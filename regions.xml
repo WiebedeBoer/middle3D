@@ -9,7 +9,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>2</id> <place>Upper Saxony</place> <rank>prince-archbishopric</rank> <commerce>none<commerce> <agriculture>dyes</agriculture> <mining>iron</mining> <climate></climate> <culture></culture>
+<id>2</id> <place>Upper Saxony</place> <rank>prince-archbishopric</rank> <commerce>dyes<commerce> <agriculture>poultry</agriculture> <mining>iron</mining> <climate></climate> <culture></culture>
 <capital> <name>Magdeburg</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>prince-archbishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>hospitaller</commandry> <scholar>none</scholar> </capital>
 <castle> <name>Meissen</name> <pop>town</pop> <fort>castle</fort> <temporal>margrave</temporal> <spiritual>prince-bishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name>Erfurt</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>university</scholar> </town>
@@ -57,7 +57,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>8</id> <place>Swabia</place> <rank>duchy</rank> <commerce>books<commerce> <agriculture>wine</agriculture> <mining>silver</mining> <climate></climate> <culture></culture>
+<id>8</id> <place>Swabia</place> <rank>duchy</rank> <commerce>armor<commerce> <agriculture>wine</agriculture> <mining>silver</mining> <climate></climate> <culture></culture>
 <capital> <name>Ulm</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name>Hohenzollern</name> <pop>village</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name>Basel</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>prince-bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>none</monastic> <commandry>hospitaller</commandry> <scholar>university</scholar> </town>
@@ -137,7 +137,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>18</id> <place>Tyrolia</place> <rank>duchy</rank> <commerce>none<commerce> <agriculture>cheese</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>18</id> <place>Tyrolia</place> <rank>duchy</rank> <commerce>armor<commerce> <agriculture>cheese</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Innsbruck</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>lord_abbot</commandry> <scholar>none</scholar> </capital>
 <castle> <name>Bozen</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name>Trent</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>prince-bishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
@@ -145,7 +145,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>19</id> <place>Carinthia</place> <rank>march</rank> <commerce><commerce> <agriculture>timber</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>19</id> <place>Carinthia</place> <rank>march</rank> <commerce>none<commerce> <agriculture>timber</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Klagenfurt</name> <pop>town</pop> <fort>burgh</fort> <temporal>margrave</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name>Gorizia</name> <pop>town</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name>Treffen</name> <pop>town</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
@@ -161,7 +161,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>21</id> <place>Bohemia</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>21</id> <place>Bohemia</place> <rank>kingdom</rank> <commerce>beer<commerce> <agriculture>poultry</agriculture> <mining>silver</mining> <climate></climate> <culture></culture>
 <capital> <name>Prague</name> <pop>metropolis</pop> <fort>burgh</fort> <temporal>king</temporal> <spiritual>lord_archbishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name>Karlstein</name> <pop>village</pop> <fort>castle</fort> <temporal>burgrave</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name>Olmutz</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>prince-bishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
@@ -177,49 +177,49 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>23</id> <place>Normandy</place> <rank>duchy</rank> <commerce>none<commerce> <agriculture>cheese</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name>Rouen</name> <pop>town</pop> <fort>castle</fort> <temporal>duke</temporal> <spiritual>lord_archbishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name>Caen</name> <pop>town</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>university</scholar> </castle>
+<id>23</id> <place>Normandy</place> <rank>duchy</rank> <commerce>horses<commerce> <agriculture>cheese</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<capital> <name>Rouen</name> <pop>city</pop> <fort>castle</fort> <temporal>duke</temporal> <spiritual>lord_archbishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<castle> <name>Caen</name> <pop>city</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>university</scholar> </castle>
 <town> <name>Lisieux</name> <pop>town</pop> <fort>burgh</fort> <temporal>count</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name>Bayeux</name> <pop>town</pop> <fort>burgh</fort> <temporal>burgrave</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>24</id> <place>Brittany</place> <rank>duchy</rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
-<abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
+<id>24</id> <place>Brittany</place> <rank>duchy</rank> <commerce>dyes<commerce> <agriculture>poultry</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<capital> <name>Vannes</name> <pop>town</pop> <fort>burgh</fort> <temporal>duke</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<castle> <name>Rohan</name> <pop>village</pop> <fort>castle</fort> <temporal>burgrave</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Quimper</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<abbey> <name>Redon</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>library</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>25</id> <place>Ile de France</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name>Paris</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name>Vincennes</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name>Meaux</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
-<abbey> <name>Saint Denis</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
+<id>25</id> <place>Ile de France</place> <rank>kingdom</rank> <commerce>cloth<commerce> <agriculture>grain</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<capital> <name>Paris</name> <pop>metropolis</pop> <fort>burgh</fort> <temporal>king</temporal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>university</scholar> </capital>
+<castle> <name>Vincennes</name> <pop>village</pop> <fort>castle</fort> <temporal>lord</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Meaux</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>lord_mayor</monastic> <commandry>templar</commandry> <scholar>none</scholar> </town>
+<abbey> <name>Saint Denis</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>library</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>26</id> <place>Champagne</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
-<abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
+<capital> <name>Troyes</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<castle> <name>Thierry</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Reims</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>lord_archbishop</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<abbey> <name>Clairvaux</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>27</id> <place>Burgundy</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>27</id> <place>Burgundy</place> <rank></rank> <commerce>horses<commerce> <agriculture>wine</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Dijon</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
-<abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
+<castle> <name>Besancon</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Chalon</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<abbey> <name>Citeaux</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>28</id> <place>Orleans</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name>Orleans</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<id>28</id> <place>Orleans</place> <rank></rank> <commerce><commerce> <agriculture>cheese</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<capital> <name>Orleans</name> <pop>city</pop> <fort>burgh</fort> <temporal>count</temporal> <spiritual>lord_bishop</spiritual> <burgher>none</burgher> <monastic>lord_abbot</monastic> <commandry>none</commandry> <scholar>university</scholar> </capital>
+<castle> <name>Chateaudun</name> <pop>village</pop> <fort>castle</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -228,13 +228,13 @@
 <id>29</id> <place>Touraine</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Tours</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<town> <name>Chinonn</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>30</id> <place>Anjou</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name>Angouleme</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<capital> <name>Angers</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
@@ -250,8 +250,8 @@
 </Region>
 <Region>
 <id>32</id> <place>Berry</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<capital> <name>Bourges</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<castle> <name>Chateauroux</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -273,23 +273,23 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>35</id> <place>Viennois</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<id>35</id> <place>Viennois</place> <rank></rank> <commerce><commerce> <agriculture>poultry</agriculture> <mining>iron</mining> <climate></climate> <culture></culture>
+<capital> <name>Grenoble</name> <pop>town</pop> <fort>burgh</fort> <temporal>count</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
+<castle> <name>Vienne</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Lyon</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>36</id> <place>Provence</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>36</id> <place>Provence</place> <rank></rank> <commerce><commerce> <agriculture>grain</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Arles</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
-<castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
-<abbey> <name></name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
+<castle> <name>Aix</name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
+<town> <name>Marseille</name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
+<abbey> <name>Toulon</name> <pop>village</pop> <fort>fortified_abbey</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>37</id> <place>Toulouse</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>37</id> <place>Toulouse</place> <rank></rank> <commerce>dyes<commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Toulouse</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
@@ -297,7 +297,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>38</id> <place>Aquitaine</place> <rank></rank> <commerce><commerce> <agriculture></agriculture> <mining>none</mining> <climate></climate> <culture></culture>
+<id>38</id> <place>Aquitaine</place> <rank></rank> <commerce>horses<commerce> <agriculture>wine</agriculture> <mining>none</mining> <climate></climate> <culture></culture>
 <capital> <name>Bordeaux</name> <pop>town</pop> <fort>burgh</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </castle>
 <town> <name></name> <pop>town</pop> <fort>palace</fort> <temporal>none</temporal> <spiritual>priest</spiritual> <burgher>none</burgher> <monastic>none</monastic> <commandry>none</commandry> <scholar>none</scholar> </town>
