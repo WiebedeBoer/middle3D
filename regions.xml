@@ -409,7 +409,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>52</id> <place>Sjaelland</place> <rank>kingdom</rank>  <climate>temperate_woodlands</climate> <style>hunt</style> <culture></culture>
+<id>52</id> <place>Sjaelland</place> <rank>kingdom</rank>  <climate>temperate_woodlands</climate> <style>hunt</style> <culture>danish</culture>
 <capital> <name>Copenhagen</name> <pop>town</pop> <fort>burgh</fort> <com>horses</com> <feudal>king</feudal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </capital>
 <castle> <name>Kalundborg</name> <pop>village</pop> <fort>castle</fort> <com>grain</com> <feudal>bailiff</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </castle>
 <town> <name>Roskilde</name> <pop>town</pop> <fort>chancery</fort> <com>grain</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </town>
@@ -417,7 +417,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>53</id> <place>Scania</place> <rank>county</rank>  <climate>temperate_woodlands</climate> <style>minstrel</style> <culture></culture>
+<id>53</id> <place>Scania</place> <rank>county</rank>  <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>danish</culture>
 <capital> <name>Lund</name> <pop>town</pop> <fort>bishop_palace</fort> <com>grain</com> <feudal>knight</feudal> <spiritual>lord_archbishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>university</scholar> </capital>
 <castle> <name>Trelleborg</name> <pop>village</pop> <fort>castle</fort> <com>fish</com> <feudal>lord</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </castle>
 <town> <name>Halmstad</name> <pop>town</pop> <fort>burgh</fort> <com>fish</com> <feudal>count</feudal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </town>
@@ -425,7 +425,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>54</id> <place>Jutland</place> <rank>county</rank>  <climate>temperate_woodlands_marshes</climate> <style></style> <culture></culture>
+<id>54</id> <place>Jutland</place> <rank>county</rank>  <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>danish</culture>
 <capital> <name>Aarhus</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </capital>
 <castle> <name>Aalborg</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </castle>
 <town> <name>Ripen</name> <pop>town</pop> <fort>town_hall</fort> <com>wool</com> <feudal>knight</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <scholar>none</scholar> </town>
@@ -433,18 +433,18 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>55</id> <place></place> <rank></rank>  <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </capital>
+<id>55</id> <place>Svaeland</place> <rank>kingdom</rank>  <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>swedish</culture>
+<capital> <name>Stockholm</name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>king</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </town>
+<town> <name>Uppsala</name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>university</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>56</id> <place></place> <rank></rank>  <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </capital>
+<id>56</id> <place>Gotaland</place> <rank>county</rank>  <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>swedish</culture>
+<capital> <name>Visby</name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </capital>
 <castle> <name></name> <pop>village</pop> <fort>castle</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </town>
+<town> <name>Skara</name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>library</scholar> </town>
 <abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <scholar>none</scholar> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
