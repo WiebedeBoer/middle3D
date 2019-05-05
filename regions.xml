@@ -425,7 +425,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>54</id> <place>Gwent</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>welsh</culture>
+<id>54</id> <place>Gwent</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>welsh</culture>
 <capital> <name>Caerwent</name> <pop>town</pop> <fort>castle</fort> <com>grain</com> <feudal>baron</feudal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>stables</factory> </capital>
 <castle> <name>Carmarthen</name> <pop>town</pop> <fort>castle</fort> <com>pigs</com> <feudal>count</feudal> <spiritual>priest</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </castle>
 <town> <name>Cardiff</name> <pop>town</pop> <fort>castle</fort> <com>poultry</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>templar</monastic> <factory>none</factory> </town>
@@ -569,7 +569,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>72</id> <place>Dalriada</place> <rank>county</rank> <climate>temperate_grasslands_marshes</climate> <style>tavern</style> <culture>scottish</culture>
+<id>72</id> <place>Dalriada</place> <rank>county</rank> <climate>temperate_grasslands_marshes</climate> <style>hunt</style> <culture>scottish</culture>
 <capital> <name>Dunadd</name> <pop>village</pop> <fort>castle</fort> <com>wool</com> <feudal>bailiff</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <factory>none</factory> </capital>
 <castle> <name>Dunollie</name> <pop>village</pop> <fort>castle</fort> <com>cheese</com> <feudal>lord</feudal> <spiritual>priest</spiritual> <burgher>reeve</burgher> <monastic>none</monastic> <factory>none</factory> </castle>
 <town> <name>Dunaverty</name> <pop>village</pop> <fort>castle</fort> <com>wool</com> <feudal>count</feudal> <spiritual>priest</spiritual> <burgher>sheriff</burgher> <monastic>none</monastic> <factory>none</factory> </town>
@@ -585,7 +585,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>74</id> <place>Fortriu</place> <rank>county</rank> <climate>temperate_woodlands</climate> <style>tavern</style> <culture>pictish</culture>
+<id>74</id> <place>Fortriu</place> <rank>county</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>pictish</culture>
 <capital> <name>Elgin</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </capital>
 <castle> <name>Nairn</name> <pop>village</pop> <fort>castle</fort> <com>fish</com> <feudal>count</feudal> <spiritual>priest</spiritual> <burgher>sheriff</burgher> <monastic>none</monastic> <factory>none</factory> </castle>
 <town> <name>Mortlach</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </town>
@@ -633,7 +633,7 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>80</id> <place>Munster</place> <rank>county</rank> <climate>temperate_grasslands_marshes</climate> <style>minstrel</style> <culture>irish</culture>
+<id>80</id> <place>Munster</place> <rank>county</rank> <climate>temperate_grasslands_marshes</climate> <style>hunt</style> <culture>irish</culture>
 <capital> <name>Cashel</name> <pop>town</pop> <fort>castle</fort> <com>fruit</com> <feudal>count</feudal> <spiritual>lord_archbishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </capital>
 <castle> <name>Limerick</name> <pop>village</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </castle>
 <town> <name>Cork</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>count</feudal> <spiritual>lord_bishop</spiritual> <burgher>lord_mayor</burgher> <monastic>lord_abbot</monastic> <factory>none</factory> </town>
