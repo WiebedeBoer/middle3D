@@ -2,7 +2,7 @@
 <Regions>
 <Region>
 <id>1</id> <place>Lower Saxony</place> <rank>prince-archbishopric</rank> <climate>temperate_grasslands_marshes</climate> <style>hunt</style> <culture>saxon</culture>
-<capital> <name>Bremen</name> <pop>city</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
+<capital> <name>Bremen</name> <pop>city</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
 <castle> <name>Oldenburg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Hamburg</name> <pop>city</pop> <fort>burgh</fort> <com>salt</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Corvey</name> <pop>village</pop> <fort>fortified_abbey</fort> <com>fruit</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>prince-abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
@@ -20,7 +20,7 @@
 <id>3</id> <place>Mecklenburg</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>fair</style> <culture>saxon</culture>
 <capital> <name>Schwerin</name> <pop>town</pop> <fort>burgh</fort> <com>stud</com> <feudal>duke</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Rostock</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </castle>
-<town> <name>Lubeck</name> <pop>city</pop> <fort>town_hall</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
+<town> <name>Lubeck</name> <pop>city</pop> <fort>town_hall</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
 <abbey> <name>Broda</name> <pop>village</pop> <fort>abbey_grange</fort> <com>grain</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -44,13 +44,13 @@
 <id>6</id> <place>Franconia</place> <rank>prince-archbishopric</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>franconian</culture>
 <capital> <name>Mainz</name> <pop>city</pop> <fort>chancery</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>bookbinder</factory> <arms>none</arms> <edu>university</edu> </capital>
 <castle> <name>Heidelberg</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>university</edu> </castle>
-<town> <name>Frankfurt</name> <pop>town</pop> <fort>burgh</fort> <com>timber</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<town> <name>Frankfurt</name> <pop>town</pop> <fort>burgh</fort> <com>timber</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>cooper</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Fulda</name> <pop>village</pop> <fort>fortified_abbey</fort> <com>grain</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>prince-abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>7</id> <place>Bavaria</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>joust</style> <culture>bavarian</culture>
-<capital> <name>Regensburg</name> <pop>city</pop> <fort>chancery</fort> <com>grain</com> <feudal>duke</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </capital>
+<capital> <name>Regensburg</name> <pop>city</pop> <fort>chancery</fort> <com>stud</com> <feudal>duke</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>granary</factory> <arms>smithy</arms> <edu>none</edu> </capital>
 <castle> <name>Augsburg</name> <pop>city</pop> <fort>chancery</fort> <com>flax</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </castle>
 <town> <name>Wurzburg</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>university</edu> </town>
 <abbey> <name>Nuremberg</name> <pop>city</pop> <fort>chancery</fort> <com>timber</com> <feudal>burgrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>bookbinder</factory> <arms>none</arms> <edu>none</edu> </abbey>
@@ -59,14 +59,14 @@
 <Region>
 <id>8</id> <place>Swabia</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>swabian</culture>
 <capital> <name>Ulm</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>bookbinder</factory> <arms>none</arms> <edu>hospice</edu> </capital>
-<castle> <name>Hohenzollern</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </castle>
+<castle> <name>Hohenzollern</name> <pop>village</pop> <fort>mountain_castle</fort> <com>silver</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </castle>
 <town> <name>Basel</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>mint</factory> <arms>none</arms> <edu>university</edu> </town>
 <abbey> <name>Sankt Gallen</name> <pop>town</pop> <fort>fortified_abbey</fort> <com>poultry</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>prince-abbot</monastic> <factory>glasswork</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>9</id> <place>Lower Lorraine</place> <rank>prince-archbishopric</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>franconian</culture>
-<capital> <name>Cologne</name> <pop>city</pop> <fort>chancery</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>university</edu> </capital>
+<capital> <name>Cologne</name> <pop>city</pop> <fort>chancery</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>potterer</factory> <arms>smithy</arms> <edu>university</edu> </capital>
 <castle> <name>Aachen</name> <pop>town</pop> <fort>town_hall</fort> <com>lead</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </castle>
 <town> <name>Liege</name> <pop>town</pop> <fort>bishop_palace</fort> <com>lead</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>watermill</factory> <arms>none</arms> <edu>library</edu> </town>
 <abbey> <name>Stavelot</name> <pop>village</pop> <fort>fortified_abbey</fort> <com>fruit</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>prince-abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>library</edu> </abbey>
@@ -101,7 +101,7 @@
 <capital> <name>Dorestad</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Emden</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Utrecht</name> <pop>town</pop> <fort>bishop_palace</fort> <com>cheese</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>library</edu> </town>
-<abbey> <name>Amsterdam</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </abbey>
+<abbey> <name>Amsterdam</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -132,7 +132,7 @@
 <id>17</id> <place>Styria</place> <rank>duchy</rank> <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>bavarian</culture>
 <capital> <name>Graz</name> <pop>town</pop> <fort>burgh</fort> <com>iron</com> <feudal>duke</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Hohenwang</name> <pop>town</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </castle>
-<town> <name>Styraburg</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>margrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<town> <name>Styraburg</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>margrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>granary</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Seckau</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -140,7 +140,7 @@
 <id>18</id> <place>Tyrolia</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>joust</style> <culture>bavarian</culture>
 <capital> <name>Innsbruck</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </capital>
 <castle> <name>Bozen</name> <pop>town</pop> <fort>town_hall</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </castle>
-<town> <name>Trent</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<town> <name>Trent</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Brixen</name> <pop>town</pop> <fort>bishop_palace</fort> <com>grain</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -162,7 +162,7 @@
 </Region>
 <Region>
 <id>21</id> <place>Bohemia</place> <rank>kingdom</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>bohemian</culture>
-<capital> <name>Prague</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>poultry</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </capital>
+<capital> <name>Prague</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>poultry</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>glasswork</factory> <arms>smithy</arms> <edu>none</edu> </capital>
 <castle> <name>Karlstein</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>burgrave</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Olmutz</name> <pop>town</pop> <fort>bishop_palace</fort> <com>cheese</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Plass</name> <pop>village</pop> <fort>abbey_grange</fort> <com>fruit</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
@@ -180,7 +180,7 @@
 <id>23</id> <place>Normandy</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>frankish</culture>
 <capital> <name>Rouen</name> <pop>city</pop> <fort>chancery</fort> <com>poultry</com> <feudal>duke</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Caen</name> <pop>city</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </castle>
-<town> <name>Lisieux</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<town> <name>Lisieux</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Bayeux</name> <pop>town</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>burgrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -188,7 +188,7 @@
 <id>24</id> <place>Brittany</place> <rank>duchy</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>breton</culture>
 <capital> <name>Vannes</name> <pop>town</pop> <fort>burgh</fort> <com>stud</com> <feudal>duke</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Rohan</name> <pop>village</pop> <fort>mountain_castle</fort> <com>fruit</com> <feudal>burgrave</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Quimper</name> <pop>town</pop> <fort>burgh</fort> <com>flax</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<town> <name>Quimper</name> <pop>town</pop> <fort>burgh</fort> <com>flax</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Redon</name> <pop>village</pop> <fort>abbey_grange</fort> <com>honey</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -284,7 +284,7 @@
 <id>36</id> <place>Provence</place> <rank>county</rank> <climate>mediterranean_shrublands_marshes</climate> <style>joust</style> <culture>occitan</culture>
 <capital> <name>Arles</name> <pop>town</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </capital>
 <castle> <name>Aix</name> <pop>town</pop> <fort>burgh</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>university</edu> </castle>
-<town> <name>Marseille</name> <pop>city</pop> <fort>bishop_palace</fort> <com>stud</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<town> <name>Marseille</name> <pop>city</pop> <fort>bishop_palace</fort> <com>stud</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>soapmaker</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Avignon</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -324,24 +324,24 @@
 <id>41</id> <place>Alsace</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>swabian</culture>
 <capital> <name>Hagenau</name> <pop>town</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Colmar</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Strassbourg</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<town> <name>Strassbourg</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>glasswork</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Wissembourg</name> <pop>town</pop> <fort>burgh</fort> <com>salt</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>prince-abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>42</id> <place>Kent</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>falconry</style> <culture>english</culture>
 <capital> <name>Canterbury</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>baron</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>glasswork</factory> <arms>none</arms> <edu>library</edu> </capital>
-<castle> <name>Dover</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>burgrave</feudal> <church>priest</church> <civil>lord_warden</civil> <monastic>none</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </castle>
+<castle> <name>Dover</name> <pop>village</pop> <fort>mountain_castle</fort> <com>flax</com> <feudal>burgrave</feudal> <church>priest</church> <civil>lord_warden</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>shipyard</arms> <edu>hospice</edu> </castle>
 <town> <name>Ashford</name> <pop>town</pop> <fort>town_hall</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>potterer</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Maidstone</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>43</id> <place>Essex</place> <rank>kingdom</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>english</culture>
-<capital> <name>London</name> <pop>city</pop> <fort>royal_court</fort> <com>wool</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
-<castle> <name>Windsor</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>watermill</factory> <arms>none</arms> <edu>none</edu> </castle>
+<capital> <name>London</name> <pop>city</pop> <fort>royal_court</fort> <com>wool</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
+<castle> <name>Windsor</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>watermill</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Guildford</name> <pop>town</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Westminster</name> <pop>town</pop> <fort>chancery</fort> <com>wool</com> <feudal>bailiff</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </abbey>
+<abbey> <name>Westminster</name> <pop>town</pop> <fort>chancery</fort> <com>wool</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -394,7 +394,7 @@
 </Region>
 <Region>
 <id>50</id> <place>Mercia</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>joust</style> <culture>english</culture>
-<capital> <name>Tamworth</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
+<capital> <name>Tamworth</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Warwick</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Stafford</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>burgrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>hospice</edu> </town>
 <abbey> <name>Leicester</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
@@ -411,9 +411,9 @@
 <Region>
 <id>52</id> <place>Gwynedd</place> <rank>principality</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>welsh</culture>
 <capital> <name>Caernarfon</name> <pop>town</pop> <fort>royal_court</fort> <com>cheese</com> <feudal>prince</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name>Harlech</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Harlech</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Bangor</name> <pop>town</pop> <fort>bishop_palace</fort> <com>cheese</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Conwy</name> <pop>village</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<abbey> <name>Conwy</name> <pop>village</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -442,7 +442,7 @@
 </Region>
 <Region>
 <id>56</id> <place>Hordaland</place> <rank>county</rank> <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>norwegian</culture>
-<capital> <name>Bergen</name> <pop>town</pop> <fort>mountain_castle</fort> <com>fruit</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
+<capital> <name>Bergen</name> <pop>town</pop> <fort>mountain_castle</fort> <com>fruit</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
 <castle> <name>Holm</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Stavanger</name> <pop>town</pop> <fort>burgh</fort> <com>poultry</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
 <abbey> <name>Halsnoy</name> <pop>village</pop> <fort>abbey_grange</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
@@ -451,7 +451,7 @@
 <Region>
 <id>57</id> <place>Sjaelland</place> <rank>kingdom</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>danish</culture>
 <capital> <name>Copenhagen</name> <pop>town</pop> <fort>burgh</fort> <com>stud</com> <feudal>king</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </capital>
-<castle> <name>Kalundborg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Kalundborg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Roskilde</name> <pop>town</pop> <fort>chancery</fort> <com>grain</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Esrum</name> <pop>village</pop> <fort>abbey_grange</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -498,42 +498,42 @@
 </Region>
 <Region>
 <id>63</id> <place>Estonia</place> <rank>duchy</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>baltic</culture>
-<capital> <name>Reval</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
-<castle> <name>Weissenstein</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
+<capital> <name>Reval</name> <pop>town</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
+<castle> <name>Weissenstein</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Arensburg</name> <pop>town</pop> <fort>bishop_palace</fort> <com>cheese</com> <feudal>knight</feudal> <church>prince_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </town>
 <abbey> <name>Hapsal</name> <pop>town</pop> <fort>bishop_palace</fort> <com>grain</com> <feudal>knight</feudal> <church>prince_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>64</id> <place>Livonia</place> <rank>prince-archbishopric</rank> <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>baltic</culture>
-<capital> <name>Riga</name> <pop>city</pop> <fort>bishop_palace</fort> <com>honey</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
-<castle> <name>Wenden</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>landmaster</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Walk</name> <pop>town</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>commander</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Dunaburg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>honey</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<capital> <name>Riga</name> <pop>city</pop> <fort>bishop_palace</fort> <com>honey</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </capital>
+<castle> <name>Wenden</name> <pop>village</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Walk</name> <pop>town</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Dunaburg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>honey</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>65</id> <place>Courland</place> <rank>duchy</rank> <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>baltic</culture>
 <capital> <name>Pilten</name> <pop>town</pop> <fort>bishop_palace</fort> <com>grain</com> <feudal>knight</feudal> <church>prince_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name>Libau</name> <pop>town</pop> <fort>burgh</fort> <com>honey</com> <feudal>commander</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Goldingen</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>commander</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Talsen</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </abbey>
+<castle> <name>Libau</name> <pop>town</pop> <fort>burgh</fort> <com>honey</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Goldingen</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Talsen</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>66</id> <place>Prussia</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style></style> <culture>baltic</culture>
-<capital> <name>Marienburg</name> <pop>town</pop> <fort>chancery</fort> <com>grain</com> <feudal>grandmaster</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>hospice</edu> </capital>
-<castle> <name>Elbing</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>landmaster</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Danzig</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>margrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
+<capital> <name>Marienburg</name> <pop>town</pop> <fort>chancery</fort> <com>grain</com> <feudal>duke</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>windmill</factory> <arms>none</arms> <edu>hospice</edu> </capital>
+<castle> <name>Elbing</name> <pop>village</pop> <fort>mountain_castle</fort> <com>timber</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Danzig</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>margrave</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
 <abbey> <name>Koningsberg</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>knight</feudal> <church>prince_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>67</id> <place>Samogitia</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>baltic</culture>
-<capital> <name>Memelburg</name> <pop>town</pop> <fort>burgh</fort> <com>honey</com> <feudal>commander</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name>Saule</name> <pop>village</pop> <fort>mountain_castle</fort> <com>pigs</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Tilsit</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>commander</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Georgenburg</name> <pop>village</pop> <fort>abbey_grange</fort> <com>honey</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<capital> <name>Memelburg</name> <pop>town</pop> <fort>burgh</fort> <com>honey</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
+<castle> <name>Saule</name> <pop>village</pop> <fort>mountain_castle</fort> <com>pigs</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Tilsit</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Georgenburg</name> <pop>village</pop> <fort>abbey_grange</fort> <com>honey</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -570,7 +570,7 @@
 </Region>
 <Region>
 <id>72</id> <place>Dalriada</place> <rank>county</rank> <climate>temperate_grasslands_marshes</climate> <style>hunt</style> <culture>scottish</culture>
-<capital> <name>Dunadd</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
+<capital> <name>Dunadd</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Dunollie</name> <pop>village</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Dunaverty</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Iona</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wool</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </abbey>
@@ -579,7 +579,7 @@
 <Region>
 <id>73</id> <place>Fib</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>pictish</culture>
 <capital> <name>Perth</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </capital>
-<castle> <name>Stirling</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Stirling</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>mint</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Saint Andrews</name> <pop>town</pop> <fort>bishop_palace</fort> <com>rubies</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </town>
 <abbey> <name>Dunfermline</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -643,7 +643,7 @@
 <Region>
 <id>81</id> <place>Connaught</place> <rank>principality</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>irish</culture>
 <capital> <name>Galway</name> <pop>village</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name>Mayo</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>watermill</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Mayo</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>watermill</factory> <arms>smithy</arms> <edu>none</edu> </castle>
 <town> <name>Tuam</name> <pop>town</pop> <fort>bishop_palace</fort> <com>stud</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Achonry</name> <pop>town</pop> <fort>burgh</fort> <com>fruit</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -660,7 +660,7 @@
 <id>83</id> <place>Biscay</place> <rank>county</rank> <climate>temperate_woodlands</climate> <style>falconry</style> <culture>navarrese</culture>
 <capital> <name>San Sebastian</name> <pop>village</pop> <fort>abbey_grange</fort> <com>poultry</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Durango</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Bilbao</name> <pop>town</pop> <fort>burgh</fort> <com>iron</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
+<town> <name>Bilbao</name> <pop>town</pop> <fort>burgh</fort> <com>iron</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>hospice</edu> </town>
 <abbey> <name>Gastehiz</name> <pop>town</pop> <fort>burgh</fort> <com>olive_oil</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -690,7 +690,7 @@
 </Region>
 <Region>
 <id>87</id> <place>Barcelona</place> <rank>principality</rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>catalan</culture>
-<capital> <name>Barcelona</name> <pop>city</pop> <fort>royal_court</fort> <com>leather</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<capital> <name>Barcelona</name> <pop>city</pop> <fort>royal_court</fort> <com>leather</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>dyeswork</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
 <castle> <name>Barbens</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Manresa</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Monserrat</name> <pop>village</pop> <fort>abbey_scriptorium</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
@@ -698,8 +698,8 @@
 </Region>
 <Region>
 <id>88</id> <place>Valencia</place> <rank>principality</rank> <climate>mediterranean_shrublands</climate> <style>tavern</style> <culture>catalan</culture>
-<capital> <name>Valencia</name> <pop>city</pop> <fort>royal_court</fort> <com>salt</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
-<castle> <name>Sagunto</name> <pop>village</pop> <fort>mountain_castle</fort> <com>olive_oil</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </castle>
+<capital> <name>Valencia</name> <pop>city</pop> <fort>royal_court</fort> <com>silk</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>mint</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<castle> <name>Sagunto</name> <pop>village</pop> <fort>mountain_castle</fort> <com>olive_oil</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Castellon</name> <pop>town</pop> <fort>bishop_palace</fort> <com>olive_oil</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Serra</name> <pop>village</pop> <fort>abbey_grange</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -714,7 +714,7 @@
 </Region>
 <Region>
 <id>90</id> <place>Baleares</place> <rank>principality</rank> <climate>mediterranean_shrublands</climate> <style>tavern</style> <culture>catalan</culture>
-<capital> <name>Palma</name> <pop>city</pop> <fort>royal_court</fort> <com>grain</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<capital> <name>Palma</name> <pop>city</pop> <fort>royal_court</fort> <com>grain</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>mint</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
 <castle> <name>Pollenca</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Menorca</name> <pop>town</pop> <fort>burgh</fort> <com>horses</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Ibiza</name> <pop>town</pop> <fort>burgh</fort> <com>olive_oil</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </abbey>
@@ -740,7 +740,7 @@
 <id>93</id> <place>Castile</place> <rank>kingdom</rank> <climate>steppe</climate> <style>minstrel</style> <culture>castilian</culture>
 <capital> <name>Valladolid</name> <pop>city</pop> <fort>royal_court</fort> <com>wine</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>university</edu> </capital>
 <castle> <name>Avila</name> <pop>town</pop> <fort>burgh</fort> <com>emeralds</com> <feudal>margrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Segovia</name> <pop>town</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<town> <name>Segovia</name> <pop>town</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>soapmaker</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Salamanca</name> <pop>town</pop> <fort>abbey_grange</fort> <com>pigs</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -757,14 +757,14 @@
 <capital> <name>Santiago</name> <pop>city</pop> <fort>royal_court</fort> <com>wine</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </capital>
 <castle> <name>Ourense</name> <pop>town</pop> <fort>chancery</fort> <com>tin</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Coruna</name> <pop>town</pop> <fort>burgh</fort> <com>salt</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Ponferrada</name> <pop>village</pop> <fort>mountain_castle</fort> <com>gold</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<abbey> <name>Ponferrada</name> <pop>village</pop> <fort>mountain_castle</fort> <com>gold</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>96</id> <place>Porto</place> <rank>duchy</rank> <climate>mediterranean_shrublands_marshes</climate> <style>fair</style> <culture>portuguese</culture>
 <capital> <name>Porto</name> <pop>city</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Guimaraes</name> <pop>town</pop> <fort>mountain_castle</fort> <com>fruit</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Viana</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<town> <name>Viana</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Aveiro</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
@@ -779,7 +779,7 @@
 <Region>
 <id>98</id> <place>Beira</place> <rank>county</rank> <climate>mediterranean_shrublands_marshes</climate> <style>minstrel</style> <culture>portuguese</culture>
 <capital> <name>Coimbra</name> <pop>town</pop> <fort>chancery</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name>Tomar</name> <pop>village</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Tomar</name> <pop>village</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Leiria</name> <pop>village</pop> <fort>burgh</fort> <com>timber</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Pombal</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>margrave</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -797,7 +797,7 @@
 <capital> <name>Evora</name> <pop>town</pop> <fort>chancery</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>library</edu> </capital>
 <castle> <name>Alcacer</name> <pop>village</pop> <fort>mountain_castle</fort> <com>olive_oil</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Moura</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Avis</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>commander</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<abbey> <name>Avis</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -820,14 +820,14 @@
 <id>103</id> <place>Sevilla</place> <rank>principality</rank> <climate>mediterranean_shrublands_marshes</climate> <style>fair</style> <culture>andalucian</culture>
 <capital> <name>Sevilla</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>sugar</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>potterer</factory> <arms>none</arms> <edu>none</edu> </capital>
 <castle> <name>Osuna</name> <pop>town</pop> <fort>mountain_castle</fort> <com>leather</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Cadiz</name> <pop>town</pop> <fort>mountain_castle</fort> <com>honey</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<town> <name>Cadiz</name> <pop>town</pop> <fort>mountain_castle</fort> <com>honey</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>soapmaker</factory> <arms>shipyard</arms> <edu>none</edu> </town>
 <abbey> <name>Huelva</name> <pop>town</pop> <fort>abbey_grange</fort> <com>iron</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>mint</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>104</id> <place>Badajoz</place> <rank>principality</rank> <climate>mediterranean_shrublands_marshes</climate> <style>fair</style> <culture>andalucian</culture>
 <capital> <name>Badajoz</name> <pop>town</pop> <fort>royal_court</fort> <com>stud</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </capital>
-<castle> <name>Zafra</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Zafra</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Merida</name> <pop>city</pop> <fort>water_castle</fort> <com>timber</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Olivenza</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
@@ -836,16 +836,16 @@
 <id>105</id> <place>Toledo</place> <rank>principality</rank> <climate>mediterranean_shrublands_marshes</climate> <style>minstrel</style> <culture>andalucian</culture>
 <capital> <name>Toledo</name> <pop>city</pop> <fort>royal_court</fort> <com>grain</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>potterer</factory> <arms>none</arms> <edu>library</edu> </capital>
 <castle> <name>Almaden</name> <pop>town</pop> <fort>mountain_castle</fort> <com>gold</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Consuegra</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>bailiff</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </town>
+<town> <name>Consuegra</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Talavera</name> <pop>village</pop> <fort>abbey_grange</fort> <com>olive_oil</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>potterer</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
 <id>106</id> <place>Granada</place> <rank>principality</rank> <climate>mediterranean_shrublands</climate> <style>fair</style> <culture>andalucian</culture>
 <capital> <name>Granada</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>silk</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>armorer</arms> <edu>university</edu> </capital>
-<castle> <name>Alcaudete</name> <pop>village</pop> <fort>mountain_castle</fort> <com>olive_oil</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<castle> <name>Alcaudete</name> <pop>village</pop> <fort>mountain_castle</fort> <com>olive_oil</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Antquera</name> <pop>village</pop> <fort>bishop_palace</fort> <com>olive_oil</com> <feudal>count</feudal> <church>priest</church> <civil>sheriff</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name>Guadix</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>bailiff</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>granary</factory> <arms>none</arms> <edu>library</edu> </abbey>
+<abbey> <name>Guadix</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>granary</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
@@ -873,171 +873,171 @@
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>110</id> <place>Lombardy</place> <rank>kingdom</rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name>Milan</name> <pop>metropolis</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>duke</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>tailor</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Pavia</name> <pop>city</pop> <fort>royal_court</fort> <com>leather</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>university</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>110</id> <place>Lombardy</place> <rank>kingdom</rank> <climate>temperate_grasslands</climate> <style>minstrel</style> <culture>lombard</culture>
+<capital> <name>Milan</name> <pop>metropolis</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>duke</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>tailor</factory> <arms>armorer</arms> <edu>none</edu> </capital>
+<castle> <name>Brescia</name> <pop>city</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>bookbinder</factory> <arms>armorer</arms> <edu>none</edu> </castle>
+<town> <name>Pavia</name> <pop>city</pop> <fort>royal_court</fort> <com>leather</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>glasswork</factory> <arms>armorer</arms> <edu>university</edu> </town>
+<abbey> <name>Cremona</name> <pop>city</pop> <fort>town_hall</fort> <com>pigs</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>111</id> <place>Tuscany</place> <rank>duchy</rank> <climate></climate> <style></style> <culture>tuscan</culture>
-<capital> <name>Florence</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>doge</civil> <monastic>lord_abbot</monastic> <factory>mint</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>111</id> <place>Tuscany</place> <rank>duchy</rank> <climate>mediterranean_shrublands</climate> <style>fair</style> <culture>tuscan</culture>
+<capital> <name>Florence</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>doge</civil> <monastic>lord_abbot</monastic> <factory>mint</factory> <arms>smithy</arms> <edu>university</edu> </capital>
+<castle> <name>Siena</name> <pop>village</pop> <fort>ducal_residence</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>doge</civil> <monastic>templar</monastic> <factory>potterer</factory> <arms>smithy</arms> <edu>university</edu> </castle>
+<town> <name>Arezzo</name> <pop>town</pop> <fort>town_hall</fort> <com>poultry</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>university</edu> </town>
+<abbey> <name>Grosseto</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>112</id> <place>Verona</place> <rank>march</rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name>Verona</name> <pop>city</pop> <fort>mountain_castle</fort> <com>flax</com> <feudal>margrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>112</id> <place>Verona</place> <rank>march</rank> <climate>temperate_grasslands_marshes</climate> <style>minstrel</style> <culture>lombard</culture>
+<capital> <name>Verona</name> <pop>city</pop> <fort>mountain_castle</fort> <com>flax</com> <feudal>margrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>smithy</arms> <edu>none</edu> </capital>
+<castle> <name>Padua</name> <pop>city</pop> <fort>town_hall</fort> <com>poultry</com> <feudal>burgrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>smithy</arms> <edu>university</edu> </castle>
+<town> <name>Vicenza</name> <pop>town</pop> <fort>town_hall</fort> <com>wool</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>bookbinder</factory> <arms>smithy</arms> <edu>university</edu> </town>
+<abbey> <name>Mantua</name> <pop>town</pop> <fort>mountain_castle</fort> <com>stud</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>113</id> <place>Spoleto</place> <rank>duchy</rank> <climate></climate> <style></style> <culture>tuscan</culture>
+<id>113</id> <place>Spoleto</place> <rank>duchy</rank> <climate>temperate_woodlands</climate> <style>minstrel</style> <culture>tuscan</culture>
 <capital> <name>Spoleto</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<castle> <name>Aquila</name> <pop>city</pop> <fort>mountain_castle</fort> <com>wool</com> <feudal>lord</feudal> <church>lord_bishop</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Ancona</name> <pop>city</pop> <fort>ducal_residence</fort> <com>poultry</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>doge</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<abbey> <name>Assissi</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>114</id> <place>Genoa</place> <rank>duchy</rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name>Genoa</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>silk</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>doge</civil> <monastic>hospitaller</monastic> <factory>tailor</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>114</id> <place>Genoa</place> <rank>duchy</rank> <climate>mediterranean_shrublands</climate> <style>fair</style> <culture>lombard</culture>
+<capital> <name>Genoa</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>silk</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>doge</civil> <monastic>hospitaller</monastic> <factory>dyeswork</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<castle> <name>Noli</name> <pop>town</pop> <fort>ducal_residence</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>doge</civil> <monastic>none</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </castle>
+<town> <name>Aleria</name> <pop>town</pop> <fort>burgh</fort> <com>timber</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Bobbio</name> <pop>village</pop> <fort>abbey_scriptorium</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>115</id> <place>Venice</place> <rank>duchy</rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name>Venice</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>silk</com> <feudal>knight</feudal> <church>priest</church> <civil>doge</civil> <monastic>teutonic</monastic> <factory>tailor</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>115</id> <place>Venice</place> <rank>duchy</rank> <climate>temperate_grasslands_marshes</climate> <style>fair</style> <culture>lombard</culture>
+<capital> <name>Venice</name> <pop>metropolis</pop> <fort>ducal_residence</fort> <com>silk</com> <feudal>knight</feudal> <church>priest</church> <civil>doge</civil> <monastic>teutonic</monastic> <factory>tailor</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<castle> <name>Treviso</name> <pop>town</pop> <fort>burgh</fort> <com>flax</com> <feudal>margrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>bookbinder</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Chioggia</name> <pop>town</pop> <fort>town_hall</fort> <com>salt</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Belluno</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wool</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>116</id> <place>Napels</place> <rank>kingdom</rank> <climate></climate> <style></style> <culture>napolitan</culture>
+<id>116</id> <place>Napels</place> <rank>kingdom</rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>napolitan</culture>
 <capital> <name>Napels</name> <pop>city</pop> <fort>royal_court</fort> <com>stud</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<castle> <name>Gaeta</name> <pop>town</pop> <fort>ducal_residence</fort> <com>silk</com> <feudal>knight</feudal> <church>priest</church> <civil>doge</civil> <monastic>none</monastic> <factory>cooper</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Amalfi</name> <pop>city</pop> <fort>ducal_residence</fort> <com>leather</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>doge</civil> <monastic>lord_abbot</monastic> <factory>mint</factory> <arms>shipyard</arms> <edu>none</edu> </town>
+<abbey> <name>Cassino</name> <pop>village</pop> <fort>abbey_scriptorium</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>117</id> <place>Sardinia</place> <rank>kingdom</rank> <climate></climate> <style></style> <culture>sardinian</culture>
-<capital> <name>Sassari</name> <pop>city</pop> <fort>royal_court</fort> <com>olive_oil</com> <feudal>king</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>117</id> <place>Sardinia</place> <rank>kingdom</rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>sardinian</culture>
+<capital> <name>Sassari</name> <pop>city</pop> <fort>royal_court</fort> <com>olive_oil</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </capital>
+<castle> <name>Olbia</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Bosa</name> <pop>town</pop> <fort>bishop_palace</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Porto Torres</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>118</id> <place>Sicily</place> <rank>principality</rank> <climate></climate> <style></style> <culture>sicilian</culture>
-<capital> <name>Palermo</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>silk</com> <feudal>prince</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>118</id> <place>Mazara</place> <rank>kingdom</rank> <climate>mediterranean_shrublands_marshes</climate> <style>minstrel</style> <culture>sicilian</culture>
+<capital> <name>Palermo</name> <pop>metropolis</pop> <fort>royal_court</fort> <com>silk</com> <feudal>king</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>glasswork</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
+<castle> <name>Agrigento</name> <pop>town</pop> <fort>burgh</fort> <com>salt</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Cefalu</name> <pop>town</pop> <fort>burgh</fort> <com>sugar</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Marsala</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>fishery</factory> <arms>smithy</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>119</id> <place>Lazio</place> <rank>papacy</rank> <climate></climate> <style></style> <culture>tuscan</culture>
+<id>119</id> <place>Lazio</place> <rank>papacy</rank> <climate>mediterranean_shrublands</climate> <style>reliquary</style> <culture>tuscan</culture>
 <capital> <name>Rome</name> <pop>city</pop> <fort>papal_palace</fort> <com>cheese</com> <feudal>pope</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>glasswork</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<castle> <name>Frascati</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Tivoli</name> <pop>town</pop> <fort>town_hall</fort> <com></com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<abbey> <name>Subiaco</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>hospice</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>120</id> <place>Turin</place> <rank>march</rank> <climate></climate> <style></style> <culture>lombard</culture>
+<id>120</id> <place>Turin</place> <rank>march</rank> <climate>temperate_woodlands</climate> <style>hunt</style> <culture>lombard</culture>
 <capital> <name>Turin</name> <pop>city</pop> <fort>burgh</fort> <com>cheese</com> <feudal>margrave</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>glasswork</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<castle> <name>Ivrea</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Asti</name> <pop>town</pop> <fort>bishop_palace</fort> <com>fruit</com> <feudal>knight</feudal> <church>prince-bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Pinerollo</name> <pop>village</pop> <fort>fortified_abbey</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>prince-abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>121</id> <place>Apulia</place> <rank></rank> <climate></climate> <style></style> <culture>napolitan</culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>121</id> <place>Apulia</place> <rank></rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>napolitan</culture>
+<capital> <name>Taranto</name> <pop>town</pop> <fort>royal_court</fort> <com>iron</com> <feudal>prince</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
+<castle> <name>Bari</name> <pop>town</pop> <fort>burgh</fort> <com>stud</com> <feudal>baron</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>tailor</factory> <arms>shipyard</arms> <edu>none</edu> </castle>
+<town> <name>Siponto</name> <pop>town</pop> <fort>bishop_palace</fort> <com>grain</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Brindisi</name> <pop>town</pop> <fort>burgh</fort> <com>stud</com> <feudal>count</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>122</id> <place>Calabria</place> <rank></rank> <climate></climate> <style></style> <culture>napolitan</culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>122</id> <place>Calabria</place> <rank></rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>napolitan</culture>
+<capital> <name>Cosenza</name> <pop>town</pop> <fort>burgh</fort> <com>timber</com> <feudal>duke</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>bookbinder</factory> <arms>none</arms> <edu>none</edu> </capital>
+<castle> <name>Rossano</name> <pop>town</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>lord</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>library</edu> </castle>
+<town> <name>Tropea</name> <pop>town</pop> <fort>bishop_palace</fort> <com>olive_oil</com> <feudal>lord</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Vivarium</name> <pop>village</pop> <fort>abbey_grange</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>123</id> <place>Benevento</place> <rank></rank> <climate></climate> <style></style> <culture>napolitan</culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>123</id> <place>Benevento</place> <rank>principality</rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>napolitan</culture>
+<capital> <name>Benevento</name> <pop>town</pop> <fort>royal_court</fort> <com>wine</com> <feudal>prince</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </capital>
+<castle> <name>Monteverde</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Potenza</name> <pop>town</pop> <fort>town_hall</fort> <com>cheese</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>armorer</arms> <edu>none</edu> </town>
+<abbey> <name>Viggiano</name> <pop>village</pop> <fort>abbey_grange</fort> <com>cheese</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>124</id> <place>Pisa</place> <rank></rank> <climate></climate> <style></style> <culture>tuscan</culture>
-<capital> <name>Pisa</name> <pop>city</pop> <fort>ducal_residence</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>doge</civil> <monastic>hospitaller</monastic> <factory>tailor</factory> <arms>none</arms> <edu>university</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>124</id> <place>Pisa</place> <rank>duchy</rank> <climate>mediterranean_shrublands</climate> <style>fair</style> <culture>tuscan</culture>
+<capital> <name>Pisa</name> <pop>city</pop> <fort>ducal_residence</fort> <com>olive_oil</com> <feudal>knight</feudal> <church>lord_archbishop</church> <civil>doge</civil> <monastic>hospitaller</monastic> <factory>tailor</factory> <arms>shipyard</arms> <edu>university</edu> </capital>
+<castle> <name>Carrara</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Lucca</name> <pop>city</pop> <fort>mountain_castle</fort> <com>silk</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<abbey> <name>Volterra</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>125</id> <place>Romagna</place> <rank></rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>125</id> <place>Romagna</place> <rank>county</rank> <climate>temperate_woodlands_marshes</climate> <style>hunt</style> <culture>lombard</culture>
+<capital> <name>Ravenna</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>lord</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>mint</factory> <arms>none</arms> <edu>none</edu> </capital>
+<castle> <name>Cesena</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </castle>
+<town> <name>Forli</name> <pop>town</pop> <fort>town_hall</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Rimini</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>lord</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>126</id> <place>Emilia</place> <rank></rank> <climate></climate> <style></style> <culture>lombard</culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>126</id> <place>Emilia</place> <rank>duchy</rank> <climate>temperate_woodlands_marshes</climate> <style>minstrel</style> <culture>lombard</culture>
+<capital> <name>Modena</name> <pop>town</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>duke</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>smithy</factory> <arms>none</arms> <edu>university</edu> </capital>
+<castle> <name>Parma</name> <pop>town</pop> <fort>town_hall</fort> <com>cheese</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>mint</factory> <arms>smithy</arms> <edu>university</edu> </castle>
+<town> <name>Ferrara</name> <pop>city</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>tailor</factory> <arms>none</arms> <edu>university</edu> </town>
+<abbey> <name>Bologna</name> <pop>city</pop> <fort>town_hall</fort> <com>flax</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>watermill</factory> <arms>smithy</arms> <edu>university</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>127</id> <place></place> <rank></rank> <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>127</id> <place>Aquileja</place> <rank>prince-archbishopric</rank> <climate>temperate_grasslands</climate> <style>minstrel</style> <culture>lombard</culture>
+<capital> <name>Aquileja</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>prince-archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </capital>
+<castle> <name>Pordenone</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Udine</name> <pop>town</pop> <fort>bishop_palace</fort> <com>wine</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<abbey> <name>Gemona</name> <pop>town</pop> <fort>town_hall</fort> <com>iron</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>smithy</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>128</id> <place></place> <rank></rank> <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>128</id> <place>Demona</place> <rank>county</rank> <climate>mediterranean_shrublands_marshes</climate> <style>hunt</style> <culture>sicilian</culture>
+<capital> <name>Messina</name> <pop>city</pop> <fort>mountain_castle</fort> <com>pigs</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </capital>
+<castle> <name>Taormina</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Catania</name> <pop>town</pop> <fort>mountain_castle</fort> <com>iron</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>fishery</factory> <arms>none</arms> <edu>university</edu> </town>
+<abbey> <name>Troina</name> <pop>town</pop> <fort>burgh</fort> <com>wine</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>129</id> <place></place> <rank></rank> <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>129</id> <place>Siracusa</place> <rank>kingdom</rank> <climate>mediterranean_shrublands_marshes</climate> <style>minstrel</style> <culture>sicilian</culture>
+<capital> <name>Siracusa</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>mint</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
+<castle> <name>Caltagirone</name> <pop>village</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>potterer</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Valletta</name> <pop>town</pop> <fort>burgh</fort> <com>olive_oil</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>hospitaller</monastic> <factory>fishery</factory> <arms>smithy</arms> <edu>none</edu> </town>
+<abbey> <name>Modica</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>templar</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
-<id>130</id> <place></place> <rank></rank> <climate></climate> <style></style> <culture></culture>
-<capital> <name></name> <pop>town</pop> <fort>burgh</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name></name> <pop>village</pop> <fort>mountain_castle</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name></name> <pop>town</pop> <fort>bishop_palace</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
-<abbey> <name></name> <pop>village</pop> <fort>abbey_grange</fort> <com></com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
+<id>130</id> <place>Cagliari</place> <rank>county</rank> <climate>mediterranean_shrublands</climate> <style>minstrel</style> <culture>sardinian</culture>
+<capital> <name>Cagliari</name> <pop>city</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>count</feudal> <church>lord_archbishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>granary</factory> <arms>shipyard</arms> <edu>none</edu> </capital>
+<castle> <name>Oristano</name> <pop>town</pop> <fort>burgh</fort> <com>emeralds</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Dolia</name> <pop>town</pop> <fort>bishop_palace</fort> <com>cheese</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
+<abbey> <name>Iglesias</name> <pop>town</pop> <fort>mountain_castle</fort> <com>silver</com> <feudal>knight</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>dyeswork</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>0</xc> <yc>0</yc> </Point>
 </Region>
 <Region>
