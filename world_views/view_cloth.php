@@ -17,7 +17,7 @@ $town_b = $town->castle->factory;
 $town_c = $town->town->factory;
 $town_d = $town->abbey->factory;
 
-if ($agri_a =="wool" || $agri_b =="wool" || $agri_c =="wool" || $agri_d =="wool"){
+if ($agri_a =="wool" || $agri_b =="wool" || $agri_c =="wool" || $agri_d =="wool" || $town_a =="fuller" || $town_b =="fuller" || $town_c =="fuller" || $town_d =="fuller"){
 $wool ="wool";	
 }
 else {

@@ -12,6 +12,11 @@ $agri_b = $town->castle->com;
 $agri_c = $town->town->com;
 $agri_d = $town->abbey->com;
 
+$town_a = $town->capital->factory;
+$town_b = $town->castle->factory;
+$town_c = $town->town->factory;
+$town_d = $town->abbey->factory;
+
 if ($agri_a =="fruit" || $agri_b =="fruit" || $agri_c =="fruit" || $agri_d =="fruit"){
 $fruit ="fruit";	
 }
@@ -24,6 +29,13 @@ $dates ="dates";
 }
 else {
 $dates ="none";		
+}
+
+if ($agri_a =="wine" || $agri_b =="wine" || $agri_c =="wine" || $agri_d =="wine" || $town_a =="vintner" || $town_b =="vintner" || $town_c =="vintner" || $town_d =="vintner"){
+$wine ="wine";	
+}
+else {
+$wine ="none";		
 }
 
 $stroke_width =0;
@@ -66,7 +78,24 @@ $radius_color =$radius_color;
 $descript =$descript;
 }
 
-
+//tier 3
+if ($wine =="wine"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(128,0,128)";
+if ($radius_size<7){
+$descript = $descript." and wine";}
+else {
+$descript ="wine";}
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
 
 //display
 if ($radius_size ==8){

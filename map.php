@@ -64,6 +64,20 @@ echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" str
 include("world_views/view_cloth.php");
 
 }
+elseif ($view =="dyes"){
+
+echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">dyes</text>';
+
+include("world_views/view_dyes.php");
+
+}
+elseif ($view =="scents"){
+
+echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">fragrances</text>';
+
+include("world_views/view_scents.php");
+
+}
 elseif ($view =="metal"){
 
 echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">metals</text>';
@@ -138,7 +152,7 @@ include("world_views/grain.php");
 }
 elseif ($view =="fruit"){
 
-echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">fruit</text>';
+echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">fruit and beverages</text>';
 
 include("world_views/fruit.php");
 
@@ -152,9 +166,16 @@ include("world_views/sweet.php");
 }
 elseif ($view =="animal"){
 
-echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">husbandry</text>';
+echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">diary</text>';
 
 include("world_views/husbandry.php");
+
+}
+elseif ($view =="meat"){
+
+echo '<text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">meat</text>';
+
+include("world_views/meat.php");
 
 }
 elseif ($view =="forest"){

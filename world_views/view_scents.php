@@ -7,28 +7,16 @@ $placename = $town->place;
 $lon = $town->Point->xc;
 $lat = $town->Point->yc;
 
-$agri_a = $town->capital->com;
-$agri_b = $town->castle->com;
-$agri_c = $town->town->com;
-$agri_d = $town->abbey->com;
+$agri_a = $town->capital->factory;
+$agri_b = $town->castle->factory;
+$agri_c = $town->town->factory;
+$agri_d = $town->abbey->factory;
 
-$town_a = $town->capital->factory;
-$town_b = $town->castle->factory;
-$town_c = $town->town->factory;
-$town_d = $town->abbey->factory;
-
-if ($agri_a =="grain" || $agri_b =="grain" || $agri_c =="grain" || $agri_d =="grain"){
-$grain ="grain";	
+if ($agri_a =="frankincense" || $agri_b =="frankincense" || $agri_c =="frankincense" || $agri_d =="frankincense"){
+$frankincense ="frankincense";	
 }
 else {
-$grain ="none";		
-}
-
-if ($town_a =="granary" || $town_b =="granary" || $town_c =="granary" || $town_d =="granary" || $town_a =="windmill" || $town_b =="windmill" || $town_c =="windmill" || $town_d =="windmill" || $town_a =="watermill" || $town_b =="watermill" || $town_c =="watermill" || $town_d =="watermill"){
-$granary ="granary";	
-}
-else {
-$granary ="none";		
+$frankincense ="none";		
 }
 
 $stroke_width =0;
@@ -38,30 +26,11 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($grain =="grain"){
+if ($frankincense =="frankincense"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(255,0,0)";
-$descript ="grain";
-}
-else {
-$stroke_width =$stroke_width;
-$radius_size =$radius_size;
-$stroke_color = $stroke_color;
-$radius_color =$radius_color;
-$descript =$descript;
-}
-
-//tier 2
-if ($granary =="granary"){
-$stroke_width++;
-$radius_size--;
-$stroke_color = $radius_color;
-$radius_color ="rgb(92,0,92)";
-if ($radius_size<7){
-$descript = $descript." and granary";}
-else {
-$descript ="granary";}
+$radius_color ="rgb(192,0,0)";
+$descript ="frankincense";
 }
 else {
 $stroke_width =$stroke_width;

@@ -7,28 +7,30 @@ $placename = $town->place;
 $lon = $town->Point->xc;
 $lat = $town->Point->yc;
 
-$agri_a = $town->capital->com;
-$agri_b = $town->castle->com;
-$agri_c = $town->town->com;
-$agri_d = $town->abbey->com;
+$agri_a = $town->capital->factory;
+$agri_b = $town->castle->factory;
+$agri_c = $town->town->factory;
+$agri_d = $town->abbey->factory;
 
-$town_a = $town->capital->factory;
-$town_b = $town->castle->factory;
-$town_c = $town->town->factory;
-$town_d = $town->abbey->factory;
-
-if ($agri_a =="grain" || $agri_b =="grain" || $agri_c =="grain" || $agri_d =="grain"){
-$grain ="grain";	
+if ($agri_a =="madder" || $agri_b =="madder" || $agri_c =="madder" || $agri_d =="madder"){
+$madder ="madder";	
 }
 else {
-$grain ="none";		
+$madder ="none";		
 }
 
-if ($town_a =="granary" || $town_b =="granary" || $town_c =="granary" || $town_d =="granary" || $town_a =="windmill" || $town_b =="windmill" || $town_c =="windmill" || $town_d =="windmill" || $town_a =="watermill" || $town_b =="watermill" || $town_c =="watermill" || $town_d =="watermill"){
-$granary ="granary";	
+if ($agri_a =="woad" || $agri_b =="woad" || $agri_c =="woad" || $agri_d =="woad"){
+$woad ="woad";	
 }
 else {
-$granary ="none";		
+$woad ="none";		
+}
+
+if ($agri_a =="saffron" || $agri_b =="saffron" || $agri_c =="saffron" || $agri_d =="saffron"){
+$saffron ="saffron";	
+}
+else {
+$saffron ="none";		
 }
 
 $stroke_width =0;
@@ -38,11 +40,11 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($grain =="grain"){
+if ($madder =="madder"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(255,0,0)";
-$descript ="grain";
+$radius_color ="rgb(192,0,0)";
+$descript ="madder";
 }
 else {
 $stroke_width =$stroke_width;
@@ -53,15 +55,34 @@ $descript =$descript;
 }
 
 //tier 2
-if ($granary =="granary"){
+if ($woad =="woad"){
 $stroke_width++;
 $radius_size--;
 $stroke_color = $radius_color;
-$radius_color ="rgb(92,0,92)";
+$radius_color ="rgb(0,192,255)";
 if ($radius_size<7){
-$descript = $descript." and granary";}
+$descript = $descript." and woad";}
 else {
-$descript ="granary";}
+$descript ="woad";}
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
+
+//tier 3
+if ($saffron =="saffron"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(255,255,0)";
+if ($radius_size<7){
+$descript = $descript." and saffron";}
+else {
+$descript ="saffron";}
 }
 else {
 $stroke_width =$stroke_width;

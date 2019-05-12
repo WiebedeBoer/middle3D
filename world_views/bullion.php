@@ -45,6 +45,13 @@ else {
 $rubies ="none";		
 }
 
+if ($agri_a =="sapphire" || $agri_b =="sapphire" || $agri_c =="sapphire" || $agri_d =="sapphire"){
+$sapphire ="sapphire";	
+}
+else {
+$sapphire ="none";		
+}
+
 if($town_a =="mint" || $town_b =="mint" || $town_c =="mint" || $town_d =="mint"){
 $mint ="mint";	
 }
@@ -119,7 +126,7 @@ $descript =$descript;
 }
 
 //tier 4
-if ($rubies =="emeralds"){
+if ($emeralds =="emeralds"){
 $stroke_width++;
 $radius_size--;
 $stroke_color = $radius_color;
@@ -138,6 +145,25 @@ $descript =$descript;
 }
 
 //tier 5
+if ($sapphire =="sapphire"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(15,82,186)";
+if ($radius_size<7){
+$descript = $descript." and sapphire";}
+else {
+$descript ="sapphire";}
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
+
+//tier 6
 if ($mint =="mint"){
 $stroke_width++;
 $radius_size--;
@@ -156,7 +182,7 @@ $radius_color =$radius_color;
 $descript =$descript;
 }
 
-//tier 6
+//tier 7
 if ($ivory =="ivory"){
 $stroke_width++;
 $radius_size--;

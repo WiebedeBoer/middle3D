@@ -12,23 +12,18 @@ $agri_b = $town->castle->com;
 $agri_c = $town->town->com;
 $agri_d = $town->abbey->com;
 
-$town_a = $town->capital->factory;
-$town_b = $town->castle->factory;
-$town_c = $town->town->factory;
-$town_d = $town->abbey->factory;
-
-if ($agri_a =="grain" || $agri_b =="grain" || $agri_c =="grain" || $agri_d =="grain"){
-$grain ="grain";	
+if ($agri_a =="poultry" || $agri_b =="poultry" || $agri_c =="poultry" || $agri_d =="poultry"){
+$poultry ="poultry";	
 }
 else {
-$grain ="none";		
+$poultry ="none";		
 }
 
-if ($town_a =="granary" || $town_b =="granary" || $town_c =="granary" || $town_d =="granary" || $town_a =="windmill" || $town_b =="windmill" || $town_c =="windmill" || $town_d =="windmill" || $town_a =="watermill" || $town_b =="watermill" || $town_c =="watermill" || $town_d =="watermill"){
-$granary ="granary";	
+if ($agri_a =="pigs" || $agri_b =="pigs" || $agri_c =="pigs" || $agri_d =="pigs"){
+$pigs ="pigs";	
 }
 else {
-$granary ="none";		
+$pigs ="none";		
 }
 
 $stroke_width =0;
@@ -38,11 +33,11 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($grain =="grain"){
+if ($poultry =="poultry"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(255,0,0)";
-$descript ="grain";
+$radius_color ="rgb(255,255,0)";
+$descript ="poultry";
 }
 else {
 $stroke_width =$stroke_width;
@@ -53,15 +48,15 @@ $descript =$descript;
 }
 
 //tier 2
-if ($granary =="granary"){
+if ($pigs =="pigs"){
 $stroke_width++;
 $radius_size--;
 $stroke_color = $radius_color;
-$radius_color ="rgb(92,0,92)";
+$radius_color ="rgb(192,0,0)";
 if ($radius_size<7){
-$descript = $descript." and granary";}
+$descript = $descript." and pork";}
 else {
-$descript ="granary";}
+$descript ="pork";}
 }
 else {
 $stroke_width =$stroke_width;
