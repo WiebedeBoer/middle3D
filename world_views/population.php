@@ -85,28 +85,25 @@ $descript =" ";
 
 //tier 1
 if ($avg_pop >=3){
-if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
-$stroke_width = $stroke_width + 2;
-$radius_size = $radius_size - 2;
-$stroke_color ="rgb(128,0,128)";}
-else {
 $stroke_width++;
 $radius_size--;
+if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
+$radius_color ="rgb(192,0,192)";
 $stroke_color ="rgb(0,0,0)";}
-$radius_color ="rgb(64,0,0)";
+else {
+$radius_color ="rgb(128,0,128)";
+$stroke_color ="rgb(0,0,0)";}
 $descript ="highly urbanized";
 }
 elseif ($avg_pop >=2 && $avg_pop <3){
-
-if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
-$stroke_width = $stroke_width + 2;
-$radius_size = $radius_size - 2;
-$stroke_color ="rgb(128,0,128)";}
-else {
 $stroke_width++;
 $radius_size--;
+if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
+$radius_color ="rgb(64,0,0)";
 $stroke_color ="rgb(0,0,0)";}
+else {
 $radius_color ="rgb(192,0,0)";
+$stroke_color ="rgb(0,0,0)";}
 $descript ="urban";
 }
 elseif ($avg_pop >=1 && $avg_pop <2){
