@@ -80,35 +80,51 @@ $total_pop = $pop_a + $pop_b + $pop_c + $pop_d;
 $avg_pop = $total_pop / 4;
 
 $stroke_width =0;
-$stroke_color ="rgb(0,0,0)";
 $radius_size =8;
-$radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
 if ($avg_pop >=3){
+if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
+$stroke_width = $stroke_width + 2;
+$radius_size = $radius_size - 2;
+$stroke_color ="rgb(128,0,128)";}
+else {
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(192,64,192)";
+$stroke_color ="rgb(0,0,0)";}
+$radius_color ="rgb(64,0,0)";
 $descript ="highly urbanized";
 }
 elseif ($avg_pop >=2 && $avg_pop <3){
+
+if ($agri_a =="metropolis" || $agri_b =="metropolis" || $agri_c =="metropolis" || $agri_d =="metropolis"){
+$stroke_width = $stroke_width + 2;
+$radius_size = $radius_size - 2;
+$stroke_color ="rgb(128,0,128)";}
+else {
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(192,192,0)";
+$stroke_color ="rgb(0,0,0)";}
+$radius_color ="rgb(192,0,0)";
 $descript ="urban";
 }
 elseif ($avg_pop >=1 && $avg_pop <2){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(192,0,0)";
+if ($total_pop ==5){
+$radius_color ="rgb(255,255,0)";
+$stroke_color ="rgb(0,0,0)";}
+else {
+$radius_color ="rgb(255,128,0)";
+$stroke_color ="rgb(0,0,0)";}
 $descript ="rural";
 }
 else {
 $stroke_width =$stroke_width;
 $radius_size =$radius_size;
-$stroke_color = $stroke_color;
-$radius_color =$radius_color;
+$stroke_color ="rgb(0,0,0)";
+$radius_color ="rgb(0,0,0)";
 $descript =$descript;
 }
 
@@ -116,13 +132,13 @@ $descript =$descript;
 if ($radius_size ==8){
 echo '<g z-index="2">
 <a xlink:href="settlement.php?id='.$id.'&view='.$getv.'"><title>'.$placename.' ('.$lon.','.$lat.')</title>
-<circle cx="'.$lon.'" cy="'.$lat.'" r="5" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,0)" />
+<circle cx="'.$lon.'" cy="'.$lat.'" r="5" stroke="'.$stroke_color.'" stroke-width="1" fill="rgb(0,0,0)" />
 </a></g>';
 }
 elseif ($radius_size ==7){
 echo '<g z-index="2">
 <a xlink:href="settlement.php?id='.$id.'&view='.$getv.'"><title>'.$placename.', '. $descript.' ('.$lon.','.$lat.')</title>
-<circle cx="'.$lon.'" cy="'.$lat.'" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="'.$radius_color.'" />
+<circle cx="'.$lon.'" cy="'.$lat.'" r="7" stroke="'.$stroke_color.'" stroke-width="1" fill="'.$radius_color.'" />
 </a></g>';
 }
 else {

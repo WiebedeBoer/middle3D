@@ -13,17 +13,24 @@ $agri_c = $town->town->com;
 $agri_d = $town->abbey->com;
 
 if ($agri_a =="lead" || $agri_b =="lead" || $agri_c =="lead" || $agri_d =="lead"){
-$silver ="lead";	
+$lead ="lead";	
 }
 else {
-$silver ="none";		
+$lead ="none";		
 }
 
 if ($agri_a =="iron" || $agri_b =="iron" || $agri_c =="iron" || $agri_d =="iron"){
-$gold ="iron";	
+$iron ="iron";	
 }
 else {
-$gold ="none";		
+$iron ="none";		
+}
+
+if ($agri_a =="tin" || $agri_b =="tin" || $agri_c =="tin" || $agri_d =="tin"){
+$tin ="tin";	
+}
+else {
+$tin ="none";		
 }
 
 $stroke_width =0;
@@ -33,10 +40,10 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($silver =="lead"){
+if ($lead =="lead"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(192,192,192)";
+$radius_color ="rgb(192,0,192)";
 $descript ="lead";
 }
 else {
@@ -48,11 +55,11 @@ $descript =$descript;
 }
 
 //tier 2
-if ($gold =="iron"){
+if ($iron =="iron"){
 $stroke_width++;
 $radius_size--;
 $stroke_color = $radius_color;
-$radius_color ="rgb(255,255,0)";
+$radius_color ="rgb(0,192,192)";
 if ($radius_size<7){
 $descript = $descript." and iron";}
 else {
@@ -66,7 +73,24 @@ $radius_color =$radius_color;
 $descript =$descript;
 }
 
-
+//tier 3
+if ($tin =="tin"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(192,192,192)";
+if ($radius_size<7){
+$descript = $descript." and tin";}
+else {
+$descript ="tin";}
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
 
 //display
 if ($radius_size ==8){

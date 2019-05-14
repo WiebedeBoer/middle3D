@@ -9,11 +9,23 @@ $lat = $town->Point->yc;
 
 $ride = $town->ride;
 
+$agri_a = $town->capital->arms;
+$agri_b = $town->castle->arms;
+$agri_c = $town->town->arms;
+$agri_d = $town->abbey->arms;
+
 $stroke_width =0;
 $stroke_color ="rgb(0,0,0)";
 $radius_size =8;
 $radius_color ="rgb(0,0,0)";
 $descript =" ";
+
+if ($agri_a =="shipyard" || $agri_b =="shipyard" || $agri_c =="shipyard" || $agri_d =="shipyard"){
+$shipyard ="shipyard";	
+}
+else {
+$shipyard ="none";		
+}
 
 //tier 1
 if ($ride =="stud"){
@@ -27,6 +39,25 @@ $stroke_width++;
 $radius_size--;
 $radius_color ="rgb(255,128,0)";
 $descript ="camel";
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
+
+//tier 2
+if ($shipyard =="shipyard"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(0,255,255)";
+if ($radius_size<7){
+$descript = $descript." and shipyard";}
+else {
+$descript ="shipyard";}
 }
 else {
 $stroke_width =$stroke_width;

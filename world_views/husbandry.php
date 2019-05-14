@@ -29,7 +29,7 @@ $descript =" ";
 if ($diary =="diary"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(255,0,0)";
+$radius_color ="rgb(255,255,0)";
 $descript ="diary";
 }
 else {
