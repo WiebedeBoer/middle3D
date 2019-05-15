@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Buildings>
+<Fortification>
+<royal_court><name>court</name></royal_court> 
+<chancery><name>court</name></chancery>
+<mountain_castle><name>castle</name></mountain_castle> 
+<water_castle><name>castle</name></water_castle> 
+<burgh><name>castle</name></burgh>
+<town_hall><name>town hall</name></town_hall> 
+<bishop_palace><name>palace</name></bishop_palace>
+<ducal_residence><name>palace</name></ducal_residence>
+<fortified_abbey><name>abbey</name></fortified_abbey> 
+<abbey_grange><name>abbey</name></abbey_grange>
+<abbey_scriptorium><name>abbey</name></abbey_scriptorium> 
+</Fortification>
+<Entertainment>
+<hunt><name>hunting lodge</name></hunt> 
+<falconry><name>falconer</name></falconry> 
+<fair><name>market fair</name></fair> 
+<bazaar><name>bazaar</name></bazaar> 
+<coaching><name>coaching inn</name></coaching>
+<caravan><name>caravaners inn</name></caravan>
+<tavern><name>inn</name></tavern> 
+<minstrel><name>minstrel gallery</name></minstrel>
+<joust><name>tiltyard</name></joust> 
+</Entertainment>
+<Education>
+<university><name>university</name></university> 
+<library><name>library</name></library>
+<hospice><name>hospice</name></hospice>
+</Education>
+<Factory>
+<bookbinder><name>bookbinder</name></bookbinder> 
+<scriptorium><name>scriptorium</name></scriptorium>
+<leather><name>goat farm</name></leather>
+<fuller><name>sheep farm</name></fuller>
+<vintner><name>vineyard</name></vintner>
+<tailor><name>tailor</name></tailor>
+<glasswork><name>glasswork</name></glasswork>
+<potterer><name>potterer</name></potterer>
+<windmill><name>windmill</name></windmill>
+<watermill><name>watermill</name></watermill>
+<granary><name>granary</name></granary>
+<fur><name>furrier</name></fur>
+<fishery><name>fishing port</name></fishery>
+<mint><name>mint</name></mint>
+<frankincense><name>incense shop</name></frankincense>
+<soapmaker><name>soap maker</name></soapmaker>
+<cooper><name>cooper</name></cooper>
+<madder><name>dyeswork</name></madder>
+<woad><name>dyeswork</name></woad>
+<saffron><name>dyeswork</name></saffron>
+</Factory>
+<Riding>
+<stud><name>stud farm</name></stud> 
+<camel><name>camel caravan</name></camel>
+</Riding>
+<Commerce>
+<grain><name>grain farm</name></grain>
+<flax><name>flax farm</name></flax>
+<dates><name>dates plantation</name></dates>
+<sugar><name>sugar plantation</name></sugar>
+<silk><name>silk plantation</name></silk>
+<pigs><name>pig farm</name></pigs>
+<cheese><name>dairy farm</name></cheese>
+<wool><name>sheep farm</name></wool>
+<poultry><name>sheep farm</name></poultry>
+<fruit><name>orchard</name></fruit>
+<honey><name>beekeeper</name></honey>
+<olive_oil><name>olive grove</name></olive_oil>
+<wine><name>vineyard</name></wine>
+<salt><name>vineyard</name></salt>
+<iron><name>iron mine</name></iron>
+<lead><name>lead mine</name></lead>
+<tine><name>salt mine</name></tin>
+<silver><name>silver mine</name></silver>
+<gold><name>gold mine</name></gold>
+<rubies><name>ruby mine</name></rubies>
+<emeralds><name>emerald mine</name></emeralds>
+<sapphire><name>sapphire mine</name></sapphire>
+</Commerce>
+<Armory>
+<smithy><name>smithy</name></smithy>
+<armorer><name>armorer</name></armorer>
+<shipyard><name>shipyard</name></shipyard>
+</Armory>
+<Climate>
+<temperate_woodlands_marshes><basket>basket weaver</basket><forester>forester hut</forester></temperate_woodlands_marshes>
+<temperate_woodlands><basket>none</basket><forester>forester hut</forester></temperate_woodlands>
+<temperate_grasslands_marshes><basket>basket weaver</basket><forester>none</forester></temperate_grasslands_marshes>
+<temperate_grasslands><basket>none</basket><forester>none</forester></temperate_grasslands>
+<steppe><basket>none</basket><forester>none</forester></steppe>
+<desert_marshes><basket>basket weaver</basket><forester>none</forester></desert_marshes>
+<desert><basket>none</basket><forester>none</forester></desert>
+<mediterranean_shrublands_marshes><basket>basket weaver</basket><forester>none</forester></mediterranean_shrublands_marshes>
+<mediterranean_shrublands><basket>none</basket><forester>none</forester></mediterranean_shrublands>
+<mediterranean_woodlands_marshes><basket>basket weaver</basket><forester>forester hut</forester></mediterranean_woodlands_marshes>
+<mediterranean_woodlands><basket>none</basket><forester>forester hut</forester></mediterranean_woodlands>
+</Climate>
+<Feudal>
+<knight><name>none</name></knight>
+<lord><name>none</name></lord>
+<baron><name>none</name></baron>
+<burgrave><name>none</name></burgrave>
+<count><name>none</name></count>
+<margrave><name>none</name></margrave>
+<duke><name>none</name></duke>
+<prince><name>none</name></prince>
+<king><name>none</name></king>
+</Feudal>
+<Church>
+<pope><name>cathedral</name></pope>
+<patriarch><name>cathedral</name></patriarch>
+<lord_bishop><name>cathedral</name></lord_bishop>
+<prince_bishop><name>cathedral</name></prince_bishop>
+<lord_archbishop><name>cathedral</name></lord_archbishop>
+<prince_archbishop><name>cathedral</name></prince_archbishop>
+<priest><name>church</name></priest>
+</Church>
+<Burgher>
+<lord_mayor><name>none</name></lord_mayor>
+<lord_warden><name>none</name></lord_warden>
+<doge><name>none</name></doge>
+<reeve><name>none</name></reeve>
+<sheriff><name>none</name></sheriff>
+</Burgher>
+<Monastic>
+<teutonic><name>chapterhouse</name></teutonic>
+<templar><name>chapterhouse</name></templar>
+<hospitaller><name>chapterhouse</name></hospitaller>
+<lord_abbot><name>cloister</name></lord_abbot>
+<prince_abbot><name>cloister</name></prince_abbot>
+</Monastic>
+<Settlement>
+<metropolis><name>city wall</name></metropolis>
+<city><name>city wall</name></city>
+<town><name>city wall</name></town>
+<village><name>none</name></village>
+</Settlement>
+</Buildings>
