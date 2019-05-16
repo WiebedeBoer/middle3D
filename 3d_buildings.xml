@@ -80,8 +80,8 @@
 <buildset><name>sapphire</name><building>sapphire mine</building><type>mine_plot</type></buildset>
 </Commerce>
 <Armory>
-<buildset><name>smithy</name><building>smithy</building><type>armorer_plaza</type></buildset>
-<buildset><name>armorer</name><building>armorer</building><type>armorer_plaza</type></buildset>
+<buildset><name>smithy</name><building>smithy</building><type>northwest_plaza</type></buildset>
+<buildset><name>armorer</name><building>armorer</building><type>northwest_plaza</type></buildset>
 <buildset><name>shipyard</name><building>shipyard</building><type>port_plaza</type></buildset>
 </Armory>
 <Climate>
@@ -98,15 +98,15 @@
 <buildset><name>mediterranean_woodlands</name><basket>none</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
 </Climate>
 <Feudal>
-<buildset><name>knight</name><building>none</building><type></type></buildset>
-<buildset><name>lord</name><building>none</building><type></type></buildset>
-<buildset><name>baron</name><building>none</building><type></type></buildset>
-<buildset><name>burgrave</name><building>none</building><type></type></buildset>
-<buildset><name>count</name><building>none</building><type></type></buildset>
-<buildset><name>margrave</name><building>none</building><type></type></buildset>
-<buildset><name>duke</name><building>none</building><type></type></buildset>
-<buildset><name>prince</name><building>none</building><type></type></buildset>
-<buildset><name>king</name><building>none</building><type></type></buildset>
+<buildset><name>knight</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>lord</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>baron</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>burgrave</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>count</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>margrave</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>duke</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>prince</name><building>none</building><type>northeast_plaza</type></buildset>
+<buildset><name>king</name><building>none</building><type>northeast_plaza</type></buildset>
 </Feudal>
 <Church>
 <buildset><name>pope</name><building>cathedral</building><type>north_plaza</type></buildset>
@@ -118,11 +118,11 @@
 <buildset><name>priest</name><building>church</building><type></type>north_plaza</buildset>
 </Church>
 <Burgher>
-<buildset><name>lord_mayor</name><building>none</building><type></type></buildset>
-<buildset><name>lord_warden</name><building>none</building><type></type></buildset>
-<buildset><name>doge</name><building>none</building><type></type></buildset>
-<buildset><name>reeve</name><building>none</building><type></type></buildset>
-<buildset><name>sheriff</name><building>none</building><type></type></buildset>
+<buildset><name>lord_mayor</name><building>none</building><type>southwest_plaza</type></buildset>
+<buildset><name>lord_warden</name><building>none</building><type>southwest_plaza</type></buildset>
+<buildset><name>doge</name><building>none</building><type>southwest_plaza</type></buildset>
+<buildset><name>reeve</name><building>none</building><type>southwest_plaza</type></buildset>
+<buildset><name>sheriff</name><building>none</building><type>southwest_plaza</type></buildset>
 </Burgher>
 <Monastic>
 <buildset><name>teutonic</name><building>chapterhouse</building><type>west_plaza</type></buildset>
