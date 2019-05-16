@@ -1,140 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Buildings>
 <Fortification>
-<royal_court><name>court</name></royal_court> 
-<chancery><name>court</name></chancery>
-<mountain_castle><name>castle</name></mountain_castle> 
-<water_castle><name>castle</name></water_castle> 
-<burgh><name>castle</name></burgh>
-<town_hall><name>town hall</name></town_hall> 
-<bishop_palace><name>palace</name></bishop_palace>
-<ducal_residence><name>palace</name></ducal_residence>
-<fortified_abbey><name>abbey</name></fortified_abbey> 
-<abbey_grange><name>abbey</name></abbey_grange>
-<abbey_scriptorium><name>abbey</name></abbey_scriptorium> 
+<buildset><name>royal_court</name><building>court</building><type>wall_section_south_plaza</type></buildset> 
+<buildset><name>chancery</name><building>court</building><type>wall_section_south_plaza</type></buildset>
+<buildset><name>mountain_castle</name><building>castle</building><type>wall_section_main_plaza</type></buildset> 
+<buildset><name>water_castle</name><building>castle</building><type>wall_section_main_plaza</type></buildset> 
+<buildset><name>burgh</name><building>castle</building><type>south_plaza</type></buildset>
+<buildset><name>town_hall</name><building>town hall</building><type>south_plaza</type></buildset> 
+<buildset><name>bishop_palace</name><building>palace</building><type>south_plaza</type></buildset>
+<buildset><name>ducal_residence</name><building>palace</building><type>south_plaza</type></buildset>
+<buildset><name>fortified_abbey</name><building>abbey</building><type>south_plaza</type></buildset> 
+<buildset><name>abbey_grange</name><building>abbey</building><type>south_plaza</type></buildset>
+<buildset><name>abbey_scriptorium</name><building>abbey</building><type>south_plaza</type></buildset> 
 </Fortification>
 <Entertainment>
-<hunt><name>hunting lodge</name></hunt> 
-<falconry><name>falconer</name></falconry> 
-<fair><name>market fair</name></fair> 
-<bazaar><name>bazaar</name></bazaar> 
-<coaching><name>coaching inn</name></coaching>
-<caravan><name>caravaners inn</name></caravan>
-<tavern><name>inn</name></tavern> 
-<minstrel><name>minstrel gallery</name></minstrel>
-<joust><name>tiltyard</name></joust> 
+<buildset><name>hunt</name><building>hunting lodge</building><type>outer_plot</type></buildset> 
+<buildset><name>falconry</name><building>falconer</building><type>outer_plot</type></buildset> 
+<buildset><name>fair</name><building>market fair</building><type>main_plaza</type></buildset> 
+<buildset><name>bazaar</name><building>bazaar</building><type>main_plaza</type></buildset> 
+<buildset><name>coaching</name><building>coaching inn</building><type>main_plaza</type></buildset>
+<buildset><name>caravan</name><building>caravaners inn</building><type>main_plaza</type></buildset>
+<buildset><name>tavern</name><building>inn</building><type>outer_plot</type></buildset> 
+<buildset><name>minstrel</name><building>minstrel gallery</building><type>north_plaza_main_plaza</type></buildset>
+<buildset><name>joust</name><building>tiltyard</building><type>southeast_plaza</type></buildset> 
 </Entertainment>
 <Education>
-<university><name>university</name></university> 
-<library><name>library</name></library>
-<hospice><name>hospice</name></hospice>
+<buildset><name>university</name><building>university</building><type>east_plaza</type></buildset> 
+<buildset><name>library</name><building>library</building><type>east_plaza</type></buildset>
+<buildset><name>hospice</name><building>hospice</building><type>east_plaza</type></buildset>
 </Education>
 <Factory>
-<bookbinder><name>bookbinder</name></bookbinder> 
-<scriptorium><name>scriptorium</name></scriptorium>
-<leather><name>goat farm</name></leather>
-<fuller><name>sheep farm</name></fuller>
-<vintner><name>vineyard</name></vintner>
-<tailor><name>tailor</name></tailor>
-<glasswork><name>glasswork</name></glasswork>
-<potterer><name>potterer</name></potterer>
-<windmill><name>windmill</name></windmill>
-<watermill><name>watermill</name></watermill>
-<granary><name>granary</name></granary>
-<fur><name>furrier</name></fur>
-<fishery><name>fishing port</name></fishery>
-<mint><name>mint</name></mint>
-<frankincense><name>incense shop</name></frankincense>
-<soapmaker><name>soap maker</name></soapmaker>
-<cooper><name>cooper</name></cooper>
-<madder><name>dyeswork</name></madder>
-<woad><name>dyeswork</name></woad>
-<saffron><name>dyeswork</name></saffron>
+<buildset><name>bookbinder</name><building>bookbinder</building><type>east_plaza_main_plaza</type></buildset> 
+<buildset><name>scriptorium</name><building>scriptorium</building><type>east_plaza_main_plaza</type></buildset>
+<buildset><name>leather</name><building>goat farm</building><type>mill_plot</type></buildset>
+<buildset><name>fuller</name><building>sheep farm</building><type>mill_plot</type></buildset>
+<buildset><name>vintner</name><building>vineyard</building><type>mill_plot</type></buildset>
+<buildset><name>tailor</name><building>tailor</building><type>commerce_plaza</type></buildset>
+<buildset><name>glasswork</name><building>glasswork</building><type>commerce_plaza</type></buildset>
+<buildset><name>potterer</name><building>potterer</building><type>commerce_plaza</type></buildset>
+<buildset><name>windmill</name><building>windmill</building><type>mill_plot</type></buildset>
+<buildset><name>watermill</name><building>watermill</building><type>mill_plot</type></buildset>
+<buildset><name>granary</name><building>granary</building><type>commerce_plaza</type></buildset>
+<buildset><name>fur</name><building>furrier</building><type>commerce_plaza</type></buildset>
+<buildset><name>fishery</name><building>fishing port</building><type>port_plaza</type></buildset>
+<buildset><name>mint</name><building>mint</building><type>commerce_plaza</type></buildset>
+<buildset><name>frankincense</name><building>incense shop</building><type>commerce_plaza</type></buildset>
+<buildset><name>soapmaker</name><building>soap maker</building><type>commerce_plaza</type></buildset>
+<buildset><name>cooper</name><building>cooper</building><type>commerce_plaza</type></buildset>
+<buildset><name>madder</name><building>dyeswork</building><type>commerce_plaza</type></buildset>
+<buildset><name>woad</name><building>dyeswork</building><type>commerce_plaza</type></buildset>
+<buildset><name>saffron</name><building>dyeswork</building><type>commerce_plaza</type></buildset>
 </Factory>
 <Riding>
-<stud><name>stud farm</name></stud> 
-<camel><name>camel caravan</name></camel>
+<buildset><name>stud</name><building>stud farm</building><type>outer_plot</type></buildset> 
+<buildset><name>camel</name><building>camel caravan</building><type>outer_plot</type></buildset>
 </Riding>
 <Commerce>
-<grain><name>grain farm</name></grain>
-<flax><name>flax farm</name></flax>
-<dates><name>dates plantation</name></dates>
-<sugar><name>sugar plantation</name></sugar>
-<silk><name>silk plantation</name></silk>
-<pigs><name>pig farm</name></pigs>
-<cheese><name>dairy farm</name></cheese>
-<wool><name>sheep farm</name></wool>
-<poultry><name>sheep farm</name></poultry>
-<fruit><name>orchard</name></fruit>
-<honey><name>beekeeper</name></honey>
-<olive_oil><name>olive grove</name></olive_oil>
-<wine><name>vineyard</name></wine>
-<salt><name>vineyard</name></salt>
-<iron><name>iron mine</name></iron>
-<lead><name>lead mine</name></lead>
-<tine><name>salt mine</name></tin>
-<silver><name>silver mine</name></silver>
-<gold><name>gold mine</name></gold>
-<rubies><name>ruby mine</name></rubies>
-<emeralds><name>emerald mine</name></emeralds>
-<sapphire><name>sapphire mine</name></sapphire>
+<buildset><name>grain</name><building>grain farm</building><type>farm_plot</type></buildset>
+<buildset><name>flax</name><building>flax farm</building><type>farm_plot</type></buildset>
+<buildset><name>dates</name><building>dates plantation</building><type>plantation_plot</type></buildset>
+<buildset><name>sugar</name><building>sugar plantation</building><type>plantation_plot</type></buildset>
+<buildset><name>silk</name><building>silk plantation</building><type></type></buildset>
+<buildset><name>pigs</name><building>pig farm</building><type>farm_plot</type></buildset>
+<buildset><name>cheese</name><building>dairy farm</building><type></type></buildset>
+<buildset><name>wool</name><building>sheep farm</building><type>farm_plot</type></buildset>
+<buildset><name>poultry</name><building>sheep farm</building><type>farm_plot</type></buildset>
+<buildset><name>fruit</name><building>orchard</building><type>farm_plot</type></buildset>
+<buildset><name>honey</name><building>beekeeper</building><type></type></buildset>
+<buildset><name>olive_oil</name><building>olive grove</building><type>farm_plot</type></buildset>
+<buildset><name>wine</name><building>vineyard</building><type>farm_plot</type></buildset>
+<buildset><name>salt</name><building>vineyard</building><type>mine_plot</type></buildset>
+<buildset><name>iron</name><building>iron mine</building><type>mine_plot</type></buildset>
+<buildset><name>lead</name><building>lead mine</building><type>mine_plot</type></buildset>
+<buildset><name>tin</name><building>salt mine</building><type>mine_plot</type></buildset>
+<buildset><name>silver</name><building>silver mine</building><type>mine_plot</type></buildset>
+<buildset><name>gold</name><building>gold mine</building><type>mine_plot</type></buildset>
+<buildset><name>rubies</name><building>ruby mine</building><type>mine_plot</type></buildset>
+<buildset><name>emeralds</name><building>emerald mine</building><type>mine_plot</type></buildset>
+<buildset><name>sapphire</name><building>sapphire mine</building><type>mine_plot</type></buildset>
 </Commerce>
 <Armory>
-<smithy><name>smithy</name></smithy>
-<armorer><name>armorer</name></armorer>
-<shipyard><name>shipyard</name></shipyard>
+<buildset><name>smithy</name><building>smithy</building><type>armorer_plaza</type></buildset>
+<buildset><name>armorer</name><building>armorer</building><type>armorer_plaza</type></buildset>
+<buildset><name>shipyard</name><building>shipyard</building><type>port_plaza</type></buildset>
 </Armory>
 <Climate>
-<temperate_woodlands_marshes><basket>basket weaver</basket><forester>forester hut</forester></temperate_woodlands_marshes>
-<temperate_woodlands><basket>none</basket><forester>forester hut</forester></temperate_woodlands>
-<temperate_grasslands_marshes><basket>basket weaver</basket><forester>none</forester></temperate_grasslands_marshes>
-<temperate_grasslands><basket>none</basket><forester>none</forester></temperate_grasslands>
-<steppe><basket>none</basket><forester>none</forester></steppe>
-<desert_marshes><basket>basket weaver</basket><forester>none</forester></desert_marshes>
-<desert><basket>none</basket><forester>none</forester></desert>
-<mediterranean_shrublands_marshes><basket>basket weaver</basket><forester>none</forester></mediterranean_shrublands_marshes>
-<mediterranean_shrublands><basket>none</basket><forester>none</forester></mediterranean_shrublands>
-<mediterranean_woodlands_marshes><basket>basket weaver</basket><forester>forester hut</forester></mediterranean_woodlands_marshes>
-<mediterranean_woodlands><basket>none</basket><forester>forester hut</forester></mediterranean_woodlands>
+<buildset><name>temperate_woodlands_marshes</name><basket>basket weaver</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
+<buildset><name>temperate_woodlands</name><basket>none</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
+<buildset><name>temperate_grasslands_marshes</name><basket>basket weaver</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>temperate_grasslands</name><basket>none</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>steppe</name><basket>none</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>desert_marshes</name><basket>basket weaver</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>desert</name><basket>none</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>mediterranean_shrublands_marshes</name><basket>basket weaver</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>mediterranean_shrublands</name><basket>none</basket><forester>none</forester><type>outer_plot</type></buildset>
+<buildset><name>mediterranean_woodlands_marshes</name><basket>basket weaver</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
+<buildset><name>mediterranean_woodlands</name><basket>none</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
 </Climate>
 <Feudal>
-<knight><name>none</name></knight>
-<lord><name>none</name></lord>
-<baron><name>none</name></baron>
-<burgrave><name>none</name></burgrave>
-<count><name>none</name></count>
-<margrave><name>none</name></margrave>
-<duke><name>none</name></duke>
-<prince><name>none</name></prince>
-<king><name>none</name></king>
+<buildset><name>knight</name><building>none</building><type></type></buildset>
+<buildset><name>lord</name><building>none</building><type></type></buildset>
+<buildset><name>baron</name><building>none</building><type></type></buildset>
+<buildset><name>burgrave</name><building>none</building><type></type></buildset>
+<buildset><name>count</name><building>none</building><type></type></buildset>
+<buildset><name>margrave</name><building>none</building><type></type></buildset>
+<buildset><name>duke</name><building>none</building><type></type></buildset>
+<buildset><name>prince</name><building>none</building><type></type></buildset>
+<buildset><name>king</name><building>none</building><type></type></buildset>
 </Feudal>
 <Church>
-<pope><name>cathedral</name></pope>
-<patriarch><name>cathedral</name></patriarch>
-<lord_bishop><name>cathedral</name></lord_bishop>
-<prince_bishop><name>cathedral</name></prince_bishop>
-<lord_archbishop><name>cathedral</name></lord_archbishop>
-<prince_archbishop><name>cathedral</name></prince_archbishop>
-<priest><name>church</name></priest>
+<buildset><name>pope</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>patriarch</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>lord_bishop</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>prince-bishop</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>lord_archbishop</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>prince-archbishop</name><building>cathedral</building><type>north_plaza</type></buildset>
+<buildset><name>priest</name><building>church</building><type></type>north_plaza</buildset>
 </Church>
 <Burgher>
-<lord_mayor><name>none</name></lord_mayor>
-<lord_warden><name>none</name></lord_warden>
-<doge><name>none</name></doge>
-<reeve><name>none</name></reeve>
-<sheriff><name>none</name></sheriff>
+<buildset><name>lord_mayor</name><building>none</building><type></type></buildset>
+<buildset><name>lord_warden</name><building>none</building><type></type></buildset>
+<buildset><name>doge</name><building>none</building><type></type></buildset>
+<buildset><name>reeve</name><building>none</building><type></type></buildset>
+<buildset><name>sheriff</name><building>none</building><type></type></buildset>
 </Burgher>
 <Monastic>
-<teutonic><name>chapterhouse</name></teutonic>
-<templar><name>chapterhouse</name></templar>
-<hospitaller><name>chapterhouse</name></hospitaller>
-<lord_abbot><name>cloister</name></lord_abbot>
-<prince_abbot><name>cloister</name></prince_abbot>
+<buildset><name>teutonic</name><building>chapterhouse</building><type>west_plaza</type></buildset>
+<buildset><name>templar</name><building>chapterhouse</building><type>west_plaza</type></buildset>
+<buildset><name>hospitaller</name><building>chapterhouse</building><type>west_plaza</type></buildset>
+<buildset><name>lord_abbot</name><building>cloister</building><type>west_plaza</type></buildset>
+<buildset><name>prince-abbot</name><building>cloister</building><type>west_plaza</type></buildset>
 </Monastic>
 <Settlement>
-<metropolis><name>city wall</name></metropolis>
-<city><name>city wall</name></city>
-<town><name>city wall</name></town>
-<village><name>none</name></village>
+<buildset><name>metropolis</name><building>city wall</building><type>wall_section</type></buildset>
+<buildset><name>city</name><building>city wall</building><type>wall_section</type></buildset>
+<buildset><name>town</name><building>city wall</building><type>wall_section</type></buildset>
+<buildset><name>village</name><building>none</building><type>wall_section</type></buildset>
 </Settlement>
 </Buildings>
