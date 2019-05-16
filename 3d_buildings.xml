@@ -44,7 +44,6 @@
 <buildset><name>fur</name><building>furrier</building><type>commerce_plaza</type></buildset>
 <buildset><name>fishery</name><building>fishing port</building><type>port_plaza</type></buildset>
 <buildset><name>mint</name><building>mint</building><type>commerce_plaza</type></buildset>
-<buildset><name>frankincense</name><building>incense shop</building><type>commerce_plaza</type></buildset>
 <buildset><name>soapmaker</name><building>soap maker</building><type>commerce_plaza</type></buildset>
 <buildset><name>cooper</name><building>cooper</building><type>commerce_plaza</type></buildset>
 <buildset><name>madder</name><building>dyeswork</building><type>commerce_plaza</type></buildset>
@@ -97,6 +96,15 @@
 <buildset><name>mediterranean_woodlands_marshes</name><basket>basket weaver</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
 <buildset><name>mediterranean_woodlands</name><basket>none</basket><forester>forester hut</forester><type>outer_plot</type></buildset>
 </Climate>
+<Herb>
+<buildset><name>hops</name><building>brewer</building><type>commerce_plaza</type></buildset>
+<buildset><name>heather</name><building>herbalist</building><type>outer_plot</type></buildset>
+<buildset><name>cedar</name><building>forester hut</building><type>outer_plot</type></buildset>
+<buildset><name>lavender</name><building>perfumer</building><type>commerce_plaza</type></buildset>
+<buildset><name>elder</name><building>herbalist</building><type>outer_plot</type></buildset>
+<buildset><name>rosemary</name><building>herbalist</building><type>outer_plot</type></buildset>
+<buildset><name>frankincense</name><building>merchant</building><type>commerce_plaza</type></buildset>
+</Herb>
 <Feudal>
 <buildset><name>knight</name><building>none</building><type>northeast_plaza</type></buildset>
 <buildset><name>lord</name><building>none</building><type>northeast_plaza</type></buildset>

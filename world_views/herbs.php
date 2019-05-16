@@ -7,31 +7,7 @@ $placename = $town->place;
 $lon = $town->Point->xc;
 $lat = $town->Point->yc;
 
-$agri_a = $town->capital->com;
-$agri_b = $town->castle->com;
-$agri_c = $town->town->com;
-$agri_d = $town->abbey->com;
-
 $herbs = $town->herb;
-
-$town_a = $town->capital->factory;
-$town_b = $town->castle->factory;
-$town_c = $town->town->factory;
-$town_d = $town->abbey->factory;
-
-if ($agri_a =="olive_oil" || $agri_b =="olive_oil" || $agri_c =="olive_oil" || $agri_d =="olive_oil"){
-$olive_oil ="olive_oil";	
-}
-else {
-$olive_oil ="none";		
-}
-
-if ($town_a =="soapmaker" || $town_b =="soapmaker" || $town_c =="soapmaker" || $town_d =="soapmaker"){
-$soapmaker ="soapmaker";	
-}
-else {
-$soapmaker ="none";		
-}
 
 $stroke_width =0;
 $stroke_color ="rgb(0,0,0)";
@@ -40,36 +16,23 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($herbs =="frankincense"){
+if ($herbs =="heather"){
 $stroke_width++;
 $radius_size--;
 $radius_color ="rgb(192,0,0)";
-$descript ="frankincense";
+$descript ="heather";
 }
-elseif ($herbs =="lavender"){
+elseif ($herbs =="elder"){
 $stroke_width++;
 $radius_size--;
 $radius_color ="rgb(128,0,128)";
-$descript ="lavender";
+$descript ="elder";
 }
-else {
-$stroke_width =$stroke_width;
-$radius_size =$radius_size;
-$stroke_color = $stroke_color;
-$radius_color =$radius_color;
-$descript =$descript;
-}
-
-//tier 2
-if ($olive_oil =="olive_oil"){
+elseif ($herbs =="rosemary"){
 $stroke_width++;
 $radius_size--;
-$stroke_color = $radius_color;
-$radius_color ="rgb(192,192,0)";
-if ($radius_size<7){
-$descript = $descript." and olive oil";}
-else {
-$descript ="olive oil";}
+$radius_color ="rgb(255,255,0)";
+$descript ="rosemary";
 }
 else {
 $stroke_width =$stroke_width;
@@ -78,27 +41,6 @@ $stroke_color = $stroke_color;
 $radius_color =$radius_color;
 $descript =$descript;
 }
-
-//tier 3
-if ($soapmaker =="soapmaker"){
-$stroke_width++;
-$radius_size--;
-$stroke_color = $radius_color;
-$radius_color ="rgb(0,192,192)";
-if ($radius_size<7){
-$descript = $descript." and soap";}
-else {
-$descript ="soap";}
-}
-else {
-$stroke_width =$stroke_width;
-$radius_size =$radius_size;
-$stroke_color = $stroke_color;
-$radius_color =$radius_color;
-$descript =$descript;
-}
-
-
 
 //display
 if ($radius_size ==8){

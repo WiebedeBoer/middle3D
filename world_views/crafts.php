@@ -7,30 +7,23 @@ $placename = $town->place;
 $lon = $town->Point->xc;
 $lat = $town->Point->yc;
 
-$agri_a = $town->capital->com;
-$agri_b = $town->castle->com;
-$agri_c = $town->town->com;
-$agri_d = $town->abbey->com;
-
-$herbs = $town->herb;
-
 $town_a = $town->capital->factory;
 $town_b = $town->castle->factory;
 $town_c = $town->town->factory;
 $town_d = $town->abbey->factory;
 
-if ($agri_a =="olive_oil" || $agri_b =="olive_oil" || $agri_c =="olive_oil" || $agri_d =="olive_oil"){
-$olive_oil ="olive_oil";	
+if ($town_a =="potterer" || $town_b =="potterer" || $town_c =="potterer" || $town_d =="potterer"){
+$potterer ="potterer";	
 }
 else {
-$olive_oil ="none";		
+$potterer ="none";		
 }
 
-if ($town_a =="soapmaker" || $town_b =="soapmaker" || $town_c =="soapmaker" || $town_d =="soapmaker"){
-$soapmaker ="soapmaker";	
+if ($town_a =="glasswork" || $town_b =="glasswork" || $town_c =="glasswork" || $town_d =="glasswork"){
+$glasswork ="glasswork";	
 }
 else {
-$soapmaker ="none";		
+$glasswork ="none";		
 }
 
 $stroke_width =0;
@@ -40,17 +33,11 @@ $radius_color ="rgb(0,0,0)";
 $descript =" ";
 
 //tier 1
-if ($herbs =="frankincense"){
+if ($potterer =="potterer"){
 $stroke_width++;
 $radius_size--;
-$radius_color ="rgb(192,0,0)";
-$descript ="frankincense";
-}
-elseif ($herbs =="lavender"){
-$stroke_width++;
-$radius_size--;
-$radius_color ="rgb(128,0,128)";
-$descript ="lavender";
+$radius_color ="rgb(192,64,0)";
+$descript ="pottery";
 }
 else {
 $stroke_width =$stroke_width;
@@ -61,15 +48,15 @@ $descript =$descript;
 }
 
 //tier 2
-if ($olive_oil =="olive_oil"){
+if ($glasswork =="glasswork"){
 $stroke_width++;
 $radius_size--;
 $stroke_color = $radius_color;
-$radius_color ="rgb(192,192,0)";
+$radius_color ="rgb(192,192,192)";
 if ($radius_size<7){
-$descript = $descript." and olive oil";}
+$descript = $descript." and glass";}
 else {
-$descript ="olive oil";}
+$descript ="glass";}
 }
 else {
 $stroke_width =$stroke_width;
@@ -79,24 +66,7 @@ $radius_color =$radius_color;
 $descript =$descript;
 }
 
-//tier 3
-if ($soapmaker =="soapmaker"){
-$stroke_width++;
-$radius_size--;
-$stroke_color = $radius_color;
-$radius_color ="rgb(0,192,192)";
-if ($radius_size<7){
-$descript = $descript." and soap";}
-else {
-$descript ="soap";}
-}
-else {
-$stroke_width =$stroke_width;
-$radius_size =$radius_size;
-$stroke_color = $stroke_color;
-$radius_color =$radius_color;
-$descript =$descript;
-}
+
 
 
 
