@@ -10,13 +10,23 @@
 <!--climate and regions-->
 <script src="openregions.js"></script>
 <!--buildings and fields-->
+<script src="buildings/farm_maker.js"></script>
+<script src="buildings/house_maker.js"></script>
+<script src="buildings/field_maker.js"></script>
+<script src="buildings/forest.js"></script>
+<script src="buildings/barn.js"></script>
+<script src="buildings/beehive.js"></script>
+<script src="buildings/mountain.js"></script>
+<script src="buildings/metal.js"></script>
+<script src="buildings/villa.js"></script>
 <!--props-->
+<script src="props/fence.js"></script>
 <script src="props/scroll.js"></script>
 <!--environment: plane en skybox-->
 <script src="environment/villePlane.js"></script>
 <script src="environment/Skybox.js"></script>
 <!--lighting-->
-
+<script src="lighting/BarracksLight.js"></script>
 <!--animals-->
 <script src="animals/chicken.js"></script>
 <script src="animals/rooster.js"></script>
@@ -25,7 +35,6 @@
 <script src="animals/donkey.js"></script>
 <script src="animals/cow.js"></script>
 <script src="animals/goat.js"></script>
-<script src="animals/pig.js"></script>
 <script src="animals/sheep.js"></script>
 <script src="animals/horse.js"></script>
 <script src="animals/camel.js"></script>
@@ -90,43 +99,56 @@ var propTypes = [];
 //no show menu
 var gamestart = document.getElementById("menu");
 gamestart.style.display = "none";
-//page url for villa type
+//page url for region type
 var urlParams = new URLSearchParams(location.search);
-var actid = urlParams.get('villa');
-var urlid = actid -1;
-var province,climate,horse,cattle,sheep,pig,fish,poultry;
-var grain,vine,oil,pottery,timber,honey,fruit;
-var tin,copper,iron,gold,silver;
-var paper,seasoning,scent,carving,fabrics,glass;
-if (urlid >=1 && urlid <=66){
-        var uprovince = xprov[urlid].getElementsByTagName("province")[0].childNodes[0].nodeValue;
+var actid = urlParams.get('region');
+var urlid = actid - 1;
+var province,climate,horse,cattle,sheep,goat,herb,entertainment,deposit;
+//var grain,vine,oil,pottery,timber,honey,fruit;
+//var tin,copper,iron,gold,silver;
+//var paper,seasoning,scent,carving,fabrics,glass;
+if (actid >=1 && actid <=260){
+        var uprovince = xprov[urlid].getElementsByTagName("place")[0].childNodes[0].nodeValue;
         province = uprovince.replace("_", " ");
         climate = xprov[urlid].getElementsByTagName("climate")[0].childNodes[0].nodeValue;
-        //resources
-        horse = xprov[urlid].getElementsByTagName("horse")[0].childNodes[0].nodeValue;
-        cattle = xprov[urlid].getElementsByTagName("cattle")[0].childNodes[0].nodeValue;
+		culture = xprov[urlid].getElementsByTagName("culture")[0].childNodes[0].nodeValue;
+		entertainment = xprov[urlid].getElementsByTagName("style")[0].childNodes[0].nodeValue;
+        //reional resources
+        horse = xprov[urlid].getElementsByTagName("ride")[0].childNodes[0].nodeValue;
+		herb = xprov[urlid].getElementsByTagName("herb")[0].childNodes[0].nodeValue;
+		//regional animal types
+		cattle = xprov[urlid].getElementsByTagName("cattle")[0].childNodes[0].nodeValue;
         sheep = xprov[urlid].getElementsByTagName("sheep")[0].childNodes[0].nodeValue;
-        pig = xprov[urlid].getElementsByTagName("pig")[0].childNodes[0].nodeValue;
-        fish = xprov[urlid].getElementsByTagName("fish")[0].childNodes[0].nodeValue;
-        poultry = xprov[urlid].getElementsByTagName("poultry")[0].childNodes[0].nodeValue;
-        grain = xprov[urlid].getElementsByTagName("grain")[0].childNodes[0].nodeValue;
-        vine = xprov[urlid].getElementsByTagName("vine")[0].childNodes[0].nodeValue;
-        pottery = xprov[urlid].getElementsByTagName("pottery")[0].childNodes[0].nodeValue;
-        timber = xprov[urlid].getElementsByTagName("timber")[0].childNodes[0].nodeValue;
-        honey = xprov[urlid].getElementsByTagName("honey")[0].childNodes[0].nodeValue; 
-        fruit = xprov[urlid].getElementsByTagName("fruit")[0].childNodes[0].nodeValue;       
-        tin = xprov[urlid].getElementsByTagName("tin")[0].childNodes[0].nodeValue;
-        copper = xprov[urlid].getElementsByTagName("copper")[0].childNodes[0].nodeValue;
-        iron = xprov[urlid].getElementsByTagName("iron")[0].childNodes[0].nodeValue;
-        gold = xprov[urlid].getElementsByTagName("gold")[0].childNodes[0].nodeValue;
-        silver = xprov[urlid].getElementsByTagName("silver")[0].childNodes[0].nodeValue;
-        paper = xprov[urlid].getElementsByTagName("paper")[0].childNodes[0].nodeValue;
-        seasoning = xprov[urlid].getElementsByTagName("seasoning")[0].childNodes[0].nodeValue;
-        scent = xprov[urlid].getElementsByTagName("scent")[0].childNodes[0].nodeValue;
-        carving = xprov[urlid].getElementsByTagName("sculpt")[0].childNodes[0].nodeValue;
-        fabrics = xprov[urlid].getElementsByTagName("fabric")[0].childNodes[0].nodeValue;
-        glass = xprov[urlid].getElementsByTagName("glass")[0].childNodes[0].nodeValue; 
-        dye = xprov[urlid].getElementsByTagName("dye")[0].childNodes[0].nodeValue;             
+        goat = xprov[urlid].getElementsByTagName("goat")[0].childNodes[0].nodeValue;
+		//settlement resources
+		commerceCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("com")[0].childNodes[0].nodeValue;
+		factoryCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("factory")[0].childNodes[0].nodeValue;
+		armorerCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("arms")[0].childNodes[0].nodeValue;
+		commerceCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("com")[0].childNodes[0].nodeValue;
+		factoryCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("factory")[0].childNodes[0].nodeValue;
+		armorerCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("arms")[0].childNodes[0].nodeValue;
+		commerceTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("com")[0].childNodes[0].nodeValue;
+		factoryTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("factory")[0].childNodes[0].nodeValue;
+		armorerTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("arms")[0].childNodes[0].nodeValue;
+		commerceAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("com")[0].childNodes[0].nodeValue;
+		factoryAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("factory")[0].childNodes[0].nodeValue;
+		armorerAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("arms")[0].childNodes[0].nodeValue;
+		//settlement buildings
+        feudalCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
+		churchCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
+		civilCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
+		monasticCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
+		educationCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
+		feudalCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
+		churchCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
+		civilCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
+		monasticCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
+		educationCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
+		feudalCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
+		churchCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
+		civilCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
+		monasticCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
+		educationCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
 }
 else {
         window.location.assign("index.html")
@@ -156,7 +178,7 @@ camera.position.x = -21;
 //environment
 var environmentsize = 2800;
 //plane
-if(climate =="desert"){
+if(climate =="desert" || climate =="desert_marshes"){
         var planeroad = new Plane(environmentsize,environmentsize,"ground7");
         scene.add(planeroad);  
 }
@@ -170,6 +192,74 @@ scene.add( skyBox );
 //lighting 
 barracksLighter();
 //fields and buildings and props and people, x5, z5
+
+//OUTER PLOTS
+//forest and forester hut
+if (climate =="temperate_woodlands" || climate =="mediterranean_woodlands"){
+FarmMaker("forest",60,-30);
+}
+//forest and forester hut and basket weaver
+else if (climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes"){
+FarmMaker("forest",60,-30);
+}
+//basket weaver
+else if (climate =="desert_marshes" || climate =="mediterranean_shrublands_marshes"){
+FarmMaker("forest",60,-30);
+}
+//stud farm
+if (horse =="stud"){
+}
+//camel caravan
+else if(horse =="camel"){
+}
+
+//CAPITAL PLOTS
+//mine
+if (commerceCapital =="sapphire" || commerceCapital =="rubies" || commerceCapital =="emeralds" || commerceCapital =="salt" || commerceCapital =="tin" || commerceCapital =="lead" || commerceCapital =="iron" || commerceCapital =="gold" || commerceCapital =="silver"){
+    FarmMaker("capitalmine",-840,-30);	
+}
+//farm
+else if (commerceCapital =="grain" || commerceCapital =="flax" || commerceCapital =="pigs" || commerceCapital =="cheese" || commerceCapital =="wool" || commerceCapital =="poultry" || commerceCapital =="fruit" || commerceCapital =="honey" || commerceCapital =="olive_oil" || commerceCapital =="wine"){
+}
+//plantation
+else if (commerceCapital =="dates" || commerceCapital =="sugar"){
+}
+
+//CASTLE PLOTS
+//mine
+if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
+    FarmMaker("townmine",60,-930);	
+}
+//farm
+else if (commerceCastle =="grain" || commerceCastle =="flax" || commerceCastle =="pigs" || commerceCastle =="cheese" || commerceCastle =="wool" || commerceCastle =="poultry" || commerceCastle =="fruit" || commerceCastle =="honey" || commerceCastle =="olive_oil" || commerceCastle =="wine"){
+}
+//plantation
+else if (commerceCastle =="dates" || commerceCastle =="sugar"){
+}
+
+//TOWN PLOTS
+//mine
+if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
+    FarmMaker("townmine",60,870);	
+}
+//farm
+else if (commerceTown =="grain" || commerceTown =="flax" || commerceTown =="pigs" || commerceTown =="cheese" || commerceTown =="wool" || commerceTown =="poultry" || commerceTown =="fruit" || commerceTown =="honey" || commerceTown =="olive_oil" || commerceTown =="wine"){
+}
+//plantation
+else if (commerceTown =="dates" || commerceTown =="sugar"){
+}
+
+//ABBEY PLOTS
+//mine
+if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="emeralds" || commerceAbbey =="salt" || commerceAbbey =="tin" || commerceAbbey =="lead" || commerceAbbey =="iron" || commerceAbbey =="gold" || commerceAbbey =="silver"){
+    FarmMaker("townmine",960,-30);	
+}
+//farm
+else if (commerceAbbey =="grain" || commerceAbbey =="flax" || commerceAbbey =="pigs" || commerceAbbey =="cheese" || commerceAbbey =="wool" || commerceAbbey =="poultry" || commerceAbbey =="fruit" || commerceAbbey =="honey" || commerceAbbey =="olive_oil" || commerceAbbey =="wine"){
+}
+//plantation
+else if (commerceAbbey =="dates" || commerceAbbey =="sugar"){
+}
 
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
@@ -218,6 +308,7 @@ var collisionZ;
 appendCoin();
 appendItem();
 //onload loop
+
 function GameLoop(){
         //update function
         updateFcts.push(function(delta,now){
@@ -236,6 +327,7 @@ function GameLoop(){
                 soundGathering();
         })
         
+
         //loop runner
         var lastTimeMsec= null
         requestAnimationFrame(function animate(nowMsec){
@@ -250,6 +342,7 @@ function GameLoop(){
                         updateFn(deltaMsec/1000, nowMsec/1000)
                 })
         })
+		
 }
 function newDoc() {
     window.location.assign("map.html")

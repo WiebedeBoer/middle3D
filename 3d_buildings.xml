@@ -59,13 +59,13 @@
 <buildset><name>flax</name><building>flax farm</building><type>farm_plot</type></buildset>
 <buildset><name>dates</name><building>dates plantation</building><type>plantation_plot</type></buildset>
 <buildset><name>sugar</name><building>sugar plantation</building><type>plantation_plot</type></buildset>
-<buildset><name>silk</name><building>silk plantation</building><type></type></buildset>
+<buildset><name>silk</name><building>silk plantation</building><type>commerce_plaza</type></buildset>
 <buildset><name>pigs</name><building>pig farm</building><type>farm_plot</type></buildset>
-<buildset><name>cheese</name><building>dairy farm</building><type></type></buildset>
+<buildset><name>cheese</name><building>dairy farm</building><type>farm_plot</type></buildset>
 <buildset><name>wool</name><building>sheep farm</building><type>farm_plot</type></buildset>
-<buildset><name>poultry</name><building>sheep farm</building><type>farm_plot</type></buildset>
+<buildset><name>poultry</name><building>chicken farm</building><type>farm_plot</type></buildset>
 <buildset><name>fruit</name><building>orchard</building><type>farm_plot</type></buildset>
-<buildset><name>honey</name><building>beekeeper</building><type></type></buildset>
+<buildset><name>honey</name><building>beekeeper</building><type>farm_plot</type></buildset>
 <buildset><name>olive_oil</name><building>olive grove</building><type>farm_plot</type></buildset>
 <buildset><name>wine</name><building>vineyard</building><type>farm_plot</type></buildset>
 <buildset><name>salt</name><building>vineyard</building><type>mine_plot</type></buildset>
