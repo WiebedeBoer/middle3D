@@ -12,6 +12,7 @@
 <buildset><name>fortified_abbey</name><building>abbey</building><type>south_plaza</type></buildset> 
 <buildset><name>abbey_grange</name><building>abbey</building><type>south_plaza</type></buildset>
 <buildset><name>abbey_scriptorium</name><building>abbey</building><type>south_plaza</type></buildset> 
+<buildset><name>roadside_inn</name><building>inn</building><type>south_plaza</type></buildset> 
 </Fortification>
 <Entertainment>
 <buildset><name>hunt</name><building>hunting lodge</building><type>outer_plot</type></buildset> 
