@@ -10,6 +10,7 @@
 <!--climate and regions-->
 <script src="openregions.js"></script>
 <!--buildings and fields-->
+<script src="buildings/towns_maker.js"></script>
 <script src="buildings/farm_maker.js"></script>
 <script src="buildings/house_maker.js"></script>
 <script src="buildings/field_maker.js"></script>
@@ -133,22 +134,40 @@ if (actid >=1 && actid <=260){
 		commerceAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("com")[0].childNodes[0].nodeValue;
 		factoryAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("factory")[0].childNodes[0].nodeValue;
 		armorerAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("arms")[0].childNodes[0].nodeValue;
+		//settlement size
+		popCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("pop")[0].childNodes[0].nodeValue;
+		popCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("pop")[0].childNodes[0].nodeValue;
+		popTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("pop")[0].childNodes[0].nodeValue;
+		popAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("pop")[0].childNodes[0].nodeValue;
+		//fortification
+		fortCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("fort")[0].childNodes[0].nodeValue;
+		fortCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("fort")[0].childNodes[0].nodeValue;
+		fortTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("fort")[0].childNodes[0].nodeValue;
+		fortAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("fort")[0].childNodes[0].nodeValue;
 		//settlement buildings
         feudalCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
 		churchCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
 		civilCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
 		monasticCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
 		educationCapital = xprov[urlid].getElementsByTagName("capital")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
+		
 		feudalCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
 		churchCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
 		civilCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
 		monasticCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
 		educationCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
-		feudalCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
-		churchCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
-		civilCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
-		monasticCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
-		educationCastle = xprov[urlid].getElementsByTagName("castle")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
+		
+		feudalTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
+		churchTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
+		civilTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
+		monasticTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
+		educationTown = xprov[urlid].getElementsByTagName("town")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
+		
+		feudalAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("feudal")[0].childNodes[0].nodeValue;
+		churchAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("church")[0].childNodes[0].nodeValue;
+		civilAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("civil")[0].childNodes[0].nodeValue;
+		monasticAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("monastic")[0].childNodes[0].nodeValue;
+		educationAbbey = xprov[urlid].getElementsByTagName("abbey")[0].getElementsByTagName("edu")[0].childNodes[0].nodeValue;
 }
 else {
         window.location.assign("index.html")
@@ -192,75 +211,7 @@ scene.add( skyBox );
 //lighting 
 barracksLighter();
 //fields and buildings and props and people, x5, z5
-
-//OUTER PLOTS
-//forest and forester hut
-if (climate =="temperate_woodlands" || climate =="mediterranean_woodlands"){
-FarmMaker("forest",60,-30);
-}
-//forest and forester hut and basket weaver
-else if (climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes"){
-FarmMaker("forest",60,-30);
-}
-//basket weaver
-else if (climate =="desert_marshes" || climate =="mediterranean_shrublands_marshes"){
-FarmMaker("forest",60,-30);
-}
-//stud farm
-if (horse =="stud"){
-}
-//camel caravan
-else if(horse =="camel"){
-}
-
-//CAPITAL PLOTS
-//mine
-if (commerceCapital =="sapphire" || commerceCapital =="rubies" || commerceCapital =="emeralds" || commerceCapital =="salt" || commerceCapital =="tin" || commerceCapital =="lead" || commerceCapital =="iron" || commerceCapital =="gold" || commerceCapital =="silver"){
-    FarmMaker("capitalmine",-840,-30);	
-}
-//farm
-else if (commerceCapital =="grain" || commerceCapital =="flax" || commerceCapital =="pigs" || commerceCapital =="cheese" || commerceCapital =="wool" || commerceCapital =="poultry" || commerceCapital =="fruit" || commerceCapital =="honey" || commerceCapital =="olive_oil" || commerceCapital =="wine"){
-}
-//plantation
-else if (commerceCapital =="dates" || commerceCapital =="sugar"){
-}
-
-//CASTLE PLOTS
-//mine
-if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
-    FarmMaker("townmine",60,-930);	
-}
-//farm
-else if (commerceCastle =="grain" || commerceCastle =="flax" || commerceCastle =="pigs" || commerceCastle =="cheese" || commerceCastle =="wool" || commerceCastle =="poultry" || commerceCastle =="fruit" || commerceCastle =="honey" || commerceCastle =="olive_oil" || commerceCastle =="wine"){
-}
-//plantation
-else if (commerceCastle =="dates" || commerceCastle =="sugar"){
-}
-
-//TOWN PLOTS
-//mine
-if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
-    FarmMaker("townmine",60,870);	
-}
-//farm
-else if (commerceTown =="grain" || commerceTown =="flax" || commerceTown =="pigs" || commerceTown =="cheese" || commerceTown =="wool" || commerceTown =="poultry" || commerceTown =="fruit" || commerceTown =="honey" || commerceTown =="olive_oil" || commerceTown =="wine"){
-}
-//plantation
-else if (commerceTown =="dates" || commerceTown =="sugar"){
-}
-
-//ABBEY PLOTS
-//mine
-if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="emeralds" || commerceAbbey =="salt" || commerceAbbey =="tin" || commerceAbbey =="lead" || commerceAbbey =="iron" || commerceAbbey =="gold" || commerceAbbey =="silver"){
-    FarmMaker("townmine",960,-30);	
-}
-//farm
-else if (commerceAbbey =="grain" || commerceAbbey =="flax" || commerceAbbey =="pigs" || commerceAbbey =="cheese" || commerceAbbey =="wool" || commerceAbbey =="poultry" || commerceAbbey =="fruit" || commerceAbbey =="honey" || commerceAbbey =="olive_oil" || commerceAbbey =="wine"){
-}
-//plantation
-else if (commerceAbbey =="dates" || commerceAbbey =="sugar"){
-}
-
+townsMaker();
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:false } );
