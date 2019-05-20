@@ -1,11 +1,30 @@
-function townsMaker(){
+//CENTER
+function centerMaker(xTown,yTown){
 	
-//x1 y1 450x450
+//x6 y5 450x450, woodland and forester hut
+if (climate =="temperate_woodlands" || climate =="mediterranean_woodlands" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes"){
+FarmMaker("forester",60,-30);
+}
 
-//x2 y1 450x450
+//x6 y6 450x450, start position
+	
+//x7 y6 450x450, shrubland and basket weaver
+if (climate =="temperate_grasslands_marshes" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes" || climate =="mediterranean_shrublands_marshes" || climate =="desert_marshes"){
+FarmMaker("basketweaver",60,-30);
+}
 
-//x3 y1 450x450
+//x6 y7 450x450, stud farm or camel caravan
+if (horse =="stud"){
+}
+else if(horse =="camel"){
+}
+	
+}
 
+
+//CAPITAL TOWN
+function capitalMaker(xTown,yTown){
+	
 //x4 y1 450x450, capital mill
 if (factoryCapital =="fuller" || factoryCapital =="vintner" || factoryCapital =="windmill" || factoryCapital =="watermill"){
 }
@@ -48,24 +67,6 @@ if (churchCapital =="priest"){
 //cathedral
 else {	
 }
-	
-//x7 y1 450x450
-
-//x8 y1 450x450
-
-//x9 y1 450x450
-
-//x10 y1 450x450
-
-//x11 y1 450x450	
-	
-	
-	
-//x1 y2 450x450
-
-//x2 y2 450x450
-
-//x3 y2 450x450
 
 //x4 y2 450x450, capital port
 if (factoryCapital =="fishery" || armorerCapital =="shipyard"){
@@ -115,26 +116,6 @@ if (fortCapital !="fortified_abbey" && fortCapital !="abbey_grange" && fortCapit
 	}
 }
 
-//x8 y2 450x450
-
-//x9 y2 450x450
-
-//x10 y2 450x450
-
-//x11 y2 450x450		
-	
-	
-	
-//x1 y3 450x450
-
-//x2 y3 450x450
-
-//x3 y3 450x450
-
-//x4 y3 450x450
-
-//x5 y3 450x450
-
 //x6 y3 450x450, capital palace
 if (fortCapital =="royal_court" || fortCapital =="chancery"){
 }
@@ -148,29 +129,6 @@ if (churchCapital !="priest"){
 else {
 }	
 }
-	
-//x7 y3 450x450
-
-//x8 y3 450x450
-
-//x9 y3 450x450
-
-//x10 y3 450x450
-
-//x11 y3 450x450	
-
-
-//x1 y4 450x450, castle mill
-if (factoryCastle =="fuller" || factoryCastle =="vintner" || factoryCastle =="windmill" || factoryCastle =="watermill"){
-}
-
-//x2 y4 450x450, castle port
-if (factoryCastle =="fishery" || armorerCastle =="shipyard"){
-}
-
-//x3 y4 450x450
-
-//x4 y4 450x450
 
 //x5 y4 450x450, capital mine
 if (commerceCapital =="sapphire" || commerceCapital =="rubies" || commerceCapital =="emeralds" || commerceCapital =="salt" || commerceCapital =="tin" || commerceCapital =="lead" || commerceCapital =="iron" || commerceCapital =="gold" || commerceCapital =="silver"){
@@ -184,16 +142,11 @@ if (commerceCapital =="grain" || commerceCapital =="flax" || commerceCapital =="
 //x7 y4 450x450, capital plantation
 if (commerceCapital =="dates" || commerceCapital =="sugar"){
 }
+	
+}
 
-//x8 y4 450x450
-
-//x9 y4 450x450
-
-//x10 y4 450x450
-
-//x11 y4 450x450	
-
-
+//CASTLE TOWN
+function castleMaker(xTown,yTown){
 
 //x1 y5 450x450, castle factories
 //tailor
@@ -240,63 +193,13 @@ else {
 if (commerceCastle =="dates" || commerceCastle =="sugar"){
 }
 
-//x5 y5 450x450
-
-//x6 y5 450x450, woodland and forester hut
-if (climate =="temperate_woodlands" || climate =="mediterranean_woodlands" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes"){
-FarmMaker("forester",60,-30);
-}
-	
-//x7 y5 450x450
-
-//x8 y5 450x450, town mine
-if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
-FarmMaker("townmine",60,870);	
+//x1 y4 450x450, castle mill
+if (factoryCastle =="fuller" || factoryCastle =="vintner" || factoryCastle =="windmill" || factoryCastle =="watermill"){
 }
 
-//x9 y5 450x450, town factories
-//tailor
-if (factoryTown =="tailor"){
+//x2 y4 450x450, castle port
+if (factoryCastle =="fishery" || armorerCastle =="shipyard"){
 }
-//glasswork
-else if (factoryTown =="glasswork"){
-}
-//potterer
-else if (factoryTown =="potterer"){
-}
-//granary
-else if (factoryTown =="granary"){
-}
-//furrier
-else if (factoryTown =="fur"){
-}
-//mint
-else if (factoryTown =="mint"){
-}
-//soap maker
-else if (factoryTown =="soapmaker"){
-}
-//cooper
-else if (factoryTown =="cooper"){
-}
-//dyeswork
-else if (factoryTown =="madder" || factoryTown =="woad" || factoryTown =="saffron"){
-}
-else {	
-}
-
-//x10 y5 450x450, town church
-//church
-if (churchTown =="priest"){
-}
-//cathedral
-else {	
-}
-
-//x11 y5 450x450	
-
-
-
 
 //x1 y6 450x450, castle hall
 if (fortCastle =="town_hall"){
@@ -346,13 +249,73 @@ if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle 
 if (commerceCastle =="grain" || commerceCastle =="flax" || commerceCastle =="pigs" || commerceCastle =="cheese" || commerceCastle =="wool" || commerceCastle =="poultry" || commerceCastle =="fruit" || commerceCastle =="honey" || commerceCastle =="olive_oil" || commerceCastle =="wine"){
 }
 
-//x5 y6 450x450
+//x2 y7 450x450, castle palace
+if (fortCastle =="royal_court" || fortCastle =="chancery"){
+}
+else if (fortCastle =="bishop_palace"){
+}
+else if (fortCastle =="ducal_residence"){
+}
+else {	
+if (churchCastle !="priest"){
+}
+else {
+}
+}
 
-//x6 y6 450x450, start position
+//x4 y7 450x450, castle mine
+if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
+FarmMaker("townmine",60,-930);	
+}
+
+
+}
+
+//TOWN TOWN
+function townMaker(xTown,yTown){
 	
-//x7 y6 450x450, shrubland and basket weaver
-if (climate =="temperate_grasslands_marshes" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes" || climate =="mediterranean_shrublands_marshes" || climate =="desert_marshes"){
-FarmMaker("basketweaver",60,-30);
+//x8 y5 450x450, town mine
+if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
+FarmMaker("townmine",60,870);	
+}
+
+//x9 y5 450x450, town factories
+//tailor
+if (factoryTown =="tailor"){
+}
+//glasswork
+else if (factoryTown =="glasswork"){
+}
+//potterer
+else if (factoryTown =="potterer"){
+}
+//granary
+else if (factoryTown =="granary"){
+}
+//furrier
+else if (factoryTown =="fur"){
+}
+//mint
+else if (factoryTown =="mint"){
+}
+//soap maker
+else if (factoryTown =="soapmaker"){
+}
+//cooper
+else if (factoryTown =="cooper"){
+}
+//dyeswork
+else if (factoryTown =="madder" || factoryTown =="woad" || factoryTown =="saffron"){
+}
+else {	
+}
+
+//x10 y5 450x450, town church
+//church
+if (churchTown =="priest"){
+}
+//cathedral
+else {	
 }
 
 //x8 y6 450x450, town farm
@@ -401,43 +364,7 @@ if (fortTown !="fortified_abbey" && fortTown !="abbey_grange" && fortTown !="abb
 	}
 	else {
 	}
-}	
-
-
-
-
-//x1 y7 450x450
-
-//x2 y7 450x450, castle palace
-if (fortCastle =="royal_court" || fortCastle =="chancery"){
 }
-else if (fortCastle =="bishop_palace"){
-}
-else if (fortCastle =="ducal_residence"){
-}
-else {	
-if (churchCastle !="priest"){
-}
-else {
-}
-}
-
-//x3 y7 450x450
-
-//x4 y7 450x450, castle mine
-if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
-FarmMaker("townmine",60,-930);	
-}
-
-//x5 y7 450x450
-
-//x6 y7 450x450, stud farm or camel caravan
-if (horse =="stud"){
-}
-else if(horse =="camel"){
-}
-	
-//x7 y7 450x450
 
 //x8 y7 450x450, town plantation
 if (commerceTown =="dates" || commerceTown =="sugar"){
@@ -459,18 +386,20 @@ else {
 }	
 }
 
-//x11 y7 450x450	
+//x10 y8 450x450, town port
+if (factoryTown =="fishery" || armorerTown =="shipyard"){
+}
+
+//x11 y8 450x450, town mill
+if (factoryTown =="fuller" || factoryTown =="vintner" || factoryTown =="windmill" || factoryTown =="watermill"){
+}	
+
 	
+}
+
+//ABBEY TOWN
+function abbeyMaker(xTown,yTown){
 	
-	
-//x1 y8 450x450
-
-//x2 y8 450x450
-
-//x3 y8 450x450
-
-//x4 y8 450x450
-
 //x5 y8 450x450, abbey mine
 if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="emeralds" || commerceAbbey =="salt" || commerceAbbey =="tin" || commerceAbbey =="lead" || commerceAbbey =="iron" || commerceAbbey =="gold" || commerceAbbey =="silver"){
     FarmMaker("townmine",960,-30);	
@@ -485,29 +414,6 @@ if (commerceAbbey =="dates"){
 }
 else if(commerceAbbey =="sugar"){
 }
-
-//x8 y8 450x450
-
-//x9 y8 450x450
-
-//x10 y8 450x450, town port
-if (factoryTown =="fishery" || armorerTown =="shipyard"){
-}
-
-//x11 y8 450x450, town mill
-if (factoryTown =="fuller" || factoryTown =="vintner" || factoryTown =="windmill" || factoryTown =="watermill"){
-}	
-
-
-
-
-//x1 y9 450x450
-
-//x2 y9 450x450
-
-//x3 y9 450x450
-
-//x4 y9 450x450
 
 //x5 y9 450x450, abbey factories
 //tailor
@@ -547,27 +453,6 @@ if (churchAbbey =="priest"){
 //cathedral
 else {	
 }
-	
-//x7 y9 450x450
-
-//x8 y9 450x450
-
-//x9 y9 450x450
-
-//x10 y9 450x450
-
-//x11 y9 450x450	
-
-
-
-
-//x1 y10 450x450
-
-//x2 y10 450x450
-
-//x3 y10 450x450
-
-//x4 y10 450x450
 
 //x5 y10 450x450, abbey hall
 if (fortAbbey =="town_hall"){
@@ -594,31 +479,10 @@ else if (fortAbbey =="roadside_inn"){
 //market plaza
 else {	
 }
-	
-//x7 y10 450x450
 
 //x8 y10 450x450, abbey port
 if (factoryAbbey =="fishery" || armorerAbbey =="shipyard"){
 }
-
-//x9 y10 450x450
-
-//x10 y10 450x450
-
-//x11 y10 450x450	
-
-
-
-
-//x1 y11 450x450
-
-//x2 y11 450x450
-
-//x3 y11 450x450
-
-//x4 y11 450x450
-
-//x5 y11 450x450
 
 //x6 y11 450x450, abbey palace
 if (fortAbbey =="royal_court" || fortAbbey =="chancery"){
@@ -633,19 +497,9 @@ if (churchAbbey !="priest"){
 else {
 }	
 }
-	
-//x7 y11 450x450
 
 //x8 y11 450x450, abbey mill
 if (factoryAbbey =="fuller" || factoryAbbey =="vintner" || factoryAbbey =="windmill" || factoryAbbey =="watermill"){
-}	
-
-//x9 y11 450x450
-
-//x10 y11 450x450
-
-//x11 y11 450x450	
-	
-	
+}
 	
 }
