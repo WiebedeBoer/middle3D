@@ -3,7 +3,7 @@ class Goat extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("goat/","Goat.obj","goat/","Goat.mtl", (mesh) => {
+        loadOBJModel("animals/goat/","Goat.obj","animals/goat/","Goat.mtl", (mesh) => {
             mesh.scale.x = 1.3;
             mesh.scale.y = 1.3;
             mesh.scale.z = 1.3;

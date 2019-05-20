@@ -3,7 +3,7 @@ class Camel extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("dromedary/","DromedaryCamels.obj","dromedary/","DromedaryCamels.mtl", (mesh) => {
+        loadOBJModel("animals/dromedary/","DromedaryCamels.obj","animals/dromedary/","DromedaryCamels.mtl", (mesh) => {
             mesh.scale.x = 1.7;
             mesh.scale.y = 1.7;
             mesh.scale.z = 1.7;

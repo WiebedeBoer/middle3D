@@ -1,14 +1,14 @@
-class Donkey extends THREE.Group {
+class Pig extends THREE.Group {
 
     init (){
 
         var dChurch = this;
-        loadOBJModel("animals/donkey/","Donkey.obj","animals/donkey/","Donkey.mtl", (mesh) => {
-            mesh.scale.x = 1.3;
-            mesh.scale.y = 1.3;
-            mesh.scale.z = 1.3;
+        loadOBJModel("animals/pig/","Mesh_Pig.obj","animals/pig/","Mesh_Pig.mtl", (mesh) => {
+            mesh.scale.x = 0.08;
+            mesh.scale.y = 0.08;
+            mesh.scale.z = 0.08;
             dChurch.position.x = this.pX;
-            dChurch.position.y = 0;
+            dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;
             dChurch.add(mesh);
             collidableMeshList.push(mesh);

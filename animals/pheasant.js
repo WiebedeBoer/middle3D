@@ -3,7 +3,7 @@ class Pheasant extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("pheasant/","PheasantsRingNecked.obj","pheasant/","PheasantsRingNecked.mtl", (mesh) => {
+        loadOBJModel("animals/pheasant/","PheasantsRingNecked.obj","animals/pheasant/","PheasantsRingNecked.mtl", (mesh) => {
             mesh.scale.x = 0.3;
             mesh.scale.y = 0.3;
             mesh.scale.z = 0.3;

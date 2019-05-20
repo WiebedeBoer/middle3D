@@ -1,17 +1,16 @@
-class Donkey extends THREE.Group {
+class Wheat extends THREE.Group {
 
     init (){
 
         var dChurch = this;
-        loadOBJModel("animals/donkey/","Donkey.obj","animals/donkey/","Donkey.mtl", (mesh) => {
-            mesh.scale.x = 1.3;
-            mesh.scale.y = 1.3;
-            mesh.scale.z = 1.3;
+        loadOBJModel("buildings/wheat_field/","FieldOfWheat.obj","buildings/wheat_field/","FieldOfWheat.mtl", (mesh) => {
+            mesh.scale.x = 0.75;
+            mesh.scale.y = 0.55;
+            mesh.scale.z = 0.75;
             dChurch.position.x = this.pX;
-            dChurch.position.y = 0;
+            dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;
             dChurch.add(mesh);
-            collidableMeshList.push(mesh);
 
         });
     }    
@@ -22,5 +21,6 @@ class Donkey extends THREE.Group {
         this.pY = pY;
         this.pZ = pZ;
         this.init();
+       
     }
 }

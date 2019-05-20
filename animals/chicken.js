@@ -3,7 +3,7 @@ class Chicken extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("chicken/","Mesh_Hen.obj","chicken/","Mesh_Hen.mtl", (mesh) => {
+        loadOBJModel("animals/chicken/","Mesh_Hen.obj","animals/chicken/","Mesh_Hen.mtl", (mesh) => {
             mesh.scale.x = 0.05;
             mesh.scale.y = 0.05;
             mesh.scale.z = 0.05;

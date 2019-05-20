@@ -1,20 +1,21 @@
 //CENTER
-function centerMaker(xTown,yTown){
+function centerMaker(xCentre,yCentre){
 	
 //x6 y5 450x450, woodland and forester hut
 if (climate =="temperate_woodlands" || climate =="mediterranean_woodlands" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes"){
-FarmMaker("forester",60,-30);
+	FarmMaker("forester",xCentre,yCentre-450);
 }
 
 //x6 y6 450x450, start position
 	
 //x7 y6 450x450, shrubland and basket weaver
 if (climate =="temperate_grasslands_marshes" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands_marshes" || climate =="mediterranean_shrublands_marshes" || climate =="desert_marshes"){
-FarmMaker("basketweaver",60,-30);
+	FarmMaker("basketweaver",xCentre,yCentre+450);
 }
 
 //x6 y7 450x450, stud farm or camel caravan
 if (horse =="stud"){
+	FarmMaker("studfarm",xCentre,yCentre+900);
 }
 else if(horse =="camel"){
 }
@@ -23,10 +24,20 @@ else if(horse =="camel"){
 
 
 //CAPITAL TOWN
-function capitalMaker(xTown,yTown){
+function capitalMaker(xCapital,yCapital){
 	
 //x4 y1 450x450, capital mill
-if (factoryCapital =="fuller" || factoryCapital =="vintner" || factoryCapital =="windmill" || factoryCapital =="watermill"){
+if (factoryCapital =="fuller"){
+	FarmMaker("fuller",xCapital-900,yCapital-450);
+} 
+else if(factoryCapital =="vintner"){
+	FarmMaker("vintner",xCapital-900,yCapital-450);
+} 
+else if(factoryCapital =="windmill"){
+	
+} 
+else if(factoryCapital =="watermill"){
+	
 }
 
 //x5 y1 450x450, capital factories
@@ -87,6 +98,7 @@ else {
 //x6 y2 450x450, capital centre
 //castle centre
 if (fortCapital =="mountain_castle" || fortCapital =="water_castle"){
+	//FarmMaker("castle",xCapital,yCapital);
 }
 //abbey centre
 else if (fortCapital =="fortified_abbey" || fortCapital =="abbey_grange" || fortCapital =="abbey_scriptorium"){
@@ -132,11 +144,39 @@ else {
 
 //x5 y4 450x450, capital mine
 if (commerceCapital =="sapphire" || commerceCapital =="rubies" || commerceCapital =="emeralds" || commerceCapital =="salt" || commerceCapital =="tin" || commerceCapital =="lead" || commerceCapital =="iron" || commerceCapital =="gold" || commerceCapital =="silver"){
-    FarmMaker("capitalmine",-840,-30);	
+    FarmMaker("capitalmine",xCapital-450,yCapital+900);	
 }
 
 //x6 y4 450x450, capital farm
-if (commerceCapital =="grain" || commerceCapital =="flax" || commerceCapital =="pigs" || commerceCapital =="cheese" || commerceCapital =="wool" || commerceCapital =="poultry" || commerceCapital =="fruit" || commerceCapital =="honey" || commerceCapital =="olive_oil" || commerceCapital =="wine"){
+if (commerceCapital =="grain"){
+	FarmMaker("grainfarm",xCapital,yCapital+900);	
+} 
+else if(commerceCapital =="flax"){
+	
+} 
+else if(commerceCapital =="pigs"){
+	FarmMaker("pigfarm",xCapital,yCapital+900);
+} 
+else if(commerceCapital =="cheese"){
+	FarmMaker("diaryfarm",xCapital,yCapital+900);
+} 
+else if(commerceCapital =="wool"){
+	FarmMaker("sheep",xCapital,yCapital+900);
+} 
+else if(commerceCapital =="poultry"){
+	
+} 
+else if(commerceCapital =="fruit"){
+	
+} 
+else if(commerceCapital =="honey"){
+	FarmMaker("beekeeper",xCapital,yCapital+900);
+} 
+else if(commerceCapital =="olive_oil"){
+	FarmMaker("olivegrove",xCapital,yCapital+900);
+} 
+else if(commerceCapital =="wine"){
+	FarmMaker("vineyard",xCapital,yCapital+900);
 }
 	
 //x7 y4 450x450, capital plantation
@@ -146,7 +186,7 @@ if (commerceCapital =="dates" || commerceCapital =="sugar"){
 }
 
 //CASTLE TOWN
-function castleMaker(xTown,yTown){
+function castleMaker(xCastle,yCastle){
 
 //x1 y5 450x450, castle factories
 //tailor
@@ -194,7 +234,17 @@ if (commerceCastle =="dates" || commerceCastle =="sugar"){
 }
 
 //x1 y4 450x450, castle mill
-if (factoryCastle =="fuller" || factoryCastle =="vintner" || factoryCastle =="windmill" || factoryCastle =="watermill"){
+if (factoryCastle =="fuller"){
+	FarmMaker("fuller",xCastle-900,yCastle-450);
+} 
+else if(factoryCastle =="vintner"){
+	FarmMaker("vintner",xCastle-900,yCastle-450);
+} 
+else if (factoryCastle =="windmill"){
+	
+} 
+else if(factoryCastle =="watermill"){
+	
 }
 
 //x2 y4 450x450, castle port
@@ -246,7 +296,35 @@ if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle 
 }	
 
 //x4 y6 450x450, castle farm
-if (commerceCastle =="grain" || commerceCastle =="flax" || commerceCastle =="pigs" || commerceCastle =="cheese" || commerceCastle =="wool" || commerceCastle =="poultry" || commerceCastle =="fruit" || commerceCastle =="honey" || commerceCastle =="olive_oil" || commerceCastle =="wine"){
+if (commerceCastle =="grain"){
+	FarmMaker("grainfarm",xCastle,yCastle+900);	
+} 
+else if(commerceCastle =="flax"){
+	
+} 
+else if(commerceCastle =="pigs"){
+	FarmMaker("pigfarm",xCastle,yCastle+900);
+} 
+else if(commerceCastle =="cheese"){
+	FarmMaker("diaryfarm",xCastle,yCastle+900);
+} 
+else if(commerceCastle =="wool"){
+	FarmMaker("sheep",xCastle,yCastle+900);
+} 
+else if(commerceCastle =="poultry"){
+	
+} 
+else if(commerceCastle =="fruit"){
+	
+} 
+else if(commerceCastle =="honey"){
+	FarmMaker("beekeeper",xCastle,yCastle+900);
+} 
+else if(commerceCastle =="olive_oil"){
+	FarmMaker("olivegrove",xCastle,yCastle+900);
+} 
+else if(commerceCastle =="wine"){
+	FarmMaker("vineyard",xCastle,yCastle+900);
 }
 
 //x2 y7 450x450, castle palace
@@ -265,7 +343,7 @@ else {
 
 //x4 y7 450x450, castle mine
 if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
-FarmMaker("townmine",60,-930);	
+	FarmMaker("castlemine",xCastle-450,yCastle+900);	
 }
 
 
@@ -276,7 +354,7 @@ function townMaker(xTown,yTown){
 	
 //x8 y5 450x450, town mine
 if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
-FarmMaker("townmine",60,870);	
+	FarmMaker("townmine",xTown-450,yTown+900);		
 }
 
 //x9 y5 450x450, town factories
@@ -319,7 +397,35 @@ else {
 }
 
 //x8 y6 450x450, town farm
-if (commerceTown =="grain" || commerceTown =="flax" || commerceTown =="pigs" || commerceTown =="cheese" || commerceTown =="wool" || commerceTown =="poultry" || commerceTown =="fruit" || commerceTown =="honey" || commerceTown =="olive_oil" || commerceTown =="wine"){
+if (commerceTown =="grain"){
+	FarmMaker("grainfarm",xTown,yTown+900);	
+} 
+else if(commerceTown =="flax"){
+	
+} 
+else if(commerceTown =="pigs"){
+	FarmMaker("pigfarm",xTown,yTown+900);
+} 
+else if(commerceTown =="cheese"){
+	FarmMaker("diaryfarm",xTown,yTown+900);
+} 
+else if(commerceTown =="wool"){
+	FarmMaker("sheep",xTown,yTown+900);
+} 
+else if(commerceTown =="poultry"){
+	
+} 
+else if(commerceTown =="fruit"){
+	
+} 
+else if(commerceTown =="honey"){
+	FarmMaker("beekeeper",xTown,yTown+900);
+} 
+else if(commerceTown =="olive_oil"){
+	FarmMaker("olivegrove",xTown,yTown+900);
+} 
+else if(commerceTown =="wine"){
+	FarmMaker("vineyard",xTown,yTown+900);
 }
 
 //x9 y6 450x450, town hall
@@ -391,22 +497,59 @@ if (factoryTown =="fishery" || armorerTown =="shipyard"){
 }
 
 //x11 y8 450x450, town mill
-if (factoryTown =="fuller" || factoryTown =="vintner" || factoryTown =="windmill" || factoryTown =="watermill"){
+if (factoryTown =="fuller"){
+	FarmMaker("fuller",xTown-900,yTown-450);	
+} 
+else if(factoryTown =="vintner"){
+	FarmMaker("vintner",xTown-900,yTown-450);	
+} 
+else if (factoryTown =="windmill"){
+	
+} 
+else if (factoryTown =="watermill"){
 }	
 
 	
 }
 
 //ABBEY TOWN
-function abbeyMaker(xTown,yTown){
+function abbeyMaker(xAbbey,yAbbey){
 	
 //x5 y8 450x450, abbey mine
 if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="emeralds" || commerceAbbey =="salt" || commerceAbbey =="tin" || commerceAbbey =="lead" || commerceAbbey =="iron" || commerceAbbey =="gold" || commerceAbbey =="silver"){
-    FarmMaker("townmine",960,-30);	
+    FarmMaker("townmine",xAbbey-450,yAbbey+900);	
 }
 
 //x6 y8 450x450, abbey farm
-if (commerceAbbey =="grain" || commerceAbbey =="flax" || commerceAbbey =="pigs" || commerceAbbey =="cheese" || commerceAbbey =="wool" || commerceAbbey =="poultry" || commerceAbbey =="fruit" || commerceAbbey =="honey" || commerceAbbey =="olive_oil" || commerceAbbey =="wine"){
+if (commerceAbbey =="grain"){
+	FarmMaker("grainfarm",xAbbey,yAbbey+900);	
+} 
+else if(commerceAbbey =="flax"){
+	
+} 
+else if(commerceAbbey =="pigs"){
+	FarmMaker("pigfarm",xAbbey,yAbbey+900);
+} 
+else if(commerceAbbey =="cheese"){
+	FarmMaker("diaryfarm",xAbbey,yAbbey+900);
+} 
+else if(commerceAbbey =="wool"){
+	FarmMaker("sheep",xAbbey,yAbbey+900);
+} 
+else if(commerceAbbey =="poultry"){
+	
+} 
+else if(commerceAbbey =="fruit"){
+	
+} 
+else if(commerceAbbey =="honey"){
+	FarmMaker("beekeeper",xAbbey,yAbbey+900);
+} 
+else if(commerceAbbey =="olive_oil"){
+	FarmMaker("olivegrove",xAbbey,yAbbey+900);
+} 
+else if(commerceAbbey =="wine"){
+	FarmMaker("vineyard",xAbbey,yAbbey+900);
 }
 	
 //x7 y8 450x450, abbey plantation
@@ -499,7 +642,16 @@ else {
 }
 
 //x8 y11 450x450, abbey mill
-if (factoryAbbey =="fuller" || factoryAbbey =="vintner" || factoryAbbey =="windmill" || factoryAbbey =="watermill"){
+if (factoryAbbey =="fuller"){
+	FarmMaker("fuller",xAbbey-900,yAbbey-450);
+} 
+else if(factoryAbbey =="vintner"){
+	FarmMaker("vintner",xAbbey-900,yAbbey-450);
+} 
+else if(factoryAbbey =="windmill"){
+	
+}
+else if(factoryAbbey =="watermill"){
 }
 	
 }

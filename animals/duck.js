@@ -3,7 +3,7 @@ class Duck extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("mallard_duck/","MallardDuck.obj","mallard_duck/","MallardDuck.mtl", (mesh) => {
+        loadOBJModel("animals/mallard_duck/","MallardDuck.obj","animals/mallard_duck/","MallardDuck.mtl", (mesh) => {
             mesh.scale.x = 1.5;
             mesh.scale.y = 1.5;
             mesh.scale.z = 1.5;

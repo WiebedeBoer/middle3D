@@ -3,7 +3,7 @@ class Rooster extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("rooster/","Rooster.obj","rooster/","Rooster.mtl", (mesh) => {
+        loadOBJModel("animals/rooster/","Rooster.obj","animals/rooster/","Rooster.mtl", (mesh) => {
             mesh.scale.x = 1.2;
             mesh.scale.y = 1.2;
             mesh.scale.z = 1.2;
