@@ -3,7 +3,7 @@ class Fence extends THREE.Group {
     init (){
 
         var dGun = this;
-        loadOBJModel("models/PicketFence/","SM_PicketFence_02.obj","models/PicketFence/","SM_PicketFence_02.mtl", (mesh) => {
+        loadOBJModel("props/PicketFence/","SM_PicketFence_02.obj","props/PicketFence/","SM_PicketFence_02.mtl", (mesh) => {
             mesh.scale.set (30, 4, 3);
             dGun.position.x = this.pX;
             dGun.position.y = this.pY;
