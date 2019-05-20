@@ -211,7 +211,11 @@ scene.add( skyBox );
 //lighting 
 barracksLighter();
 //fields and buildings and props and people, x5, z5
-townsMaker();
+centerMaker(60,-30);
+capitalMaker(60,-1380);
+castleMaker(-1290,-30);
+townMaker(1410,-30);
+abbeyMaker(60,1320);
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:false } );
