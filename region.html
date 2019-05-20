@@ -14,6 +14,7 @@
 <script src="buildings/farm_maker.js"></script>
 <script src="buildings/house_maker.js"></script>
 <script src="buildings/field_maker.js"></script>
+<script src="buildings/field_wheat.js"></script>
 <script src="buildings/forest.js"></script>
 <script src="buildings/barn.js"></script>
 <script src="buildings/beehive.js"></script>
@@ -23,6 +24,7 @@
 <!--props-->
 <script src="props/fence.js"></script>
 <script src="props/scroll.js"></script>
+<script src="props/cabbage.js"></script>
 <!--environment: plane en skybox-->
 <script src="environment/villePlane.js"></script>
 <script src="environment/Skybox.js"></script>
@@ -190,12 +192,12 @@ renderer.setSize( canvasWidth, canvasHeight );
 //append object to it
 document.getElementById("customcanvas").appendChild(renderer.domElement);
 //camera
-var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 4000);
+var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7000);
 camera.position.y = 12;
 camera.position.z = 15;
 camera.position.x = -21;
 //environment
-var environmentsize = 2800;
+var environmentsize = 4950;
 //plane
 if(climate =="desert" || climate =="desert_marshes"){
         var planeroad = new Plane(environmentsize,environmentsize,"ground7");
