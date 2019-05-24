@@ -1,6 +1,18 @@
 function FarmMaker(farmtype,xVil,zVil){
     //x5,z5
-if (farmtype=="vintner" || farmtype=="vineyard"){
+if (farmtype=="church"){
+    houseMaker("church",xVil,zVil); //center
+}
+else if (farmtype=="cathedral"){
+    houseMaker("cathedral",xVil,zVil); //center
+}
+else if (farmtype=="windmill"){
+    houseMaker("windmill",xVil,zVil); //center
+}
+else if (farmtype=="watermill"){
+    houseMaker("watermill",xVil,zVil); //center
+}
+else if (farmtype=="vintner" || farmtype=="vineyard"){
 
     fieldMaker("forest",xVil+180,zVil-270);
     fieldMaker("forest",xVil+180,zVil-180);
@@ -41,10 +53,10 @@ else if (farmtype=="fuller" || farmtype=="sheep"){
     fieldMaker("forest",xVil+180,zVil);
     fieldMaker("forest",xVil+180,zVil+90);
 
-    fieldMaker("sheep",xVil+90,zVil-270);
+    fieldMaker("forest",xVil+90,zVil-270);
     fieldMaker("sheep",xVil+90,zVil-180);
     fieldMaker("sheep",xVil+90,zVil-90);
-    fieldMaker("sheep",xVil+90,zVil);    
+    fieldMaker("forest",xVil+90,zVil);    
     //fallow
 
     fieldMaker("forest",xVil,zVil-270);   
@@ -74,10 +86,10 @@ else if (farmtype=="diaryfarm"){
     fieldMaker("forest",xVil+180,zVil);
     fieldMaker("forest",xVil+180,zVil+90);
 
-    fieldMaker("cow",xVil+90,zVil-270);
+    fieldMaker("forest",xVil+90,zVil-270);
     fieldMaker("cow",xVil+90,zVil-180);
     fieldMaker("cow",xVil+90,zVil-90);
-    fieldMaker("cow",xVil+90,zVil);    
+    fieldMaker("forest",xVil+90,zVil);    
     //fallow
 
     fieldMaker("forest",xVil,zVil-270);   
@@ -169,7 +181,7 @@ else if (farmtype=="grainfarm"){
 
     fieldMaker("forest",xVil+180,zVil-270);
     fieldMaker("forest",xVil+180,zVil-180);
-    fieldMaker("forest",xVil+180,zVil-90);
+    //fallow
     fieldMaker("forest",xVil+180,zVil);
     fieldMaker("forest",xVil+180,zVil+90);
 
@@ -193,7 +205,7 @@ else if (farmtype=="grainfarm"){
 
     fieldMaker("forest",xVil-180,zVil-270);
     fieldMaker("grain",xVil-180,zVil-180);
-    fieldMaker("grain",xVil-180,zVil-90);
+    fieldMaker("forest",xVil-180,zVil-90);
     //fallow
     //fallow
 
@@ -272,7 +284,7 @@ else if (farmtype=="studfarm"){
     fieldMaker("forest",xVil+180,zVil);
     fieldMaker("forest",xVil+180,zVil+90);
 
-    fieldMaker("horse",xVil+90,zVil-270);
+    //fallow
     fieldMaker("horse",xVil+90,zVil-180);
     fieldMaker("horse",xVil+90,zVil-90);
     fieldMaker("horse",xVil+90,zVil);    

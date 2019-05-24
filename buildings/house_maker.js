@@ -2,8 +2,28 @@ function houseMaker(type,xPos,zPos){
 var househigh = 21.0;
 
 //COMMERCE PLOT
+//cathedral
+if (type =="cathedral"){
+var cathedral = new Cathedral(xPos,househigh-35,zPos,0);
+scene.add( cathedral );  
+}
+//church
+else if (type =="church"){
+var church = new Church(xPos,househigh-27,zPos,0);
+scene.add( church );  
+}
+//windmill
+else if (type =="windmill"){
+var windmill = new Windmill(xPos+28,househigh,zPos+30,0);
+scene.add( windmill );  
+}
+//watermill
+else if (type =="wwatermill"){
+var watermill = new Watermill(xPos+28,househigh,zPos+30,0);
+scene.add( watermill );  
+}
 //house
-if (type =="villagehouse"){
+else if (type =="villagehouse"){
 var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
 scene.add( farmhouse );  
 }
