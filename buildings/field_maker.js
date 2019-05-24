@@ -44,6 +44,19 @@ else if (type =="vegetables"){
     scene.add( field9 );
 
 }
+//orchard
+else if (type=="apple"){
+    
+        var Fruit1 = new PomegranateTree(xPos-15,5,zPos+15); 
+        scene.add(Fruit1);
+        var Fruit2 = new PomegranateTree(xPos-15,5,zPos-15); 
+        scene.add(Fruit2);
+        var Fruit3 = new PomegranateTree(xPos+15,5,zPos+15); 
+        scene.add(Fruit3);
+        var Fruit4 = new PomegranateTree(xPos+15,5,zPos-15); 
+        scene.add(Fruit4);    
+
+}
 //olive grove
 else if (type=="olive"){
     

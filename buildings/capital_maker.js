@@ -70,10 +70,10 @@ else if(commerceCapital =="wool"){
 	FarmMaker("sheep",xCapital,yCapital+900);
 } 
 else if(commerceCapital =="poultry"){
-	
+	FarmMaker("poultryfarm",xCapital,yCapital+900);
 } 
 else if(commerceCapital =="fruit"){
-	
+	FarmMaker("orchard",xCapital,yCapital+900);
 } 
 else if(commerceCapital =="honey"){
 	FarmMaker("beekeeper",xCapital,yCapital+900);

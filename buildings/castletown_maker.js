@@ -73,10 +73,10 @@ else if(commerceCastle =="wool"){
 	FarmMaker("sheep",xCastle+900,yCastle);
 } 
 else if(commerceCastle =="poultry"){
-	
+	FarmMaker("poultryfarm",xCastle+900,yCastle);
 } 
 else if(commerceCastle =="fruit"){
-	
+	FarmMaker("orchard",xCastle+900,yCastle);
 } 
 else if(commerceCastle =="honey"){
 	FarmMaker("beekeeper",xCastle+900,yCastle);

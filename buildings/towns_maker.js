@@ -74,10 +74,10 @@ else if(commerceTown =="wool"){
 	FarmMaker("sheep",xTown-900,yTown);
 } 
 else if(commerceTown =="poultry"){
-	
+	FarmMaker("poultryfarm",xTown-900,yTown);
 } 
 else if(commerceTown =="fruit"){
-	
+	FarmMaker("orchard",xTown-900,yTown);
 } 
 else if(commerceTown =="honey"){
 	FarmMaker("beekeeper",xTown-900,yTown);
@@ -91,7 +91,7 @@ else if(commerceTown =="wine"){
 	
 //x-1,y-2 450x450, town mine
 if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
-	FarmMaker("townmine",xTown-450,yTown-900);		
+	FarmMaker("townmine",xTown-900,yTown-450);		
 }
 
 //x+1,y+2 450x450, town mill
