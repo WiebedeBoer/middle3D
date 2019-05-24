@@ -4,9 +4,9 @@ class Cathedral extends THREE.Group {
 
         var dChurch = this;
         loadOBJModel("buildings/cathedral/","cathedral.obj","buildings/cathedral/","cathedral.mtl", (mesh) => {
-            mesh.scale.x = 18.0;
-            mesh.scale.y = 20.0;
-            mesh.scale.z = 18.0;
+            mesh.scale.x = 10.0;
+            mesh.scale.y = 11.0;
+            mesh.scale.z = 10.0;
             dChurch.position.x = this.pX;
             dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;

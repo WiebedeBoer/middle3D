@@ -5,7 +5,7 @@ class Church extends THREE.Group {
         var dChurch = this;
         loadOBJModel("buildings/church/","Church.obj","buildings/church/","Church.mtl", (mesh) => {
             mesh.scale.x = 6.0;
-            mesh.scale.y = 7.0;
+            mesh.scale.y = 6.0;
             mesh.scale.z = 6.0;
             dChurch.position.x = this.pX;
             dChurch.position.y = this.pY;

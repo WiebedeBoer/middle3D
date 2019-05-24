@@ -4,22 +4,22 @@ var househigh = 21.0;
 //COMMERCE PLOT
 //cathedral
 if (type =="cathedral"){
-var cathedral = new Cathedral(xPos,househigh-35,zPos,0);
+var cathedral = new Cathedral(xPos,househigh-26.5,zPos,0);
 scene.add( cathedral );  
 }
 //church
 else if (type =="church"){
-var church = new Church(xPos,househigh-27,zPos,0);
+var church = new Church(xPos,househigh-22,zPos,0);
 scene.add( church );  
 }
 //windmill
 else if (type =="windmill"){
-var windmill = new Windmill(xPos+28,househigh,zPos+30,0);
+var windmill = new Windmill(xPos+28,househigh-21,zPos+30,0);
 scene.add( windmill );  
 }
 //watermill
-else if (type =="wwatermill"){
-var watermill = new Watermill(xPos+28,househigh,zPos+30,0);
+else if (type =="watermill"){
+var watermill = new Watermill(xPos+28,househigh-21,zPos+30,0);
 scene.add( watermill );  
 }
 //house

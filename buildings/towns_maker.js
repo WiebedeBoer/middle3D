@@ -102,9 +102,10 @@ else if(factoryTown =="vintner"){
 	FarmMaker("vintner",xTown+450,yTown+900);	
 } 
 else if (factoryTown =="windmill"){
-	
+	FarmMaker("windmill",xTown+450,yTown+900);
 } 
 else if (factoryTown =="watermill"){
+	FarmMaker("watermill",xTown+450,yTown+900);
 }
 
 //x,y+2 450x450, town port

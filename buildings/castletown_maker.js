@@ -101,10 +101,10 @@ else if(factoryCastle =="vintner"){
 	FarmMaker("vintner",xCastle-450,yCastle-900);
 } 
 else if (factoryCastle =="windmill"){
-	
+	FarmMaker("windmill",xCastle-450,yCastle-900);
 } 
 else if(factoryCastle =="watermill"){
-	
+	FarmMaker("watermill",xCastle-450,yCastle-900);
 }
 
 //COMMERCIAL OUTER WALL

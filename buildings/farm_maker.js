@@ -7,7 +7,20 @@ else if (farmtype=="cathedral"){
     houseMaker("cathedral",xVil,zVil); //center
 }
 else if (farmtype=="windmill"){
+	
+	//fallow
+    fieldMaker("grain",xVil+90,zVil-180);
+    fieldMaker("grain",xVil+90,zVil-90);
+    fieldMaker("grain",xVil+90,zVil);    
+    //fallow
+	
     houseMaker("windmill",xVil,zVil); //center
+	
+	fieldMaker("grain",xVil-90,zVil-270);
+    fieldMaker("grain",xVil-90,zVil-180);
+    //fallow
+    fieldMaker("grain",xVil-90,zVil);
+    //fallow
 }
 else if (farmtype=="watermill"){
     houseMaker("watermill",xVil,zVil); //center

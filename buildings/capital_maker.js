@@ -101,10 +101,10 @@ else if(factoryCapital =="vintner"){
 	FarmMaker("vintner",xCapital-900,yCapital-450);
 } 
 else if(factoryCapital =="windmill"){
-	
+	FarmMaker("windmill",xCapital-900,yCapital-450);
 } 
 else if(factoryCapital =="watermill"){
-	
+	FarmMaker("watermill",xCapital-900,yCapital-450);
 }
 
 //x-2,y 450x450, capital port
