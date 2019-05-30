@@ -1,12 +1,12 @@
-class Windmill extends THREE.Group {
+class Basilica extends THREE.Group {
 
     init (){
 
         var dChurch = this;
-        loadOBJModel("buildings/windmill/","SM_WindMill_02.obj","buildings/windmill/","SM_WindMill_02.mtl", (mesh) => {
-            mesh.scale.x = 4.0;
-            mesh.scale.y = 4.0;
-            mesh.scale.z = 4.0;
+        loadOBJModel("buildings/basilica/","s14.obj","buildings/basilica/","s14.mtl", (mesh) => {
+            mesh.scale.x = 0.08;
+            mesh.scale.y = 0.08;
+            mesh.scale.z = 0.08;
             dChurch.position.x = this.pX;
             dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;

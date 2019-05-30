@@ -145,11 +145,11 @@ if (fortCastle =="mountain_castle" || fortCastle =="water_castle"){
 }
 //abbey centre
 else if (fortCastle =="fortified_abbey" || fortCastle =="abbey_grange" || fortCastle =="abbey_scriptorium"){
-	//FarmMaker("abbey",xCastle,yCastle);
+	FarmMaker("abbey",xCastle,yCastle);
 }
 //inn centre
 else if (fortCastle =="roadside_inn"){
-	//FarmMaker("inn",xCastle,yCastle);
+	FarmMaker("inn",xCastle,yCastle);
 }
 //market plaza
 else {	
@@ -160,7 +160,7 @@ else {
 if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle !="abbey_scriptorium"){
 	//priory
 	if(monasticCastle =="lord_abbot" || monasticCastle =="prince-abbot"){
-		//FarmMaker("abbey",xCastle+450,yCastle);
+		FarmMaker("abbey",xCastle+450,yCastle);
 	}
 	//commandry
 	else if(monasticCastle =="teutonic"){	

@@ -9,24 +9,43 @@
 <script src="controls/FPControls.js"></script>
 <!--climate and regions-->
 <script src="openregions.js"></script>
-<!--buildings and fields-->
+<!--towns-->
 <script src="buildings/towns_maker.js"></script>
+<script src="buildings/center_maker.js"></script>
+<script src="buildings/capital_maker.js"></script>
+<script src="buildings/castletown_maker.js"></script>
+<script src="buildings/abbeytown_maker.js"></script>
+<!--buildings and fields-->
 <script src="buildings/farm_maker.js"></script>
 <script src="buildings/house_maker.js"></script>
 <script src="buildings/field_maker.js"></script>
-<script src="buildings/field_wheat.js"></script>
 <script src="buildings/forest.js"></script>
 <script src="buildings/barn.js"></script>
 <script src="buildings/beehive.js"></script>
 <script src="buildings/mountain.js"></script>
 <script src="buildings/metal.js"></script>
 <script src="buildings/villa.js"></script>
+<script src="buildings/church.js"></script>
+<script src="buildings/cathedral.js"></script>
+<script src="buildings/cloister.js"></script>
+<script src="buildings/citywall.js"></script>
+<script src="buildings/gatetower.js"></script>
+<script src="buildings/windmill.js"></script>
+<script src="buildings/watermill.js"></script>
+<script src="buildings/smithy.js"></script>
+<script src="buildings/inn.js"></script>
+<!--fields-->
+<script src="buildings/field_wheat.js"></script>
+<script src="buildings/grapevine.js"></script>
+<script src="buildings/olive_tree.js"></script>
+<script src="buildings/pomegranate_tree.js"></script>
 <!--props-->
 <script src="props/fence.js"></script>
 <script src="props/scroll.js"></script>
 <script src="props/cabbage.js"></script>
 <!--environment: plane en skybox-->
 <script src="environment/villePlane.js"></script>
+<script src="environment/plane.js"></script>
 <script src="environment/Skybox.js"></script>
 <!--lighting-->
 <script src="lighting/BarracksLight.js"></script>
@@ -192,32 +211,37 @@ renderer.setSize( canvasWidth, canvasHeight );
 //append object to it
 document.getElementById("customcanvas").appendChild(renderer.domElement);
 //camera
-var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7000);
+var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7650);
 camera.position.y = 12;
-camera.position.z = 15;
+camera.position.z = -67;
 camera.position.x = -21;
 //environment
-var environmentsize = 4950;
+var environmentsize = 5100;//4950
+
 //plane
 if(climate =="desert" || climate =="desert_marshes"){
-        var planeroad = new Plane(environmentsize,environmentsize,"ground7");
-        scene.add(planeroad);  
+	//planes
+	var impluve =new PartPlane(environmentsize,environmentsize,"ground7",0,0,0);
+	scene.add( impluve );
 }
 else {
-        var planeroad = new Plane(environmentsize,environmentsize,"ground5");
-        scene.add(planeroad); 
+	//planes
+	var impluve =new PartPlane(environmentsize,environmentsize,"ground5",0,0,0);
+	scene.add( impluve );
 }
 //skybox
 var skyBox = new Skybox(environmentsize,environmentsize,environmentsize);
 scene.add( skyBox );
 //lighting 
 barracksLighter();
+//city wall offset
+var wallOffset =60;
 //fields and buildings and props and people, x5, z5
 centerMaker(60,-30);
-capitalMaker(60,-1380);
+capitalMaker(60,-1830);
 castleMaker(-1290,-30);
 townMaker(1410,-30);
-abbeyMaker(60,1320);
+abbeyMaker(60,1770);
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:false } );
@@ -304,6 +328,7 @@ function GameLoop(){
 function newDoc() {
     window.location.assign("map.html")
 }
+
 </script>
 </div>
 <div id="game" class="game">

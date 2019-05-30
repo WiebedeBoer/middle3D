@@ -37,8 +37,8 @@ var tower4 = new GateTower("tower","city_port","city_tower","city_tower","city_p
 scene.add( tower4 );
 
 //gates
-//var gateNorth = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xCapital,yCapital-600-wallOffset); 
-//scene.add( gateNorth );
+var gateNorth = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xCapital,yCapital-600-wallOffset); 
+scene.add( gateNorth );
 //var gateSouth = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xCapital,yCapital+600-wallOffset); 
 //scene.add( gateSouth );
 var gateWest = new GateTower("gate","city_port","city_port","city_gate","city_gate","roof3",80,60,60,xCapital-600,yCapital-wallOffset); 
@@ -145,11 +145,11 @@ if (fortCapital =="mountain_castle" || fortCapital =="water_castle"){
 }
 //abbey centre
 else if (fortCapital =="fortified_abbey" || fortCapital =="abbey_grange" || fortCapital =="abbey_scriptorium"){
-	//FarmMaker("abbey",xCapital,yCapital);
+	FarmMaker("abbey",xCapital,yCapital);
 }
 //inn centre
 else if (fortCapital =="roadside_inn"){
-	//FarmMaker("inn",xCapital,yCapital);
+	FarmMaker("inn",xCapital,yCapital);
 }
 //market plaza
 else {
@@ -160,7 +160,7 @@ else {
 if (fortCapital !="fortified_abbey" && fortCapital !="abbey_grange" && fortCapital !="abbey_scriptorium"){
 	//priory
 	if(monasticCapital =="lord_abbot" || monasticCapital =="prince-abbot"){
-		//FarmMaker("abbey",xCapital+450,yCapital);
+		FarmMaker("abbey",xCapital+450,yCapital);
 	}
 	//commandry
 	else if(monasticCapital =="teutonic"){	

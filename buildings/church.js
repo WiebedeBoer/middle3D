@@ -3,10 +3,10 @@ class Church extends THREE.Group {
     init (){
 
         var dChurch = this;
-        loadOBJModel("buildings/church/","Church.obj","buildings/church/","Church.mtl", (mesh) => {
-            mesh.scale.x = 6.0;
-            mesh.scale.y = 6.0;
-            mesh.scale.z = 6.0;
+        loadOBJModel("buildings/church/","CUPIC_CHURCH.obj","buildings/church/","CUPIC_CHURCH.mtl", (mesh) => {
+            mesh.scale.x = 0.2;
+            mesh.scale.y = 0.2;
+            mesh.scale.z = 0.2;
             dChurch.position.x = this.pX;
             dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;

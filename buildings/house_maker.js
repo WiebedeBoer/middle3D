@@ -12,6 +12,16 @@ else if (type =="church"){
 var church = new Church(xPos,househigh-22,zPos,0);
 scene.add( church );  
 }
+//abbey
+else if (type =="basilica"){
+var basilica = new Cloister(xPos,househigh+6,zPos,0);
+scene.add( basilica );  
+}
+//inn
+else if (type =="inn"){
+var inn = new Inn(xPos,househigh-21,zPos,0);
+scene.add( inn );  
+}
 //windmill
 else if (type =="windmill"){
 var windmill = new Windmill(xPos+28,househigh-21,zPos+30,0);

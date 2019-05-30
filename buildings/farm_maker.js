@@ -6,6 +6,12 @@ if (farmtype=="church"){
 else if (farmtype=="cathedral"){
     houseMaker("cathedral",xVil,zVil); //center
 }
+else if (farmtype=="abbey"){
+    houseMaker("basilica",xVil,zVil); //center
+}
+else if (farmtype=="inn"){
+    houseMaker("inn",xVil,zVil); //center
+}
 else if (farmtype=="windmill"){
 	
 	//fallow
