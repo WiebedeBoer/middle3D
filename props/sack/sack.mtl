@@ -1,0 +1,13 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl Sack1
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.527059 0.483137 0.404706
+Ks 0.164706 0.164706 0.164706
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\Users\wiebe\Documents\www_online_games\middleages\barrel-boxes-grain-sack\source\Barrel Boxes & Grain Sack\Sack1.jpg
