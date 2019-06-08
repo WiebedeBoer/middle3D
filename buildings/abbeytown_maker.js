@@ -75,6 +75,9 @@ else if(commerceAbbey =="wool"){
 else if(commerceAbbey =="poultry"){
 	FarmMaker("poultryfarm",xAbbey,yAbbey-900);
 } 
+else if(commerceAbbey =="duck"){
+	FarmMaker("duckfarm",xAbbey,yAbbey-900);
+} 
 else if(commerceAbbey =="fruit"){
 	FarmMaker("orchard",xAbbey,yAbbey-900);
 } 

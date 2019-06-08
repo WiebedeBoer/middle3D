@@ -361,6 +361,39 @@ else if (farmtype=="poultryfarm"){
     //fallow
 
 }
+else if (farmtype=="duckfarm"){
+
+    fieldMaker("forest",xVil+180,zVil-270);
+    fieldMaker("forest",xVil+180,zVil-180);
+    fieldMaker("forest",xVil+180,zVil-90);
+    fieldMaker("forest",xVil+180,zVil);
+    fieldMaker("forest",xVil+180,zVil+90);
+
+    //fallow
+    fieldMaker("duck",xVil+90,zVil-180);
+    fieldMaker("duck",xVil+90,zVil-90);
+    fieldMaker("duck",xVil+90,zVil);    
+    //fallow
+
+    fieldMaker("forest",xVil,zVil-270);   
+    fieldMaker("duck",xVil,zVil-180);
+    fieldMaker("duck",xVil,zVil-90);
+    houseMaker("farmhouse",xVil,zVil); //center
+    //fallow
+
+    fieldMaker("forest",xVil-90,zVil-270);
+    fieldMaker("duck",xVil-90,zVil-180);
+    houseMaker("barn",xVil-90,zVil-90);
+    fieldMaker("barn",xVil-90,zVil);
+    //fallow
+
+    fieldMaker("forest",xVil-180,zVil-270);
+    //fallow
+    fieldMaker("forest",xVil-180,zVil-90);
+    //fallow
+    //fallow
+
+}
 else if (farmtype=="studfarm"){
 
     fieldMaker("forest",xVil+180,zVil-270);

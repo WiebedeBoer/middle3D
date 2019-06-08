@@ -75,7 +75,10 @@ else if(commerceTown =="wool"){
 } 
 else if(commerceTown =="poultry"){
 	FarmMaker("poultryfarm",xTown-900,yTown);
-} 
+}
+else if(commerceTown =="duck"){
+	FarmMaker("duckfarm",xTown-900,yTown);
+}  
 else if(commerceTown =="fruit"){
 	FarmMaker("orchard",xTown-900,yTown);
 } 
