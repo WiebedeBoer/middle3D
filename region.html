@@ -60,6 +60,7 @@
 <script src="animals/sheep.js"></script>
 <script src="animals/horse.js"></script>
 <script src="animals/camel.js"></script>
+<script src="animals/pig.js"></script>
 <!--collision detection-->
 <script src="collision/villaCollision.js"></script>
 <!--people-->
@@ -290,7 +291,9 @@ appendCoin();
 appendItem();
 //onload loop
 
+
 function GameLoop(){
+
         //update function
         updateFcts.push(function(delta,now){
                 //controls update
@@ -328,6 +331,7 @@ function GameLoop(){
 function newDoc() {
     window.location.assign("map.html")
 }
+
 
 </script>
 </div>
