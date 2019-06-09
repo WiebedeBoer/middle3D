@@ -37,13 +37,13 @@ var tower4t = new GateTower("tower","city_port","city_tower","city_tower","city_
 scene.add( tower4t );
 
 //gates
-var gateNortht = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xTown,yTown-600-wallOffset); 
+var gateNortht = new CastleGate(xTown+442,-245,yTown-310,0); 
 scene.add( gateNortht );
-var gateSoutht = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xTown,yTown+600-wallOffset); 
+var gateSoutht = new CastleGate(xTown-442,-245,yTown+190,3.1415926); 
 scene.add( gateSoutht );
-//var gateWestt = new GateTower("gate","city_port","city_port","city_gate","city_gate","roof3",80,60,60,xTown-600,yTown-wallOffset); 
-//scene.add( gateWestt );
-var gateEastt = new GateTower("gate","city_port","city_port","city_gate","city_gate","roof3",80,60,60,xTown+600,yTown-wallOffset); 
+var gateWestt = new CastleGate(xTown-255,-245,yTown-502,1.5707963); 
+scene.add( gateWestt );
+var gateEastt = new CastleGate(xTown+245,-245,yTown+382,4.7123889); 
 scene.add( gateEastt );
 	
 }	
@@ -51,10 +51,13 @@ scene.add( gateEastt );
 //OUTER WALL
 //x-2,y+1 450x450, town plantation
 if (commerceTown =="dates"){
-	//FarmMaker("dateplantation",xTown-900,yTown+450);
+	FarmMaker("dateplantation",xTown-900,yTown+450);
 }
 else if(commerceTown =="sugar"){
 	//FarmMaker("sugarplantation",xTown-900,yTown+450);
+}
+else {
+	FarmMaker("forest",xTown-900,yTown+450);
 }
 
 //x-2,y 450x450, town farm
@@ -91,6 +94,9 @@ else if(commerceTown =="olive_oil"){
 else if(commerceTown =="wine"){
 	FarmMaker("vineyard",xTown-900,yTown);
 }
+else {
+	FarmMaker("forest",xTown-900,yTown);
+}
 	
 //x-1,y-2 450x450, town mine
 if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
@@ -113,7 +119,7 @@ else if (factoryTown =="watermill"){
 
 //x,y+2 450x450, town port
 if (factoryTown =="fishery" || armorerTown =="shipyard"){
-	//FarmMaker("port",xTown,yTown+900);	
+	FarmMaker("port",xTown,yTown+900);	
 }
 
 //INNER WALL
@@ -132,7 +138,7 @@ if (fortTown =="town_hall"){
 	//FarmMaker("townhall",xTown-450,yTown);
 }
 else if (fortTown =="burgh"){
-	//FarmMaker("burgh",xTown-450,yTown);
+	FarmMaker("burgh",xTown-450,yTown);
 }
 else {	
 if (popTown !="village"){
@@ -144,7 +150,7 @@ else {
 //x,y 450x450, town centre
 //castle centre
 if (fortTown =="mountain_castle" || fortTown =="water_castle"){
-	//FarmMaker("castle",xTown,yTown);
+	FarmMaker("castle",xTown,yTown);
 }
 //abbey centre
 else if (fortTown =="fortified_abbey" || fortTown =="abbey_grange" || fortTown =="abbey_scriptorium"){
@@ -156,7 +162,7 @@ else if (fortTown =="roadside_inn"){
 }
 //market plaza
 else {	
-	//FarmMaker("fair",xTown,yTown);
+	FarmMaker("fair",xTown,yTown);
 }
 
 //x+1,y 450x450, town priory
@@ -167,15 +173,15 @@ if (fortTown !="fortified_abbey" && fortTown !="abbey_grange" && fortTown !="abb
 	}
 	//commandry
 	else if(monasticTown =="teutonic"){	
-		//FarmMaker("commandry",xTown+450,yTown);
+		FarmMaker("commandry",xTown+450,yTown);
 	}
 	//commandry
 	else if(monasticTown =="templar"){	
-		//FarmMaker("commandry",xTown+450,yTown);
+		FarmMaker("commandry",xTown+450,yTown);
 	}
 	//commandry
 	else if(monasticTown =="hospitaller"){	
-		//FarmMaker("commandry",xTown+450,yTown);
+		FarmMaker("commandry",xTown+450,yTown);
 	}
 	else {
 	}

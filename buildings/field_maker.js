@@ -268,18 +268,35 @@ else if(type =="cow"){
 //horse pasture
 else if(type =="horse"){
 
-        var Horse1 = new Horse(xPos-15,5,zPos); 
+        var Horse1 = new Horse(xPos-15,5,zPos+15); 
         scene.add(Horse1);
-        var Horse2 = new Horse(xPos+15,5,zPos); 
+        var Horse2 = new Horse(xPos-75,5,zPos+75); 
         scene.add(Horse2);
-        var fenceL2 = new Fence(xPos,0,zPos+30,0,0,0); 
+		
+		var Horse3 = new Horse(xPos-15,5,zPos+75); 
+        scene.add(Horse3);
+        var Horse4 = new Horse(xPos-75,5,zPos+15); 
+        scene.add(Horse4);
+		
+        var fenceL2 = new Fence(xPos-75,0,zPos-15,0,0,0); 
         scene.add(fenceL2);
-        var fenceR2 = new Fence(xPos,0,zPos-30,0,0,0); 
+        var fenceR2 = new Fence(xPos-15,0,zPos-15,0,0,0); 
         scene.add(fenceR2);
-        var fenceF2 = new Fence(xPos-30,0,zPos,0,1.5707963,0); 
+		
+        var fenceF2 = new Fence(xPos+15,0,zPos+15,0,1.5707963,0); 
         scene.add(fenceF2);
-        var fenceB2 = new Fence(xPos+30,0,zPos,0,1.5707963,0); 
-        scene.add(fenceB2);   
+        var fenceB2 = new Fence(xPos+15,0,zPos+75,0,1.5707963,0); 
+        scene.add(fenceB2); 
+		
+        var fenceL3 = new Fence(xPos-75,0,zPos+105,0,0,0); 
+        scene.add(fenceL3);
+        var fenceR3 = new Fence(xPos-15,0,zPos+105,0,0,0); 
+        scene.add(fenceR3);
+		
+        var fenceF3 = new Fence(xPos-105,0,zPos+15,0,1.5707963,0); 
+        scene.add(fenceF3);
+        var fenceB3 = new Fence(xPos-105,0,zPos+75,0,1.5707963,0); 
+        scene.add(fenceB3);   		
   
 }
 

@@ -12,10 +12,27 @@ else if (type =="church"){
 var church = new Church(xPos,househigh-22,zPos,0);
 scene.add( church );  
 }
+//keep
+else if (type =="keep"){
+var keep = new CastleKeep(xPos,househigh-22,zPos,0);
+scene.add( keep );  
+}
 //abbey
 else if (type =="basilica"){
 var basilica = new Cloister(xPos,househigh+6,zPos,0);
 scene.add( basilica );  
+}
+//marketstall
+else if (type =="stall"){
+var marketstall = new MarketStall(xPos+178,househigh-360,zPos+458,0);
+scene.add( marketstall );  
+}
+//warehouse
+else if (type =="warehouse"){
+var barrel = new Barrel(xPos, 1,zPos, 0,0,0);
+scene.add( barrel ); 
+var barrel2 = new Barrel(xPos+15, 1,zPos, 0,0,0);
+scene.add( barrel2 );   
 }
 //inn
 else if (type =="inn"){

@@ -37,23 +37,26 @@ var tower4c = new GateTower("tower","city_port","city_tower","city_tower","city_
 scene.add( tower4c );
 
 //gates
-var gateNorthc = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xCastle,yCastle-600-wallOffset); 
+var gateNorthc = new CastleGate(xCastle+442,-245,yCastle-310,0); 
 scene.add( gateNorthc );
-var gateSouthc = new GateTower("gate","city_gate","city_gate","city_port","city_port","roof3",80,60,60,xCastle,yCastle+600-wallOffset); 
+var gateSouthc = new CastleGate(xCastle-442,-245,yCastle+190,3.1415926); 
 scene.add( gateSouthc );
-var gateWestc = new GateTower("gate","city_port","city_port","city_gate","city_gate","roof3",80,60,60,xCastle-600,yCastle-wallOffset); 
+var gateWestc = new CastleGate(xCastle-255,-245,yCastle-502,1.5707963); 
 scene.add( gateWestc );
-//var gateEastc = new GateTower("gate","city_port","city_port","city_gate","city_gate","roof3",80,60,60,xCastle+600,yCastle-wallOffset); 
-//scene.add( gateEastc );
+var gateEastc = new CastleGate(xCastle+245,-245,yCastle+382,4.7123889); 
+scene.add( gateEastc );
 }
 
 //OUTER WALL
 //x+2,y-1 450x450, castle plantation
 if (commerceCastle =="dates"){
-	//FarmMaker("dateplantation",xCastle+900,yCastle-450);
+	FarmMaker("dateplantation",xCastle+900,yCastle-450);
 }
 else if(commerceCastle =="sugar"){
 	//FarmMaker("sugarplantation",xCastle+900,yCastle-450);
+}
+else {
+	FarmMaker("forest",xCastle+900,yCastle-450);
 }
 
 //x4 y6 450x450, castle farm
@@ -90,6 +93,9 @@ else if(commerceCastle =="olive_oil"){
 else if(commerceCastle =="wine"){
 	FarmMaker("vineyard",xCastle+900,yCastle);
 }
+else {
+	FarmMaker("forest",xCastle+900,yCastle);
+}
 
 //x4 y7 450x450, castle mine
 if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
@@ -113,7 +119,7 @@ else if(factoryCastle =="watermill"){
 //COMMERCIAL OUTER WALL
 //x,y-2 450x450, castle port
 if (factoryCastle =="fishery" || armorerCastle =="shipyard"){
-	//FarmMaker("port",xCastle,yCastle-900);
+	FarmMaker("port",xCastle,yCastle-900);
 }
 
 //INNER WALL
@@ -132,7 +138,7 @@ if (fortCastle =="town_hall"){
 	//FarmMaker("townhall",xCastle-450,yCastle);
 }
 else if (fortCastle =="burgh"){
-	//FarmMaker("burgh",xCastle-450,yCastle);
+	FarmMaker("burgh",xCastle-450,yCastle);
 }
 else {	
 if (popCastle !="village"){
@@ -144,7 +150,7 @@ else {
 //x,y 450x450, castle centre
 //castle centre
 if (fortCastle =="mountain_castle" || fortCastle =="water_castle"){
-	//FarmMaker("castle",xCastle,yCastle);
+	FarmMaker("castle",xCastle,yCastle);
 }
 //abbey centre
 else if (fortCastle =="fortified_abbey" || fortCastle =="abbey_grange" || fortCastle =="abbey_scriptorium"){
@@ -156,7 +162,7 @@ else if (fortCastle =="roadside_inn"){
 }
 //market plaza
 else {	
-	//FarmMaker("fair",xCastle,yCastle);
+	FarmMaker("fair",xCastle,yCastle);
 }
 
 //x+1,y 450x450, castle priory
@@ -167,15 +173,15 @@ if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle 
 	}
 	//commandry
 	else if(monasticCastle =="teutonic"){	
-		//FarmMaker("commandry",xCastle+450,yCastle);
+		FarmMaker("commandry",xCastle+450,yCastle);
 	}
 	//commandry
 	else if(monasticCastle =="templar"){		
-		//FarmMaker("commandry",xCastle+450,yCastle);
+		FarmMaker("commandry",xCastle+450,yCastle);
 	}
 	//commandry
 	else if(monasticCastle =="hospitaller"){
-		//FarmMaker("commandry",xCastle+450,yCastle);
+		FarmMaker("commandry",xCastle+450,yCastle);
 	}
 	else {
 	}
