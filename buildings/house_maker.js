@@ -70,6 +70,11 @@ else if (type =="tavern"){
 var tavern = new Villa(xPos+28,househigh,zPos+30,0);
 scene.add( tavern );
 }
+//urban
+else if (type =="urban"){
+    var hood = new Urban(xPos-50,0,zPos-50,Math.PI/2);
+    scene.add( hood );  
+}
 //potterer
 else if (type =="potterer"){
     var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);

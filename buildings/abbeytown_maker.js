@@ -207,13 +207,33 @@ else {
 }	
 }
 
+//HOUSES
+if (popAbbey =="village"){
+	houseMaker("urban",xAbbey,yAbbey-300); //church ward
+}
+else if (popAbbey =="town"){
+	houseMaker("urban",xAbbey,yAbbey-300); //church ward
+	houseMaker("urban",xAbbey+300,yAbbey); //abbey ward
+}
+else if (popAbbey =="city"){
+	houseMaker("urban",xAbbey,yAbbey-300); //church ward
+	houseMaker("urban",xAbbey+300,yAbbey); //abbey ward
+}
+else if (popAbbey =="metropolis"){
+	houseMaker("urban",xAbbey,yAbbey-300); //church ward
+	houseMaker("urban",xAbbey+300,yAbbey); //abbey ward
+}
+
+
 //COMMERCIAL INNER WALL
 // 450x450, abbey factories
 //tailor
 if (factoryAbbey =="tailor"){
+	
 }
 //glasswork
 else if (factoryAbbey =="glasswork"){
+	
 }
 //potterer
 else if (factoryAbbey =="potterer"){
@@ -223,20 +243,25 @@ else if (factoryAbbey =="granary"){
 }
 //furrier
 else if (factoryAbbey =="fur"){
+	
 }
 //mint
 else if (factoryAbbey =="mint"){
+	
 }
 //soap maker
 else if (factoryAbbey =="soapmaker"){
+	
 }
 //cooper
 else if (factoryAbbey =="cooper"){
 }
 //dyeswork
 else if (factoryAbbey =="madder" || factoryAbbey =="woad" || factoryAbbey =="saffron"){
+	
 }
 else {	
+	
 }
 
 	
