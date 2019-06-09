@@ -46,7 +46,13 @@ scene.add( windmill );
 }
 //watermill
 else if (type =="watermill"){
-var watermill = new Watermill(xPos+28,househigh-21,zPos+30,0);
+	
+var wallw1 = new CityWall("wallNS",15,30,30,xPos+22,zPos+120); 
+scene.add( wallw1 );
+var wallw2 = new CityWall("wallNS",15,30,30,xPos+82,zPos+120); 
+scene.add( wallw2 );
+
+var watermill = new Watermill(xPos+30,househigh-8,zPos+30,0);
 scene.add( watermill );  
 }
 //house

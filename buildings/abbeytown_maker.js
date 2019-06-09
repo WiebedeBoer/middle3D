@@ -112,14 +112,16 @@ else if(factoryAbbey =="vintner"){
 else if(factoryAbbey =="windmill"){
 	FarmMaker("windmill",xAbbey+900,yAbbey+450);
 }
+//river
 else if(factoryAbbey =="watermill"){
-	FarmMaker("watermill",xAbbey+900,yAbbey+450);
+	FarmMaker("watermill",xAbbey+975,yAbbey+225);
+	fieldMaker("grain",xAbbey+905,yAbbey+155);
 }
 
 //COMMERCIAL OUTER WALL
 //x+2,y 450x450, abbey port
 if (factoryAbbey =="fishery" || armorerAbbey =="shipyard"){
-	FarmMaker("port",xAbbey+900,yAbbey);
+	FarmMaker("port",xAbbey+875,yAbbey+30);
 }
 
 //INNER WALL

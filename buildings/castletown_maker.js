@@ -112,8 +112,10 @@ else if(factoryCastle =="vintner"){
 else if (factoryCastle =="windmill"){
 	FarmMaker("windmill",xCastle-450,yCastle-900);
 } 
+//river
 else if(factoryCastle =="watermill"){
-	FarmMaker("watermill",xCastle-450,yCastle-900);
+	FarmMaker("watermill",xCastle-450,yCastle-1350);
+	fieldMaker("grain",xCastle-310,yCastle-1210);
 }
 
 //COMMERCIAL OUTER WALL

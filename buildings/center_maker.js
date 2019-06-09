@@ -18,7 +18,7 @@ if (horse =="stud"){
 	FarmMaker("studfarm",xCentre,yCentre);
 }
 else if(horse =="camel"){
-	//FarmMaker("camelcaravan",xCentre,yCentre);
+	FarmMaker("camelcaravan",xCentre,yCentre);
 }
 	
 }
