@@ -87,6 +87,11 @@ var arrowLoafCol = new propCollect(xPos+10, 6, zPos+33, "bow");
 scene.add(arrowLoafCol);
 }
 //FARM PLOT
+//winebarrel
+else if (type =="winebarrel"){
+var vintner = new WineBarrel(xPos+8,0,zPos+58,0);
+scene.add( vintner );  
+}
 //farm
 else if (type =="farmhouse"){
 var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);

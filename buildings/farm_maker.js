@@ -86,7 +86,7 @@ else if (farmtype=="vintner" || farmtype=="vineyard"){
     //fallow
 
     fieldMaker("forest",xVil-90,zVil-270);
-    fieldMaker("grape",xVil-90,zVil-180);
+    houseMaker("winebarrel",xVil-90,zVil-180);
     houseMaker("barn",xVil-90,zVil-90);
     fieldMaker("vegetables",xVil-90,zVil);
     //fallow
