@@ -10,15 +10,16 @@
 <!--climate and regions-->
 <script src="openregions.js"></script>
 <!--towns-->
-<script src="buildings/towns_maker.js"></script>
-<script src="buildings/center_maker.js"></script>
-<script src="buildings/capital_maker.js"></script>
-<script src="buildings/castletown_maker.js"></script>
-<script src="buildings/abbeytown_maker.js"></script>
+<script src="buildings/maker_towns.js"></script>
+<script src="buildings/maker_center.js"></script>
+<script src="buildings/maker_capital.js"></script>
+<script src="buildings/maker_castletown.js"></script>
+<script src="buildings/maker_abbeytown.js"></script>
+<!--buildings and plots-->
+<script src="buildings/maker_farm.js"></script>
+<script src="buildings/maker_house.js"></script>
+<script src="buildings/maker_field.js"></script>
 <!--buildings and fields-->
-<script src="buildings/farm_maker.js"></script>
-<script src="buildings/house_maker.js"></script>
-<script src="buildings/field_maker.js"></script>
 <script src="buildings/forest.js"></script>
 <script src="buildings/barn.js"></script>
 <script src="buildings/beehive.js"></script>
@@ -28,12 +29,18 @@
 <script src="buildings/church.js"></script>
 <script src="buildings/cathedral.js"></script>
 <script src="buildings/cloister.js"></script>
-<script src="buildings/citywall.js"></script>
-<script src="buildings/gatetower.js"></script>
 <script src="buildings/windmill.js"></script>
 <script src="buildings/watermill.js"></script>
 <script src="buildings/smithy.js"></script>
+<script src="buildings/jousting.js"></script>
 <script src="buildings/inn.js"></script>
+<script src="buildings/marketstall.js"></script>
+<script src="buildings/urban.js"></script>
+<!--buildings and fortifications-->
+<script src="buildings/castlekeep.js"></script>
+<script src="buildings/citywall.js"></script>
+<script src="buildings/gatetower.js"></script>
+<script src="buildings/castlegate.js"></script>
 <!--fields-->
 <script src="buildings/field_wheat.js"></script>
 <script src="buildings/grapevine.js"></script>
@@ -43,6 +50,9 @@
 <script src="props/fence.js"></script>
 <script src="props/scroll.js"></script>
 <script src="props/cabbage.js"></script>
+<script src="props/barrel.js"></script>
+<script src="props/winebarrel.js"></script>
+<script src="props/stool.js"></script>
 <!--environment: plane en skybox-->
 <script src="environment/villePlane.js"></script>
 <script src="environment/plane.js"></script>
@@ -326,7 +336,7 @@ function GameLoop(){
                         updateFn(deltaMsec/1000, nowMsec/1000)
                 })
         })
-		
+	
 }
 function newDoc() {
     window.location.assign("map.html")
