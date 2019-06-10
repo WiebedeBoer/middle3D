@@ -190,11 +190,20 @@ if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle 
 }
 
 //entertainment
-if (entertainment =="minstrel" || entertainment =="tavern"){
+if (entertainment =="minstrel" || entertainment =="tavern" || entertainment =="caravan" || entertainment =="coaching"){
 	FarmMaker("inn",xCastle+225,yCastle+15);
 }	
 else if (entertainment =="joust"){
 	FarmMaker("joust",xCastle+225,yCastle+15);
+}
+else if (entertainment =="hunt" || entertainment =="falconry"){
+	
+}
+else if (entertainment =="reliquary"){
+	
+}
+else if (entertainment =="fair"){
+	FarmMaker("fair",xCastle+225,yCastle+15);
 }
 
 //x,y+1 450x450, castle palace

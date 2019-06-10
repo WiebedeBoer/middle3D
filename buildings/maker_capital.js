@@ -191,11 +191,20 @@ if (fortCapital !="fortified_abbey" && fortCapital !="abbey_grange" && fortCapit
 }
 
 //entertainment
-if (entertainment =="minstrel" || entertainment =="tavern"){
+if (entertainment =="minstrel" || entertainment =="tavern" || entertainment =="caravan" || entertainment =="coaching"){
 	FarmMaker("inn",xCapital+225,yCapital+15);
 }	
 else if (entertainment =="joust"){
 	FarmMaker("joust",xCapital+225,yCapital+15);
+}
+else if (entertainment =="hunt" || entertainment =="falconry"){
+	
+}
+else if (entertainment =="reliquary"){
+	
+}
+else if (entertainment =="fair"){
+	FarmMaker("fair",xCapital+225,yCapital+15);
 }
 
 //x,y+1 450x450, capital palace
