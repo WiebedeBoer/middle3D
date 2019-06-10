@@ -1,7 +1,7 @@
 function houseMaker(type,xPos,zPos){
 var househigh = 21.0;
 
-//COMMERCE PLOT
+//RELIGIOUS PLOT
 //cathedral
 if (type =="cathedral"){
 var cathedral = new Cathedral(xPos,househigh-26.5,zPos,0);
@@ -12,16 +12,18 @@ else if (type =="church"){
 var church = new Church(xPos,househigh-22,zPos,0);
 scene.add( church );  
 }
-//keep
-else if (type =="keep"){
-var keep = new CastleKeep(xPos,househigh-22,zPos,0);
-scene.add( keep );  
-}
 //abbey
 else if (type =="basilica"){
 var basilica = new Cloister(xPos,househigh+6,zPos,0);
 scene.add( basilica );  
 }
+//CASTLE PLOT
+//keep
+else if (type =="keep"){
+var keep = new CastleKeep(xPos,househigh-22,zPos,0);
+scene.add( keep );  
+}
+//MARKET PLOT
 //marketstall
 else if (type =="stall"){
 var marketstall = new MarketStall(xPos+178,househigh-360,zPos+458,0);
@@ -36,9 +38,10 @@ scene.add( barrel2 );
 }
 //inn
 else if (type =="inn"){
-var inn = new Inn(xPos,househigh-21,zPos,0);
+var inn = new Inn(xPos,househigh-21,zPos,1.5707963);
 scene.add( inn );  
 }
+//MILLS
 //windmill
 else if (type =="windmill"){
 var windmill = new Windmill(xPos+28,househigh-21,zPos+30,0);
@@ -55,16 +58,6 @@ scene.add( wallw2 );
 var watermill = new Watermill(xPos+30,househigh-8,zPos+30,0);
 scene.add( watermill );  
 }
-//house
-else if (type =="villagehouse"){
-var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
-scene.add( farmhouse );  
-}
-//house
-else if (type =="villagehouse2"){
-var farmhouse = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
-scene.add( farmhouse );
-}
 //tavern
 else if (type =="tavern"){
 var tavern = new Villa(xPos+28,househigh,zPos+30,0);
@@ -72,9 +65,19 @@ scene.add( tavern );
 }
 //urban
 else if (type =="urban"){
-    var hood = new Urban(xPos-50,0,zPos-50,Math.PI/2);
+    var hood = new Urban(xPos,0,zPos-50,Math.PI/2);
     scene.add( hood );  
 }
+//house
+else if (type =="villagehouse"){
+var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
+scene.add( farmhouse );  
+}
+else if (type =="villagehouse2"){
+var farmhouse = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
+scene.add( farmhouse );
+}
+//INDUSTRY
 //potterer
 else if (type =="potterer"){
     var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
