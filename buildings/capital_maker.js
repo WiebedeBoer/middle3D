@@ -191,9 +191,12 @@ if (fortCapital !="fortified_abbey" && fortCapital !="abbey_grange" && fortCapit
 }
 
 //entertainment
-if (entertainment =="minstrel"){
+if (entertainment =="minstrel" || entertainment =="tavern"){
 	FarmMaker("inn",xCapital+225,yCapital+15);
 }	
+else if (entertainment =="joust"){
+	FarmMaker("joust",xCapital+225,yCapital+15);
+}
 
 //x,y+1 450x450, capital palace
 if (fortCapital =="royal_court" || fortCapital =="chancery"){

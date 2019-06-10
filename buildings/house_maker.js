@@ -41,6 +41,11 @@ else if (type =="inn"){
 var inn = new Inn(xPos,househigh-21,zPos,1.5707963);
 scene.add( inn );  
 }
+//tiltyard
+else if (type =="joust"){
+var tiltyard = new Jousting(xPos,househigh-7,zPos,1.5707963);
+scene.add( tiltyard );  
+}
 //MILLS
 //windmill
 else if (type =="windmill"){

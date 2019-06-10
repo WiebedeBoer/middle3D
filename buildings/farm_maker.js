@@ -15,6 +15,11 @@ else if (farmtype=="commandry"){
 else if (farmtype=="inn"){
     houseMaker("inn",xVil,zVil); //center
 }
+else if (farmtype=="joust"){
+    houseMaker("joust",xVil-30,zVil+45); //center
+	var fenceJoust = new Fence(xVil-30,0,zVil,0,0,0); 
+    scene.add(fenceJoust);
+}
 else if (farmtype=="castle"){
     houseMaker("keep",xVil,zVil); //center
 }

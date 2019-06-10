@@ -190,8 +190,11 @@ if (fortAbbey !="fortified_abbey" && fortAbbey !="abbey_grange" && fortAbbey !="
 }	
 
 //entertainment
-if (entertainment =="minstrel"){
+if (entertainment =="minstrel" || entertainment =="tavern"){
 	FarmMaker("inn",xAbbey+225,yAbbey+15);
+}
+else if (entertainment =="joust"){
+	FarmMaker("joust",xAbbey+225,yAbbey+15);
 }
 
 //x,y+1 450x450, abbey palace
