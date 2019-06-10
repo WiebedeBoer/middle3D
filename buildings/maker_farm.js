@@ -19,6 +19,8 @@ else if (farmtype=="joust"){
     houseMaker("joust",xVil-30,zVil+45); //center
 	var fenceJoust = new Fence(xVil-30,0,zVil,0,0,0); 
     scene.add(fenceJoust);
+	var fenceJoust2 = new Fence(xVil-30,0,zVil-30,0,0,0); 
+    scene.add(fenceJoust2);
 }
 else if (farmtype=="castle"){
     houseMaker("keep",xVil,zVil); //center
@@ -267,6 +269,40 @@ else if (farmtype=="grainfarm"){
 
     fieldMaker("forest",xVil-180,zVil-270);
     fieldMaker("grain",xVil-180,zVil-180);
+    fieldMaker("forest",xVil-180,zVil-90);
+    //fallow
+    //fallow
+
+}
+//flax farm
+else if (farmtype=="flaxfarm"){
+
+    fieldMaker("forest",xVil+180,zVil-270);
+    fieldMaker("forest",xVil+180,zVil-180);
+    //fallow
+    fieldMaker("forest",xVil+180,zVil);
+    fieldMaker("forest",xVil+180,zVil+90);
+
+    //fallow
+    fieldMaker("flax",xVil+90,zVil-180);
+    fieldMaker("flax",xVil+90,zVil-90);
+    fieldMaker("flax",xVil+90,zVil);    
+    //fallow
+
+    fieldMaker("forest",xVil,zVil-270);   
+    fieldMaker("flax",xVil,zVil-180);
+    fieldMaker("flax",xVil,zVil-90);
+    houseMaker("farmhouse",xVil,zVil); //center
+    //fallow
+
+    fieldMaker("forest",xVil-90,zVil-270);
+    fieldMaker("flax",xVil-90,zVil-180);
+    houseMaker("barn",xVil-90,zVil-90);
+    fieldMaker("vegetables",xVil-90,zVil);
+    //fallow
+
+    fieldMaker("forest",xVil-180,zVil-270);
+    fieldMaker("forest",xVil-180,zVil-180);
     fieldMaker("forest",xVil-180,zVil-90);
     //fallow
     //fallow
@@ -566,6 +602,39 @@ else if (farmtype=="dateplantation"){
 
     fieldMaker("forest",xVil-90,zVil-270);
     fieldMaker("forest",xVil-90,zVil-180);
+    //fallow
+    houseMaker("barn",xVil-90,zVil);
+    fieldMaker("forest",xVil-90,zVil+90);
+
+    fieldMaker("forest",xVil-180,zVil-270);
+    fieldMaker("forest",xVil-180,zVil-180);
+    fieldMaker("forest",xVil-180,zVil-90);
+    fieldMaker("forest",xVil-180,zVil);
+    fieldMaker("forest",xVil-180,zVil+90);
+}
+//x5,z5, sugar plantation
+else if (farmtype=="sugarplantation"){
+
+    fieldMaker("forest",xVil+180,zVil-270);
+    fieldMaker("forest",xVil+180,zVil-180);
+    fieldMaker("forest",xVil+180,zVil-90);
+    fieldMaker("forest",xVil+180,zVil);
+    fieldMaker("forest",xVil+180,zVil+90);
+
+    fieldMaker("forest",xVil+90,zVil-270);
+    fieldMaker("sugar",xVil+90,zVil-180);
+    fieldMaker("sugar",xVil+90,zVil-90);
+    fieldMaker("sugar",xVil+90,zVil);
+    fieldMaker("forest",xVil+90,zVil+90);
+
+    fieldMaker("sugar",xVil,zVil-270);
+    fieldMaker("sugar",xVil,zVil-180);
+    //fallow
+    houseMaker("farmhouse",xVil,zVil); //center
+    fieldMaker("forest",xVil,zVil+90);
+
+    fieldMaker("forest",xVil-90,zVil-270);
+    fieldMaker("sugar",xVil-90,zVil-180);
     //fallow
     houseMaker("barn",xVil-90,zVil);
     fieldMaker("forest",xVil-90,zVil+90);

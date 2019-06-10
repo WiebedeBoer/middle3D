@@ -53,7 +53,7 @@ if (commerceCastle =="dates"){
 	FarmMaker("dateplantation",xCastle+900,yCastle-450);
 }
 else if(commerceCastle =="sugar"){
-	//FarmMaker("sugarplantation",xCastle+900,yCastle-450);
+	FarmMaker("sugarplantation",xCastle+900,yCastle-450);
 }
 else {
 	FarmMaker("forest",xCastle+900,yCastle-450);
@@ -64,7 +64,7 @@ if (commerceCastle =="grain"){
 	FarmMaker("grainfarm",xCastle+900,yCastle);	
 } 
 else if(commerceCastle =="flax"){
-	
+	FarmMaker("flaxfarm",xCastle+900,yCastle);	
 } 
 else if(commerceCastle =="pigs"){
 	FarmMaker("pigfarm",xCastle+900,yCastle);

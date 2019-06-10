@@ -44,6 +44,19 @@ else if (type =="vegetables"){
     scene.add( field9 );
 
 }
+//sugarcane
+else if (type=="sugar"){
+    
+        var Sugarcane1 = new Sugarcane(xPos-15,5,zPos+15); 
+        scene.add(Sugarcane1);
+        var Sugarcane2 = new Sugarcane(xPos-15,5,zPos-15); 
+        scene.add(Sugarcane2);
+        var Sugarcane3 = new Sugarcane(xPos+15,5,zPos+15); 
+        scene.add(Sugarcane3);
+        var Sugarcane4 = new Sugarcane(xPos+15,5,zPos-15); 
+        scene.add(Sugarcane4);    
+
+}
 //orchard
 else if (type=="apple"){
     
@@ -69,6 +82,27 @@ else if (type=="olive"){
         var Olive4 = new OliveTree(xPos+15,5,zPos-15); 
         scene.add(Olive4);    
 
+}
+//flax
+else if (type=="flax"){   
+        var flax1 = new Flax(xPos+15,0,zPos-15);
+        scene.add( flax1 );
+        var flax2 = new Flax(xPos+15,0,zPos);
+        scene.add( flax2 );
+        var flax3 = new Flax(xPos+15,0,zPos+15);
+        scene.add( flax3 );
+        var flax4 = new Flax(xPos,0,zPos-15);
+        scene.add( flax4 );
+        var flax5 = new Flax(xPos,0,zPos); 
+        scene.add( flax5 );
+        var flax6 = new Flax(xPos,0,zPos+15);
+        scene.add( flax6 );
+        var flax7 = new Flax(xPos-15,0,zPos-15);
+        scene.add( flax7 );
+        var flax8 = new Flax(xPos-15,0,zPos);
+        scene.add( flax8 );
+        var flax9 = new Flax(xPos-15,0,zPos+15);
+        scene.add( flax9 );  
 }
 //grapevine
 else if (type=="grape"){   
