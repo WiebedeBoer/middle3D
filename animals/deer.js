@@ -4,12 +4,12 @@ class Deer extends THREE.Group {
 
         var dChurch = this;
         loadOBJModel("animals/deer/","deer.obj","animals/deer/","deer.mtl", (mesh) => {
-            mesh.scale.x = 45.7;
-            mesh.scale.y = 45.7;
-            mesh.scale.z = 45.7;
-            dChurch.position.x = this.pX-35;
-            dChurch.position.y = 17;
-            dChurch.position.z = this.pZ+1;
+            mesh.scale.x = 40.0;
+            mesh.scale.y = 40.0;
+            mesh.scale.z = 40.0;
+            dChurch.position.x = this.pX;
+            dChurch.position.y = 13;
+            dChurch.position.z = this.pZ;
             dChurch.rotation.y = Math.PI / 2;
             dChurch.add(mesh);
             collidableMeshList.push(mesh);

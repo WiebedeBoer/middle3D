@@ -182,19 +182,19 @@ else if(type=="forest_deer"){
         if (herb =="cedar"){
             var tree1 = new Forest(xPos,45,zPos-10,"cedar"); 
             scene.add(tree1);
-			var elk = new Deer(xPos,zPos); 
+			var elk = new Deer(xPos,zPos-20); 
             scene.add(elk);
         }
         else if (herb =="pine"){
             var tree1 = new Forest(xPos,45,zPos-10,"tree_pine"); 
             scene.add(tree1);
-			var elk = new Deer(xPos,zPos); 
+			var elk = new Deer(xPos,zPos-20); 
             scene.add(elk);
         }
         else {
             var tree1 = new Forest(xPos,45,zPos-10,"tree_transparent"); 
             scene.add(tree1);
-			var elk = new Deer(xPos,zPos); 
+			var elk = new Deer(xPos,zPos-20); 
             scene.add(elk);
         }        
     } 
@@ -210,19 +210,19 @@ else if(type=="forest_pheasant"){
         if (herb =="cedar"){
             var tree1 = new Forest(xPos,45,zPos-10,"cedar"); 
             scene.add(tree1);
-			var elk = new Pheasant(xPos,zPos); 
+			var elk = new Pheasant(xPos,0,zPos-5); 
             scene.add(elk);
         }
         else if (herb =="pine"){
             var tree1 = new Forest(xPos,45,zPos-10,"tree_pine"); 
             scene.add(tree1);
-			var elk = new Pheasant(xPos,zPos); 
+			var elk = new Pheasant(xPos,0,zPos-5); 
             scene.add(elk);
         }
         else {
             var tree1 = new Forest(xPos,45,zPos-10,"tree_transparent"); 
             scene.add(tree1);
-			var elk = new Pheasant(xPos,zPos); 
+			var elk = new Pheasant(xPos,0,zPos-5); 
             scene.add(elk);
         }        
     } 

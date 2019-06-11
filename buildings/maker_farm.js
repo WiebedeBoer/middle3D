@@ -584,7 +584,7 @@ else if (farmtype=="forest"){
     fieldMaker("forest",xVil,zVil+90);
 
     fieldMaker("forest",xVil-90,zVil-270);
-	fieldMaker("forest_deer",xVil-90,zVil-180);
+	fieldMaker("forest",xVil-90,zVil-180);
     fieldMaker("forest",xVil-90,zVil-90);
     fieldMaker("forest",xVil-90,zVil);
     fieldMaker("forest",xVil-90,zVil+90);
