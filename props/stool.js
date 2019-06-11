@@ -3,7 +3,7 @@ class Stool extends THREE.Group {
     init (){
 
         var dBar = this;
-        loadOBJModel("models/bar_stool/","stool.obj","models/bar_stool/","stool.mtl", (mesh) => {
+        loadOBJModel("props/bar_stool/","stool.obj","props/bar_stool/","stool.mtl", (mesh) => {
             mesh.scale.set (1.0, 1.3, 1.0);
             dBar.position.x = this.pX;
             dBar.position.y = this.pY;

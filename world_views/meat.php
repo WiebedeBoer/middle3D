@@ -19,6 +19,13 @@ else {
 $poultry ="none";		
 }
 
+if ($agri_a =="duck" || $agri_b =="duck" || $agri_c =="duck" || $agri_d =="duck"){
+$duck ="duck";	
+}
+else {
+$duck ="none";		
+}
+
 if ($agri_a =="pigs" || $agri_b =="pigs" || $agri_c =="pigs" || $agri_d =="pigs"){
 $pigs ="pigs";	
 }
@@ -48,6 +55,25 @@ $descript =$descript;
 }
 
 //tier 2
+if ($duck =="duck"){
+$stroke_width++;
+$radius_size--;
+$stroke_color = $radius_color;
+$radius_color ="rgb(0,192,192)";
+if ($radius_size<7){
+$descript = $descript." and duck";}
+else {
+$descript ="duck";}
+}
+else {
+$stroke_width =$stroke_width;
+$radius_size =$radius_size;
+$stroke_color = $stroke_color;
+$radius_color =$radius_color;
+$descript =$descript;
+}
+
+//tier 3
 if ($pigs =="pigs"){
 $stroke_width++;
 $radius_size--;

@@ -57,7 +57,8 @@ for (var vertexIndex = 0; vertexIndex < MovingCube.geometry.vertices.length; ver
         ctx.fillRect(x_street, z_street, 1, 1);
         //msg
         clearText();
-        appendText("region: "+province);
+        //appendText("region: "+province);
+		appendText("region: "+camera.position.x+","+camera.position.z);
     }
     else {
         clearText();     

@@ -5,7 +5,7 @@ var aud = document.getElementById("imperia");
 function changeImperium(){
         //var rand = Math.floor((Math.random() * 7) + 1);
 
-        var rand = parseInt(document.getElementById("number").rand, 13);
+        var rand = parseInt(document.getElementById("number").rand, 14);
         rand = isNaN(rand) ? 2 : rand;    
         //rand++;
         if(rand ==1){
@@ -50,7 +50,7 @@ function changeImperium(){
         } 
         else if(rand ==11){
                 document.getElementById("parade").src = "music/1200_minnesang_Palastinesong.mp3";
-                rand =1;
+                rand++;
         } 
 		else if(rand ==12){
                 document.getElementById("parade").src = "music/1200_tarab_andalusi.mp3";
