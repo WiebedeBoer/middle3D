@@ -23,6 +23,19 @@ else if (type =="keep"){
 var keep = new CastleKeep(xPos,househigh-22,zPos,0);
 scene.add( keep );  
 }
+//palace
+else if (type =="royalpalace"){
+var palast = new Palace(xPos,househigh-20,zPos,1.5707963,culture);
+scene.add( palast );  
+}
+else if (type =="ducalpalace"){
+var palast = new Palace(xPos,househigh-20,zPos,1.5707963,culture);
+scene.add( palast );  
+}
+else if (type =="bishoppalace"){
+var palast = new Palace(xPos,househigh-20,zPos,1.5707963,culture);
+scene.add( palast );  
+}
 //MARKET PLOT
 //marketstall
 else if (type =="stall"){

@@ -12,6 +12,15 @@ else if (farmtype=="abbey"){
 else if (farmtype=="commandry"){
     houseMaker("basilica",xVil,zVil); //center
 }
+else if (farmtype=="ducalpalace"){
+    houseMaker("ducalpalace",xVil,zVil); //center
+}
+else if (farmtype=="royalpalace"){
+    houseMaker("royalpalace",xVil,zVil); //center
+}
+else if (farmtype=="bishoppalace"){
+    houseMaker("bishoppalace",xVil,zVil); //center
+}
 else if (farmtype=="inn"){
     houseMaker("inn",xVil,zVil); //center
 }

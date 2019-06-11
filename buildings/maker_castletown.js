@@ -208,13 +208,13 @@ else if (entertainment =="fair"){
 
 //x,y+1 450x450, castle palace
 if (fortCastle =="royal_court" || fortCastle =="chancery"){
-	//FarmMaker("royalpalace",xCastle,yCastle+450);
+	FarmMaker("royalpalace",xCastle-200,yCastle+450);
 }
 else if (fortCastle =="bishop_palace"){
-	//FarmMaker("bishoppalace",xCastle,yCastle+450);
+	FarmMaker("bishoppalace",xCastle-200,yCastle+450);
 }
 else if (fortCastle =="ducal_residence"){
-	//FarmMaker("ducalpalace",xCastle,yCastle+450);
+	FarmMaker("ducalpalace",xCastle-200,yCastle+450);
 }
 else {	
 if (churchCastle !="priest"){
