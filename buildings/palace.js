@@ -2,29 +2,41 @@ class Palace extends THREE.Group {
 
     init (){
 		
-		//eastern
-		if(this.bannier =="saxon" || this.bannier =="bavarian" || this.bannier =="flemish" || this.bannier =="tuscan"){
-			var flag_num ="black_yellow";
+		//arabic
+		if(this.bannier =="maghreb" || this.bannier =="ifriqiya" || this.bannier =="misr" || this.bannier =="mashriq" || this.bannier =="hejaz" || this.bannier =="najd"){
+			var flag_num ="East";
+			var scale_x = 14.0;
+			var scale_y = 14.0;
+			var scale_z = 14.0;
+			var rotate_palace = 3.1415926;
+		}
+		//turkish
+		else if(this.bannier =="turkish" || this.bannier =="persian"){
+			var flag_num ="Turk";
+			var scale_x = 4.0;
+			var scale_y = 7.5;
+			var scale_z = 4.0;
+			var rotate_palace = 1.5707963;
 		}
 		//european
-		else if(this.bannier =="frankish" || this.bannier =="occitan" || this.bannier =="arpitan"){
-			var flag_num ="blue_yellow";
-		}
-		//default
 		else {
-			var flag_num ="red_white";
+			var flag_num ="West";
+			var scale_x = 4.0;
+			var scale_y = 3.5;
+			var scale_z = 4.0;
+			var rotate_palace = 0;
 		}
 
 
         var dChurch = this;
-        loadOBJModel("buildings/palace/","Palace.obj","buildings/palace/","Palace.mtl", (mesh) => {
-            mesh.scale.x = 4.0;
-            mesh.scale.y = 7.5;
-            mesh.scale.z = 4.0;
+        loadOBJModel("buildings/palace/","Palace_"+flag_num+".obj","buildings/palace/","Palace_"+flag_num+".mtl", (mesh) => {
+            mesh.scale.x = scale_x;
+            mesh.scale.y = scale_y;
+            mesh.scale.z = scale_z;
             dChurch.position.x = this.pX;
             dChurch.position.y = this.pY;
             dChurch.position.z = this.pZ;
-            dChurch.rotation.y = this.yR;
+            dChurch.rotation.y = rotate_palace;
             dChurch.add(mesh);
             collidableMeshList.push(mesh);
 
