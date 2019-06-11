@@ -172,6 +172,62 @@ else if(type=="forest"){
     } 
 
 }
+else if(type=="forest_deer"){
+
+    if (climate =="desert" || climate =="desert_marshes"){        
+        var tree1 = new Forest(xPos,45,zPos,"tree_palm"); 
+        scene.add(tree1);
+    }
+    else {
+        if (herb =="cedar"){
+            var tree1 = new Forest(xPos,45,zPos-10,"cedar"); 
+            scene.add(tree1);
+			var elk = new Deer(xPos,zPos); 
+            scene.add(elk);
+        }
+        else if (herb =="pine"){
+            var tree1 = new Forest(xPos,45,zPos-10,"tree_pine"); 
+            scene.add(tree1);
+			var elk = new Deer(xPos,zPos); 
+            scene.add(elk);
+        }
+        else {
+            var tree1 = new Forest(xPos,45,zPos-10,"tree_transparent"); 
+            scene.add(tree1);
+			var elk = new Deer(xPos,zPos); 
+            scene.add(elk);
+        }        
+    } 
+
+}
+else if(type=="forest_pheasant"){
+
+    if (climate =="desert" || climate =="desert_marshes"){        
+        var tree1 = new Forest(xPos,45,zPos,"tree_palm"); 
+        scene.add(tree1);
+    }
+    else {
+        if (herb =="cedar"){
+            var tree1 = new Forest(xPos,45,zPos-10,"cedar"); 
+            scene.add(tree1);
+			var elk = new Pheasant(xPos,zPos); 
+            scene.add(elk);
+        }
+        else if (herb =="pine"){
+            var tree1 = new Forest(xPos,45,zPos-10,"tree_pine"); 
+            scene.add(tree1);
+			var elk = new Pheasant(xPos,zPos); 
+            scene.add(elk);
+        }
+        else {
+            var tree1 = new Forest(xPos,45,zPos-10,"tree_transparent"); 
+            scene.add(tree1);
+			var elk = new Pheasant(xPos,zPos); 
+            scene.add(elk);
+        }        
+    } 
+
+}
 //goat pasture
 else if(type =="goat"){
         var Goat1 = new Goat(xPos-15,5,zPos+15); 

@@ -556,19 +556,35 @@ else if (farmtype=="forest"){
     fieldMaker("forest",xVil+180,zVil+90);
 
     fieldMaker("forest",xVil+90,zVil-270);
-    fieldMaker("forest",xVil+90,zVil-180);
+	if (entertainment =="hunt"){
+		fieldMaker("forest_deer",xVil+90,zVil-180);
+	}
+	else if (entertainment =="falconry"){
+		fieldMaker("forest_pheasant",xVil+90,zVil-180);
+	}
+	else {
+		fieldMaker("forest",xVil+90,zVil-180);
+	}    
     fieldMaker("forest",xVil+90,zVil-90);
     fieldMaker("forest",xVil+90,zVil);
     fieldMaker("forest",xVil+90,zVil+90);
 
     fieldMaker("forest",xVil,zVil-270);
-    fieldMaker("forest",xVil,zVil-180);
-    fieldMaker("forest",xVil,zVil-90);
+    fieldMaker("forest",xVil,zVil-180);	
+	if (entertainment =="hunt"){
+		fieldMaker("forest_deer",xVil,zVil-90);
+	}
+	else if (entertainment =="falconry"){
+		fieldMaker("forest_pheasant",xVil,zVil-90);
+	}
+	else {
+		fieldMaker("forest",xVil,zVil-90);
+	}    
     fieldMaker("forest",xVil,zVil); //center
     fieldMaker("forest",xVil,zVil+90);
 
     fieldMaker("forest",xVil-90,zVil-270);
-    fieldMaker("forest",xVil-90,zVil-180);
+	fieldMaker("forest_deer",xVil-90,zVil-180);
     fieldMaker("forest",xVil-90,zVil-90);
     fieldMaker("forest",xVil-90,zVil);
     fieldMaker("forest",xVil-90,zVil+90);
