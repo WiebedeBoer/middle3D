@@ -407,19 +407,19 @@ else if(type =="duck"){
 //cow pasture
 else if(type =="cow"){
     
-        var Cow1 = new Cow(xPos-15,5,zPos+15); 
+        var Cow1 = new Cow(xPos-15,5,zPos+15,culture); 
         scene.add(Cow1);
-        var Cow2 = new Cow(xPos-75,5,zPos+75); 
+        var Cow2 = new Cow(xPos-75,5,zPos+75,culture); 
         scene.add(Cow2);
 		
-		var Cow3 = new Cow(xPos-15,5,zPos+75); 
+		var Cow3 = new Cow(xPos-15,5,zPos+75,culture); 
         scene.add(Cow3);
-        var Cow4 = new Cow(xPos-75,5,zPos+15); 
+        var Cow4 = new Cow(xPos-75,5,zPos+15,culture); 
         scene.add(Cow4);
 		
-		var Cow5 = new Cow(xPos-45,5,zPos+75); 
+		var Cow5 = new Cow(xPos-45,5,zPos+75,culture); 
         scene.add(Cow5);
-        var Cow6 = new Cow(xPos-75,5,zPos+45); 
+        var Cow6 = new Cow(xPos-75,5,zPos+45,culture); 
         scene.add(Cow6);
 		
         var fenceL2 = new Fence(xPos-75,0,zPos-15,0,0,0); 
