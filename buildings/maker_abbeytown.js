@@ -106,6 +106,9 @@ if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="e
 if (factoryAbbey =="fuller"){
 	FarmMaker("fuller",xAbbey+900,yAbbey+450);
 } 
+else if(factoryAbbey =="leather"){
+	FarmMaker("tanner",xAbbey+900,yAbbey+450);
+} 
 else if(factoryAbbey =="vintner"){
 	FarmMaker("vintner",xAbbey+900,yAbbey+450);
 } 

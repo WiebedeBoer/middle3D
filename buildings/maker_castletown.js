@@ -106,6 +106,9 @@ if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =
 if (factoryCastle =="fuller"){
 	FarmMaker("fuller",xCastle-450,yCastle-900);
 } 
+else if(factoryCastle =="leather"){
+	FarmMaker("tanner",xCastle-450,yCastle-900);
+} 
 else if(factoryCastle =="vintner"){
 	FarmMaker("vintner",xCastle-450,yCastle-900);
 } 

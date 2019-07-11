@@ -216,7 +216,7 @@ else if (farmtype=="pigfarm"){
 
 }
 //goat farm
-else if (farmtype=="goatfarm"){
+else if (farmtype=="tanner"){
 
     fieldMaker("forest",xVil+180,zVil-270);
     fieldMaker("forest",xVil+180,zVil-180);

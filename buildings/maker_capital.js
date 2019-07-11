@@ -107,6 +107,9 @@ else {
 if (factoryCapital =="fuller"){
 	FarmMaker("fuller",xCapital-900,yCapital-450);
 } 
+else if(factoryCapital =="leather"){
+	FarmMaker("tanner",xCapital-900,yCapital-450);
+} 
 else if(factoryCapital =="vintner"){
 	FarmMaker("vintner",xCapital-900,yCapital-450);
 } 

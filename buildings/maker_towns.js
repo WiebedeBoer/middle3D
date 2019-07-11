@@ -107,6 +107,9 @@ if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emer
 if (factoryTown =="fuller"){
 	FarmMaker("fuller",xTown+450,yTown+900);	
 } 
+else if(factoryTown =="leather"){
+	FarmMaker("tanner",xTown+450,yTown+900);	
+} 
 else if(factoryTown =="vintner"){
 	FarmMaker("vintner",xTown+450,yTown+900);	
 } 
