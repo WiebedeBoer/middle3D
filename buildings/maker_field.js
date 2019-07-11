@@ -446,14 +446,14 @@ else if(type =="cow"){
 //horse pasture
 else if(type =="horse"){
 
-        var Horse1 = new Horse(xPos-15,5,zPos+15); 
+        var Horse1 = new Horse(xPos-15,5,zPos+15,warhorse); 
         scene.add(Horse1);
-        var Horse2 = new Horse(xPos-75,5,zPos+75); 
+        var Horse2 = new Horse(xPos-75,5,zPos+75,warhorse); 
         scene.add(Horse2);
 		
-		var Horse3 = new Horse(xPos-15,5,zPos+75); 
+		var Horse3 = new Horse(xPos-15,5,zPos+75,warhorse); 
         scene.add(Horse3);
-        var Horse4 = new Horse(xPos-75,5,zPos+15); 
+        var Horse4 = new Horse(xPos-75,5,zPos+15,warhorse); 
         scene.add(Horse4);
 		
         var fenceL2 = new Fence(xPos-75,0,zPos-15,0,0,0); 

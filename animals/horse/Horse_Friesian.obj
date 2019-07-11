@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib WildHorse.mtl
+mtllib Horse_Friesian.mtl
 g default
 v -0.783586 10.448010 6.181588
 v -0.856773 10.542751 5.829817
