@@ -230,18 +230,18 @@ else if(type=="forest_pheasant"){
 }
 //goat pasture
 else if(type =="goat"){
-        var Goat1 = new Goat(xPos-15,5,zPos+15); 
+        var Goat1 = new Goat(xPos-15,5,zPos+15,goat); 
         scene.add(Goat1);
-        var Goat2 = new Goat(xPos-15,5,zPos+45); 
+        var Goat2 = new Goat(xPos-15,5,zPos+45,goat); 
         scene.add(Goat2);		
-		var Goat3 = new Goat(xPos-15,5,zPos+75); 
+		var Goat3 = new Goat(xPos-15,5,zPos+75,goat); 
         scene.add(Goat3);
 		
-        var Goat4 = new Goat(xPos-45,5,zPos+15); 
+        var Goat4 = new Goat(xPos-45,5,zPos+15,goat); 
         scene.add(Goat4);		
-		var Goat5 = new Goat(xPos-45,5,zPos+45); 
+		var Goat5 = new Goat(xPos-45,5,zPos+45,goat); 
         scene.add(Goat5);
-        var Goat6 = new Goat(xPos-45,5,zPos+75); 
+        var Goat6 = new Goat(xPos-45,5,zPos+75,goat); 
         scene.add(Goat6);
 		
 		var Goat7 = new Goat(xPos-75,5,zPos+15); 
@@ -274,18 +274,18 @@ else if(type =="goat"){
 //sheep pasture
 else if(type =="sheep"){
     
-        var Sheep1 = new Sheep(xPos-15,5,zPos+15); 
+        var Sheep1 = new Sheep(xPos-15,5,zPos+15,sheep); 
         scene.add(Sheep1);
-        var Sheep2 = new Sheep(xPos-15,5,zPos+45); 
+        var Sheep2 = new Sheep(xPos-15,5,zPos+45,sheep); 
         scene.add(Sheep2);		
-		var Sheep3 = new Sheep(xPos-15,5,zPos+75); 
+		var Sheep3 = new Sheep(xPos-15,5,zPos+75,sheep); 
         scene.add(Sheep3);
 		
-        var Sheep4 = new Sheep(xPos-45,5,zPos+15); 
+        var Sheep4 = new Sheep(xPos-45,5,zPos+15,sheep); 
         scene.add(Sheep4);		
-		var Sheep5 = new Sheep(xPos-45,5,zPos+45); 
+		var Sheep5 = new Sheep(xPos-45,5,zPos+45,sheep); 
         scene.add(Sheep5);
-        var Sheep6 = new Sheep(xPos-45,5,zPos+75); 
+        var Sheep6 = new Sheep(xPos-45,5,zPos+75,sheep); 
         scene.add(Sheep6);
 		
 		var Sheep7 = new Sheep(xPos-75,5,zPos+15); 
@@ -407,19 +407,19 @@ else if(type =="duck"){
 //cow pasture
 else if(type =="cow"){
     
-        var Cow1 = new Cow(xPos-15,5,zPos+15,culture); 
+        var Cow1 = new Cow(xPos-15,5,zPos+15,cattle); 
         scene.add(Cow1);
-        var Cow2 = new Cow(xPos-75,5,zPos+75,culture); 
+        var Cow2 = new Cow(xPos-75,5,zPos+75,cattle); 
         scene.add(Cow2);
 		
-		var Cow3 = new Cow(xPos-15,5,zPos+75,culture); 
+		var Cow3 = new Cow(xPos-15,5,zPos+75,cattle); 
         scene.add(Cow3);
-        var Cow4 = new Cow(xPos-75,5,zPos+15,culture); 
+        var Cow4 = new Cow(xPos-75,5,zPos+15,cattle); 
         scene.add(Cow4);
 		
-		var Cow5 = new Cow(xPos-45,5,zPos+75,culture); 
+		var Cow5 = new Cow(xPos-45,5,zPos+75,cattle); 
         scene.add(Cow5);
-        var Cow6 = new Cow(xPos-75,5,zPos+45,culture); 
+        var Cow6 = new Cow(xPos-75,5,zPos+45,cattle); 
         scene.add(Cow6);
 		
         var fenceL2 = new Fence(xPos-75,0,zPos-15,0,0,0); 

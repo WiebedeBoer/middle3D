@@ -2,27 +2,12 @@ class Cow extends THREE.Group {
 
     init (){
 		
-		//HRE, black yellow
-		if(this.bannier =="frisian"){
-			var flag_num ="Friesian";
-		}
-		//scotland blue white
-		else if(this.bannier =="scottish"){
-			var flag_num ="Highland";
-		}
-		//england, red white
-		else if(this.bannier =="danish" || this.bannier =="swedish" || this.bannier =="norwegian"){
-			var flag_num ="Fjall";
-		}
-		//spain red yellow
-		else if(this.bannier =="castillian" || this.bannier =="leonese"){
-			var flag_num ="Anatolian";
+		if(this.bannier !="none"){
+			var flag_num = this.bannier;
 		}
 		else {
 			var flag_num ="Friesian";
 		}
-		
-
 
         var dChurch = this;
         loadOBJModel("animals/cow/","Cow_"+flag_num+".obj","animals/cow/","Cow_"+flag_num+".mtl", (mesh) => {

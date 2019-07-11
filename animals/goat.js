@@ -1,9 +1,16 @@
 class Goat extends THREE.Group {
 
     init (){
+		
+		if(this.bannier !="none"){
+			var flag_num = this.bannier;
+		}
+		else {
+			var flag_num ="Alpine";
+		}
 
         var dChurch = this;
-        loadOBJModel("animals/goat/","Goat.obj","animals/goat/","Goat.mtl", (mesh) => {
+        loadOBJModel("animals/goat/","Goat_"+flag_num+".obj","animals/goat/","Goat_"+flag_num+".mtl", (mesh) => {
             mesh.scale.x = 1.3;
             mesh.scale.y = 1.3;
             mesh.scale.z = 1.3;
@@ -16,11 +23,12 @@ class Goat extends THREE.Group {
         });
     }    
             
-    constructor(pX,pY,pZ){
+    constructor(pX,pY,pZ,bannier){
         super();
         this.pX = pX;
         this.pY = pY;
         this.pZ = pZ;
+		this.bannier = bannier;
         this.init();
     }
 }

@@ -1390,7 +1390,7 @@
 <castle> <name>Kecskemet</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Debrecen</name> <pop>town</pop> <fort>town_hall</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>smithy</arms> <edu>none</edu> </town>
 <abbey> <name>Zounok</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
-<Point> <xc>1253</xc> <yc>989</yc> </Point> <goat>none</goat> <sheep>Zaupelschaf</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1253</xc> <yc>989</yc> </Point> <goat>none</goat> <sheep>Zaupelschaf</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>175</id> <place>Pecs</place> <rank>county</rank> <climate>temperate_woodlands</climate> <herb>none</herb> <style>tavern</style> <ride>none</ride> <culture>hungarian</culture> <cycle>hungarian</cycle>
@@ -1406,7 +1406,7 @@
 <castle> <name>Schaasburg</name> <pop>town</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>potterer</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Klausenburg</name> <pop>town</pop> <fort>burgh</fort> <com>poultry</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>teutonic</monastic> <factory>cooper</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Carta</name> <pop>village</pop> <fort>abbey_scriptorium</fort> <com>wool</com> <feudal>knight</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>scriptorium</factory> <arms>none</arms> <edu>library</edu> </abbey>
-<Point> <xc>1435</xc> <yc>1073</yc> </Point> <goat>none</goat> <sheep>Zaupelschaf</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1435</xc> <yc>1073</yc> </Point> <goat>none</goat> <sheep>Zaupelschaf</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>177</id> <place>Oltenia</place> <rank>principality</rank> <climate>temperate_woodlands</climate> <herb>none</herb> <style>tavern</style> <ride>none</ride> <culture>wallachian</culture> <cycle>none</cycle>
@@ -1422,7 +1422,7 @@
 <castle> <name>Bucharest</name> <pop>town</pop> <fort>burgh</fort> <com>cheese</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>windmill</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Torzburg</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>burgrave</feudal> <church>priest</church> <civil>reeve</civil> <monastic>teutonic</monastic> <factory>mint</factory> <arms>armorer</arms> <edu>none</edu> </town>
 <abbey> <name>Kronstadt</name> <pop>village</pop> <fort>mountain_castle</fort> <com>poultry</com> <feudal>burgrave</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>cooper</factory> <arms>smithy</arms> <edu>none</edu> </abbey>
-<Point> <xc>1511</xc> <yc>1140</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1511</xc> <yc>1140</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>179</id> <place>Besarabia</place> <rank>county</rank> <climate>temperate_grasslands</climate> <herb>none</herb> <style>tavern</style> <ride>none</ride> <culture>wallachian</culture> <cycle>none</cycle>
@@ -1438,7 +1438,7 @@
 <castle> <name>Orhei</name> <pop>village</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>baron</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Odessa</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Chisinau</name> <pop>town</pop> <fort>burgh</fort> <com>honey</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>tailor</factory> <arms>none</arms> <edu>none</edu> </abbey>
-<Point> <xc>1544</xc> <yc>982</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1544</xc> <yc>982</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>181</id> <place>Sofia</place> <rank>county</rank> <climate>temperate_woodlands</climate> <herb>none</herb> <style>minstrel</style> <ride>stud</ride> <culture>bulgarian</culture> <cycle>none</cycle>
@@ -1446,7 +1446,7 @@
 <castle> <name>Pleven</name> <pop>town</pop> <fort>mountain_castle</fort> <com>wine</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>none</monastic> <factory>granary</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Stip</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>baron</feudal> <church>lord_bishop</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>tailor</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Rila</name> <pop>village</pop> <fort>abbey_grange</fort> <com>honey</com> <feudal>lord</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>windmill</factory> <arms>none</arms> <edu>library</edu> </abbey>
-<Point> <xc>1426</xc> <yc>1264</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1426</xc> <yc>1264</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>182</id> <place>Varna</place> <rank>kingdom</rank> <climate>temperate_grasslands</climate> <herb>none</herb> <style>minstrel</style> <ride>none</ride> <culture>bulgarian</culture> <cycle>none</cycle>
@@ -1462,7 +1462,7 @@
 <castle> <name>Zenica</name> <pop>town</pop> <fort>mountain_castle</fort> <com>cheese</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </castle>
 <town> <name>Sebrenik</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </town>
 <abbey> <name>Visegrad</name> <pop>village</pop> <fort>mountain_castle</fort> <com>honey</com> <feudal>count</feudal> <church>priest</church> <civil>reeve</civil> <monastic>lord_abbot</monastic> <factory>none</factory> <arms>none</arms> <edu>none</edu> </abbey>
-<Point> <xc>1249</xc> <yc>1211</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Podolian</cattle>
+<Point> <xc>1249</xc> <yc>1211</yc> </Point> <goat>none</goat> <sheep>none</sheep> <cattle>Piedmontese</cattle>
 </Region>
 <Region>
 <id>184</id> <place>Syrmia</place> <rank>county</rank> <climate>temperate_woodlands</climate> <herb>none</herb> <style>hunt</style> <ride>stud</ride> <culture>serbian</culture> <cycle>serbian</cycle>
