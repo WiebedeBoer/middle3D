@@ -149,7 +149,7 @@ else if (fortCastle =="burgh"){
 	FarmMaker("burgh",xCastle-450,yCastle);
 }
 else {	
-if (popCastle !="village"){
+if (popCastle !="village" && factoryCastle =="none"){
 	houseMaker("housing",xCastle-450,yCastle); //default
 }
 }
@@ -268,43 +268,43 @@ else if (popCastle =="metropolis"){
 // 450x450, castle factories
 //tailor
 if (factoryCastle =="tailor"){
-	houseMaker("tailor",xCastle,yCastle); //business ward
+	houseMaker("tailor",xCastle-30,yCastle-30); //business ward
 }
 //glasswork
 else if (factoryCastle =="glasswork"){
-	houseMaker("glassworks",xCastle,yCastle); //business ward
+	houseMaker("glassworks",xCastle-30,yCastle-30); //business ward
 }
 //potterer
 else if (factoryCastle =="potterer"){
-	houseMaker("potter",xCastle,yCastle); //business ward
+	houseMaker("potter",xCastle-30,yCastle-30); //business ward
 }
 //granary
 else if (factoryCastle =="granary"){
-	houseMaker("granary",xCastle,yCastle); //business ward
+	houseMaker("granary",xCastle-30,yCastle-30); //business ward
 }
 //furrier
 else if (factoryCastle =="fur"){
-	houseMaker("furrier",xCastle,yCastle); //business ward
+	houseMaker("furrier",xCastle-30,yCastle-30); //business ward
 }
 //mint
 else if (factoryCastle =="mint"){
-	houseMaker("mint",xCastle,yCastle); //business ward
+	houseMaker("mint",xCastle-30,yCastle-30); //business ward
 }
 //soap maker
 else if (factoryCastle =="soapmaker"){
-	houseMaker("soapmaker",xCastle,yCastle); //business ward
+	houseMaker("soapmaker",xCastle-30,yCastle-30); //business ward
 }
 //cooper
 else if (factoryCastle =="cooper"){
-	houseMaker("cooper",xCastle,yCastle); //business ward
+	houseMaker("cooper",xCastle-30,yCastle-30); //business ward
 }
 //dyeswork
 else if (factoryCastle =="madder" || factoryCastle =="woad" || factoryCastle =="saffron"){
-	houseMaker("dyesworks",xCastle,yCastle); //business ward
+	houseMaker("dyesworks",xCastle-30,yCastle-30); //business ward
 }
 else {	
 	if (popCastle !="village"){
-		houseMaker("housing",xCastle,yCastle); //default
+		houseMaker("housing",xCastle-30,yCastle-30); //default
 	}
 }
 

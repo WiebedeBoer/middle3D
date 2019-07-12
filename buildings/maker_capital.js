@@ -150,7 +150,7 @@ else if (fortCapital =="burgh"){
 	FarmMaker("burgh",xCapital-450,yCapital);
 }
 else {	
-if (popCapital !="village"){
+if (popCapital !="village" && factoryCapital =="none"){
 	houseMaker("housing",xCapital,yCapital); //default
 }
 }
@@ -268,43 +268,43 @@ else if (popCapital =="metropolis"){
 // 450x450, capital factories
 //tailor
 if (factoryCapital =="tailor"){
-	houseMaker("tailor",xCapital,yCapital); //business ward
+	houseMaker("tailor",xCapital-30,yCapital-30); //business ward
 }
 //glasswork
 else if (factoryCapital =="glasswork"){
-	houseMaker("glassworks",xCapital,yCapital); //business ward
+	houseMaker("glassworks",xCapital-30,yCapital-30); //business ward
 }
 //potterer
 else if (factoryCapital =="potterer"){
-	houseMaker("potter",xCapital,yCapital); //business ward
+	houseMaker("potter",xCapital-30,yCapital-30); //business ward, potterer
 }
 //granary
 else if (factoryCapital =="granary"){
-	houseMaker("granary",xCapital,yCapital); //business ward
+	houseMaker("granary",xCapital-30,yCapital-30); //business ward, granary
 }
 //furrier
 else if (factoryCapital =="fur"){
-	houseMaker("furrier",xCapital,yCapital); //business ward
+	houseMaker("furrier",xCapital-30,yCapital-30); //business ward
 }
 //mint
 else if (factoryCapital =="mint"){
-	houseMaker("mint",xCapital,yCapital); //business ward
+	houseMaker("mint",xCapital-30,yCapital-30); //business ward
 }
 //soap maker
 else if (factoryCapital =="soapmaker"){
-	houseMaker("soapmaker",xCapital,yCapital); //business ward
+	houseMaker("soapmaker",xCapital-30,yCapital-30); //business ward
 }
 //cooper
 else if (factoryCapital =="cooper"){
-	houseMaker("cooper",xCapital,yCapital); //business ward
+	houseMaker("cooper",xCapital-30,yCapital-30); //business ward, cooper
 }
 //dyeswork
 else if (factoryCapital =="madder" || factoryCapital =="woad" || factoryCapital =="saffron"){
-	houseMaker("dyesworks",xCapital,yCapital); //business ward
+	houseMaker("dyesworks",xCapital-30,yCapital-30); //business ward
 }
 else {	
 	if (popCapital !="village"){
-		houseMaker("housing",xCapital,yCapital); //default
+		houseMaker("housing",xCapital-30,yCapital-30); //default
 	}
 }
 

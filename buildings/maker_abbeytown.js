@@ -149,7 +149,7 @@ else if (fortAbbey =="burgh"){
 	FarmMaker("burgh",xAbbey-450,yAbbey);
 }
 else {	
-	if (popAbbey !="village"){
+	if (popAbbey !="village" && factoryAbbey =="none"){
 		houseMaker("housing",xAbbey-450,yAbbey); //default
 	}
 }
@@ -268,43 +268,43 @@ else if (popAbbey =="metropolis"){
 // 450x450, abbey factories
 //tailor
 if (factoryAbbey =="tailor"){
-	houseMaker("tailor",xAbbey,yAbbey); //business ward
+	houseMaker("tailor",xAbbey-30,yAbbey-30); //business ward
 }
 //glasswork
 else if (factoryAbbey =="glasswork"){
-	houseMaker("glassworks",xAbbey,yAbbey); //business ward
+	houseMaker("glassworks",xAbbey-30,yAbbey-30); //business ward
 }
 //potterer
 else if (factoryAbbey =="potterer"){
-	houseMaker("potter",xAbbey,yAbbey); //business ward
+	houseMaker("potter",xAbbey-30,yAbbey-30); //business ward
 }
 //granary
 else if (factoryAbbey =="granary"){
-	houseMaker("granary",xAbbey,yAbbey); //business ward
+	houseMaker("granary",xAbbey-30,yAbbey-30); //business ward
 }
 //furrier
 else if (factoryAbbey =="fur"){
-	houseMaker("furrier",xAbbey,yAbbey); //business ward
+	houseMaker("furrier",xAbbey-30,yAbbey-30); //business ward
 }
 //mint
 else if (factoryAbbey =="mint"){
-	houseMaker("mint",xAbbey,yAbbey); //business ward
+	houseMaker("mint",xAbbey-30,yAbbey-30); //business ward
 }
 //soap maker
 else if (factoryAbbey =="soapmaker"){
-	houseMaker("soapmaker",xAbbey,yAbbey); //business ward
+	houseMaker("soapmaker",xAbbey-30,yAbbey-30); //business ward
 }
 //cooper
 else if (factoryAbbey =="cooper"){
-	houseMaker("cooper",xAbbey,yAbbey); //business ward
+	houseMaker("cooper",xAbbey-30,yAbbey-30); //business ward
 }
 //dyeswork
 else if (factoryAbbey =="madder" || factoryAbbey =="woad" || factoryAbbey =="saffron"){
-	houseMaker("dyesworks",xAbbey,yAbbey); //business ward
+	houseMaker("dyesworks",xAbbey-30,yAbbey-30); //business ward
 }
 else {	
 	if (popAbbey !="village"){
-		houseMaker("housing",xAbbey,yAbbey); //default
+		houseMaker("housing",xAbbey-30,yAbbey-30); //default
 	}
 }
 

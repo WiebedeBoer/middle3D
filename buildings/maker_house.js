@@ -108,9 +108,9 @@ else if (type =="cooper"){
 else if (type =="potter"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
     scene.add( hood ); 
-	var jug1 = new Jug(xPos-10, 1,zPos-50, 0,0,0);
+	var jug1 = new Jug(xPos-10, 1,zPos-50, 0);
 	scene.add( jug1 ); 	
-	var jug2 = new Jug(xPos-25, 1,zPos-50, 0,0,0);
+	var jug2 = new Jug(xPos-25, 1,zPos-50, 0);
 	scene.add( jug2 ); 
 }
 else if (type =="tailor"){
@@ -123,7 +123,9 @@ else if (type =="furrier"){
 }
 else if (type =="glassworks"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
-    scene.add( hood );  	
+    scene.add( hood ); 
+	var glassvase = new Vase(xPos-10, 1,zPos-50, 0);
+	scene.add( glassvase );  	
 }
 else if (type =="dyesworks"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
@@ -134,8 +136,8 @@ else if (type =="soapmaker"){
     scene.add( hood );  	
 }
 else if (type =="granary"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
-    scene.add( hood );  	
+    var grainshed = new Granary(xPos-30,0,zPos-90,Math.PI/2);
+    scene.add( grainshed );  	
 }
 else if (type =="mint"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);

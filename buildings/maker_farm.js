@@ -512,6 +512,8 @@ else if (farmtype=="studfarm"){
     fieldMaker("horse",xVil-90,zVil-180);
     //fallow
     houseMaker("barn",xVil-90,zVil);
+	var hayshed = new Haystack(xVil-120,0,zVil);
+	scene.add( hayshed ); 
     //fallow
 
     fieldMaker("forest",xVil-180,zVil-270);
