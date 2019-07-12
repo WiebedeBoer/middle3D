@@ -254,39 +254,39 @@ else if (popCapital =="metropolis"){
 // 450x450, capital factories
 //tailor
 if (factoryCapital =="tailor"){
-	//houseMaker("tailor",xCapital,yCapital); //business ward
+	houseMaker("tailor",xCapital,yCapital); //business ward
 }
 //glasswork
 else if (factoryCapital =="glasswork"){
-	//houseMaker("glassworks",xCapital,yCapital); //business ward
+	houseMaker("glassworks",xCapital,yCapital); //business ward
 }
 //potterer
 else if (factoryCapital =="potterer"){
-	//houseMaker("potter",xCapital,yCapital); //business ward
+	houseMaker("potter",xCapital,yCapital); //business ward
 }
 //granary
 else if (factoryCapital =="granary"){
-	//houseMaker("granary",xCapital,yCapital); //business ward
+	houseMaker("granary",xCapital,yCapital); //business ward
 }
 //furrier
 else if (factoryCapital =="fur"){
-	//houseMaker("furrier",xCapital,yCapital); //business ward
+	houseMaker("furrier",xCapital,yCapital); //business ward
 }
 //mint
 else if (factoryCapital =="mint"){
-	//houseMaker("mint",xCapital,yCapital); //business ward
+	houseMaker("mint",xCapital,yCapital); //business ward
 }
 //soap maker
 else if (factoryCapital =="soapmaker"){
-	//houseMaker("soapmaker",xCapital,yCapital); //business ward
+	houseMaker("soapmaker",xCapital,yCapital); //business ward
 }
 //cooper
 else if (factoryCapital =="cooper"){
-	//houseMaker("cooper",xCapital,yCapital); //business ward
+	houseMaker("cooper",xCapital,yCapital); //business ward
 }
 //dyeswork
 else if (factoryCapital =="madder" || factoryCapital =="woad" || factoryCapital =="saffron"){
-	//houseMaker("dyesworks",xCapital,yCapital); //business ward
+	houseMaker("dyesworks",xCapital,yCapital); //business ward
 }
 else {	
 	
