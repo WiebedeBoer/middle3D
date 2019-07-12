@@ -101,6 +101,9 @@ else {
 if (commerceCastle =="sapphire" || commerceCastle =="rubies" || commerceCastle =="emeralds" || commerceCastle =="salt" || commerceCastle =="tin" || commerceCastle =="lead" || commerceCastle =="iron" || commerceCastle =="gold" || commerceCastle =="silver"){
 	FarmMaker("castlemine",xCastle+900,yCastle+450);	
 }
+else {
+	FarmMaker("forest",xCastle+900,yCastle+450);
+}
 
 //x1 y4 450x450, castle mill
 if (factoryCastle =="fuller"){
@@ -147,8 +150,7 @@ else if (fortCastle =="burgh"){
 }
 else {	
 if (popCastle !="village"){
-}
-else {
+	houseMaker("housing",xCastle-450,yCastle); //default
 }
 }
 
@@ -189,6 +191,9 @@ if (fortCastle !="fortified_abbey" && fortCastle !="abbey_grange" && fortCastle 
 		FarmMaker("commandry",xCastle+450,yCastle);
 	}
 	else {
+		if (popCastle !="village"){
+			houseMaker("housing",xCastle+450,yCastle); //default
+		}
 	}
 }
 
@@ -200,13 +205,18 @@ else if (entertainment =="joust"){
 	FarmMaker("joust",xCastle+225,yCastle+15);
 }
 else if (entertainment =="hunt" || entertainment =="falconry"){
-	
+	houseMaker("hunting",xCastle+225,yCastle+150); //hunt
 }
 else if (entertainment =="reliquary"){
-	
+	houseMaker("chapel",xCastle+225,yCastle+150); //chapel
 }
 else if (entertainment =="fair"){
 	FarmMaker("fair",xCastle+225,yCastle+15);
+}
+else {
+	if (popCastle !="village"){
+		houseMaker("housing",xCastle+225,yCastle+15); //default
+	}
 }
 
 //x,y+1 450x450, castle palace
@@ -221,14 +231,18 @@ else if (fortCastle =="ducal_residence"){
 }
 else {	
 if (churchCastle !="priest"){
+	houseMaker("housing",xCastle-200,yCastle+500); //default
 }
 else {
+	if (popCastle !="village"){
+		houseMaker("housing",xCastle-200,yCastle+500); //default
+	}
 }
 }
 
 //HOUSES
 if (popCastle =="village"){
-	houseMaker("urban",xCastle-150,yCastle-275); //church ward
+	houseMaker("urban",xCastle-15,yCastle-350); //church ward
 }
 else if (popCastle =="town"){
 	houseMaker("urban",xCastle-150,yCastle-275); //church ward
@@ -289,7 +303,9 @@ else if (factoryCastle =="madder" || factoryCastle =="woad" || factoryCastle =="
 	houseMaker("dyesworks",xCastle,yCastle); //business ward
 }
 else {	
-	
+	if (popCastle !="village"){
+		houseMaker("housing",xCastle,yCastle); //default
+	}
 }
 
 }

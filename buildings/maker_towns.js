@@ -102,6 +102,9 @@ else {
 if (commerceTown =="sapphire" || commerceTown =="rubies" || commerceTown =="emeralds" || commerceTown =="salt" || commerceTown =="tin" || commerceTown =="lead" || commerceTown =="iron" || commerceTown =="gold" || commerceTown =="silver"){
 	FarmMaker("townmine",xTown-900,yTown-450);		
 }
+else {
+	FarmMaker("forest",xTown-900,yTown-450);
+}
 
 //x+1,y+2 450x450, town mill
 if (factoryTown =="fuller"){
@@ -147,8 +150,7 @@ else if (fortTown =="burgh"){
 }
 else {	
 if (popTown !="village"){
-}
-else {
+	houseMaker("housing",xTown-450,yTown); //default
 }
 }
 
@@ -189,6 +191,9 @@ if (fortTown !="fortified_abbey" && fortTown !="abbey_grange" && fortTown !="abb
 		FarmMaker("commandry",xTown+450,yTown);
 	}
 	else {
+		if (popTown !="village"){
+			houseMaker("housing",xTown+450,yTown); //default
+		}
 	}
 }
 
@@ -200,13 +205,18 @@ else if (entertainment =="joust"){
 	FarmMaker("joust",xTown+225,yTown+15);
 }
 else if (entertainment =="hunt" || entertainment =="falconry"){
-	
+	houseMaker("hunting",xTown+225,yTown+150); //hunt
 }
 else if (entertainment =="reliquary"){
-	
+	houseMaker("chapel",xTown+225,yTown+150); //chapel
 }
 else if (entertainment =="fair"){
 	FarmMaker("fair",xTown+225,yTown+15);
+}
+else {
+	if (popTown !="village"){
+		houseMaker("housing",xTown+225,yTown+15); //default
+	}
 }
 
 //x,y+1 450x450, town palace
@@ -221,14 +231,18 @@ else if (fortTown =="ducal_residence"){
 }
 else {
 if (churchTown !="priest"){
+	houseMaker("housing",xTown-200,yTown+500); //default
 }
 else {
+	if (popTown !="village"){
+		houseMaker("housing",xTown-200,yTown+500); //default
+	}
 }	
 }
 
 //HOUSES
 if (popTown =="village"){
-	houseMaker("urban",xTown-150,yTown-275); //church ward
+	houseMaker("urban",xTown-15,yTown-350); //church ward
 }
 else if (popTown =="town"){
 	houseMaker("urban",xTown-150,yTown-275); //church ward
@@ -288,7 +302,9 @@ else if (factoryTown =="madder" || factoryTown =="woad" || factoryTown =="saffro
 	houseMaker("dyesworks",xTown,yTown); //business ward
 }
 else {	
-	
+	if (popTown !="village"){
+		houseMaker("housing",xTown,yTown); //default
+	}
 }
 	
 }

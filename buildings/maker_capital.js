@@ -53,6 +53,9 @@ scene.add( gateEast );
 if (commerceCapital =="sapphire" || commerceCapital =="rubies" || commerceCapital =="emeralds" || commerceCapital =="salt" || commerceCapital =="tin" || commerceCapital =="lead" || commerceCapital =="iron" || commerceCapital =="gold" || commerceCapital =="silver"){
     FarmMaker("capitalmine",xCapital-450,yCapital+900);	
 }
+else {
+	FarmMaker("forest",xCapital-450,yCapital+900);
+}
 
 //x,y+2 450x450, capital farm
 if (commerceCapital =="grain"){
@@ -148,8 +151,7 @@ else if (fortCapital =="burgh"){
 }
 else {	
 if (popCapital !="village"){
-}
-else {
+	houseMaker("housing",xCapital,yCapital); //default
 }
 }
 
@@ -190,6 +192,9 @@ if (fortCapital !="fortified_abbey" && fortCapital !="abbey_grange" && fortCapit
 		FarmMaker("commandry",xCapital+450,yCapital);
 	}
 	else {
+		if (popCapital !="village"){
+			houseMaker("housing",xCapital+450,yCapital); //default
+		}
 	}
 }
 
@@ -201,13 +206,18 @@ else if (entertainment =="joust"){
 	FarmMaker("joust",xCapital+225,yCapital+15);
 }
 else if (entertainment =="hunt" || entertainment =="falconry"){
-	
+	houseMaker("hunting",xCapital+225,yCapital+150); //hunt	
 }
 else if (entertainment =="reliquary"){
-	
+	houseMaker("chapel",xCapital+225,yCapital+150); //chapel
 }
 else if (entertainment =="fair"){
 	FarmMaker("fair",xCapital+225,yCapital+15);
+}
+else {
+	if (popCapital !="village"){
+		houseMaker("housing",xCapital+225,yCapital+15); //default
+	}
 }
 
 //x,y+1 450x450, capital palace
@@ -222,14 +232,18 @@ else if (fortCapital =="ducal_residence"){
 }
 else {
 if (churchCapital !="priest"){
+	houseMaker("housing",xCapital-200,yCapital+500); //default
 }
 else {
+	if (popCapital !="village"){
+		houseMaker("housing",xCapital-200,yCapital+500); //default
+	}
 }	
 }
 
 //HOUSES
 if (popCapital =="village"){
-	houseMaker("urban",xCapital-150,yCapital-275); //church ward
+	houseMaker("urban",xCapital-15,yCapital-350); //church ward
 }
 else if (popCapital =="town"){
 	houseMaker("urban",xCapital-150,yCapital-275); //church ward
@@ -289,7 +303,9 @@ else if (factoryCapital =="madder" || factoryCapital =="woad" || factoryCapital 
 	houseMaker("dyesworks",xCapital,yCapital); //business ward
 }
 else {	
-	
+	if (popCapital !="village"){
+		houseMaker("housing",xCapital,yCapital); //default
+	}
 }
 
 }

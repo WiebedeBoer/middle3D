@@ -141,6 +141,20 @@ else if (type =="mint"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
     scene.add( hood );  	
 }
+//entertain
+else if (type =="hunting"){
+    var hood = new Industries(xPos,0,zPos-120,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="chapel"){
+    var hood = new Industries(xPos,0,zPos-120,Math.PI/2);
+    scene.add( hood );  	
+}
+//default houses
+else if (type =="housing"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
 //potterer
 else if (type =="potterer"){
     var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);

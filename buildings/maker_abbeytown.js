@@ -101,6 +101,9 @@ else {
 if (commerceAbbey =="sapphire" || commerceAbbey =="rubies" || commerceAbbey =="emeralds" || commerceAbbey =="salt" || commerceAbbey =="tin" || commerceAbbey =="lead" || commerceAbbey =="iron" || commerceAbbey =="gold" || commerceAbbey =="silver"){
     FarmMaker("abbeymine",xAbbey-450,yAbbey-900);	
 }
+else {
+	FarmMaker("forest",xAbbey-450,yAbbey-900);
+}
 
 //x+2,y+1 450x450, abbey mill
 if (factoryAbbey =="fuller"){
@@ -146,10 +149,9 @@ else if (fortAbbey =="burgh"){
 	FarmMaker("burgh",xAbbey-450,yAbbey);
 }
 else {	
-if (popAbbey !="village"){
-}
-else {
-}
+	if (popAbbey !="village"){
+		houseMaker("housing",xAbbey-450,yAbbey); //default
+	}
 }
 
 //x,y 450x450, abbey centre
@@ -189,6 +191,9 @@ if (fortAbbey !="fortified_abbey" && fortAbbey !="abbey_grange" && fortAbbey !="
 		FarmMaker("commandry",xAbbey+450,yAbbey);
 	}
 	else {
+		if (popAbbey !="village"){
+			houseMaker("housing",xAbbey+450,yAbbey); //default
+		}
 	}
 }	
 
@@ -200,13 +205,18 @@ else if (entertainment =="joust"){
 	FarmMaker("joust",xAbbey+225,yAbbey+15);
 }
 else if (entertainment =="hunt" || entertainment =="falconry"){
-	
+	houseMaker("hunting",xAbbey+225,yAbbey+150); //hunt
 }
 else if (entertainment =="reliquary"){
-	
+	houseMaker("chapel",xAbbey+225,yAbbey+150); //chapel
 }
 else if (entertainment =="fair"){
 	FarmMaker("fair",xAbbey+225,yAbbey+15);
+}
+else {
+	if (popAbbey !="village"){
+		houseMaker("housing",xAbbey+225,yAbbey+15); //default
+	}
 }
 
 //x,y+1 450x450, abbey palace
@@ -221,14 +231,18 @@ else if (fortAbbey =="ducal_residence"){
 }
 else {
 if (churchAbbey !="priest"){
+	houseMaker("housing",xAbbey-200,yAbbey+500); //default
 }
 else {
+	if (popAbbey !="village"){
+		houseMaker("housing",xAbbey-200,yAbbey+500); //default
+	}
 }	
 }
 
 //HOUSES
 if (popAbbey =="village"){
-	houseMaker("urban",xAbbey-150,yAbbey-275); //church ward
+	houseMaker("urban",xAbbey-15,yAbbey-350); //church ward
 }
 else if (popAbbey =="town"){
 	houseMaker("urban",xAbbey-150,yAbbey-275); //church ward
@@ -289,7 +303,9 @@ else if (factoryAbbey =="madder" || factoryAbbey =="woad" || factoryAbbey =="saf
 	houseMaker("dyesworks",xAbbey,yAbbey); //business ward
 }
 else {	
-	
+	if (popAbbey !="village"){
+		houseMaker("housing",xAbbey,yAbbey); //default
+	}
 }
 
 	
