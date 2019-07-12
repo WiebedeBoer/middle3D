@@ -96,6 +96,51 @@ var farmhouse = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
 scene.add( farmhouse );
 }
 //INDUSTRY
+//town industries
+else if (type =="cooper"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood ); 
+	var barrel = new Barrel(xPos-10, 1,zPos-50, 0,0,0);
+	scene.add( barrel ); 
+	var barrel2 = new Barrel(xPos-25, 1,zPos-50, 0,0,0);
+	scene.add( barrel2 );   	
+}
+else if (type =="potter"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood ); 
+	var jug1 = new Jug(xPos-10, 1,zPos-50, 0,0,0);
+	scene.add( jug1 ); 	
+	var jug2 = new Jug(xPos-25, 1,zPos-50, 0,0,0);
+	scene.add( jug2 ); 
+}
+else if (type =="tailor"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="furrier"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="glassworks"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="dyesworks"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="soapmaker"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="granary"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
+else if (type =="mint"){
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    scene.add( hood );  	
+}
 //potterer
 else if (type =="potterer"){
     var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);

@@ -254,36 +254,39 @@ else if (popAbbey =="metropolis"){
 // 450x450, abbey factories
 //tailor
 if (factoryAbbey =="tailor"){
-	
+	//houseMaker("tailor",xAbbey,yAbbey); //business ward
 }
 //glasswork
 else if (factoryAbbey =="glasswork"){
-	
+	//houseMaker("glassworks",xAbbey,yAbbey); //business ward
 }
 //potterer
 else if (factoryAbbey =="potterer"){
+	//houseMaker("potter",xAbbey,yAbbey); //business ward
 }
 //granary
 else if (factoryAbbey =="granary"){
+	//houseMaker("granary",xAbbey,yAbbey); //business ward
 }
 //furrier
 else if (factoryAbbey =="fur"){
-	
+	//houseMaker("furrier",xAbbey,yAbbey); //business ward
 }
 //mint
 else if (factoryAbbey =="mint"){
-	
+	//houseMaker("mint",xAbbey,yAbbey); //business ward
 }
 //soap maker
 else if (factoryAbbey =="soapmaker"){
-	
+	//houseMaker("soapmaker",xAbbey,yAbbey); //business ward
 }
 //cooper
 else if (factoryAbbey =="cooper"){
+	//houseMaker("cooper",xAbbey,yAbbey); //business ward
 }
 //dyeswork
 else if (factoryAbbey =="madder" || factoryAbbey =="woad" || factoryAbbey =="saffron"){
-	
+	//houseMaker("dyesworks",xAbbey,yAbbey); //business ward
 }
 else {	
 	

@@ -253,38 +253,39 @@ else if (popTown =="metropolis"){
 // 450x450, town factories
 //tailor
 if (factoryTown =="tailor"){
-	
+	//houseMaker("tailor",xTown,yTown); //business ward
 }
 //glasswork
 else if (factoryTown =="glasswork"){
-	
+	//houseMaker("glassworks",xTown,yTown); //business ward
 }
 //potterer
 else if (factoryTown =="potterer"){
-	
+	//houseMaker("potter",xTown,yTown); //business ward
 }
 //granary
 else if (factoryTown =="granary"){
+	//houseMaker("granary",xTown,yTown); //business ward
 }
 //furrier
 else if (factoryTown =="fur"){
-	
+	//houseMaker("furrier",xTown,yTown); //business ward
 }
 //mint
 else if (factoryTown =="mint"){
-	
+	//houseMaker("mint",xTown,yTown); //business ward
 }
 //soap maker
 else if (factoryTown =="soapmaker"){
-	
+	//houseMaker("soapmaker",xTown,yTown); //business ward
 }
 //cooper
 else if (factoryTown =="cooper"){
-	
+	//houseMaker("cooper",xTown,yTown); //business ward
 }
 //dyeswork
 else if (factoryTown =="madder" || factoryTown =="woad" || factoryTown =="saffron"){
-	
+	//houseMaker("dyesworks",xTown,yTown); //business ward
 }
 else {	
 	

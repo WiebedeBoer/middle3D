@@ -40,6 +40,7 @@
 <script src="buildings/marketstall.js"></script>
 <!--buildings and houses-->
 <script src="buildings/urban.js"></script>
+<script src="buildings/business.js"></script>
 <!--buildings and fortifications-->
 <script src="buildings/castlekeep.js"></script>
 <script src="buildings/citywall.js"></script>
@@ -59,6 +60,7 @@
 <script src="props/barrel.js"></script>
 <script src="props/winebarrel.js"></script>
 <script src="props/stool.js"></script>
+<script src="props/jug.js"></script>
 <!--environment: plane en skybox-->
 <script src="environment/villePlane.js"></script>
 <script src="environment/plane.js"></script>
@@ -88,7 +90,7 @@
 <!--styling-->
 <link rel="stylesheet" type="text/css" href="Styling.css">
 </head>
-<body class="ng-scope" style="margin: 0px; background-color: #d8e7ff; overflow: hidden;" onload="loadImperium(),GameLoop()">
+<body class="ng-scope" style="margin: 0px; background-color: #d8e7ff; overflow: hidden;" onload="loadImperium()">
 <div class="parent" id="parent">  
    <!--customcanvas-->       
 <div height="400" width="800" class="customcanvas" id="customcanvas"></div>
@@ -129,6 +131,7 @@
 <script src="loaders/MTLLoader.js"></script>
 <script src="loaders/ModelLoader.js"></script>
 <script>
+
 //collision vars
 var MovingCube;
 var collidableMeshList = [];
@@ -236,7 +239,6 @@ camera.position.z = -67;
 camera.position.x = -21;
 //environment
 var environmentsize = 5100;//4950
-
 //plane
 if(climate =="desert" || climate =="desert_marshes"){
 	//planes
@@ -308,8 +310,6 @@ var collisionZ;
 appendCoin();
 appendItem();
 //onload loop
-
-
 function GameLoop(){
 
         //update function
@@ -328,8 +328,7 @@ function GameLoop(){
                 //ambient
                 soundGathering();
         })
-        
-
+        /*
         //loop runner
         var lastTimeMsec= null
         requestAnimationFrame(function animate(nowMsec){
@@ -344,12 +343,11 @@ function GameLoop(){
                         updateFn(deltaMsec/1000, nowMsec/1000)
                 })
         })
-	
+	*/
 }
 function newDoc() {
     window.location.assign("map.html")
 }
-
 
 </script>
 </div>

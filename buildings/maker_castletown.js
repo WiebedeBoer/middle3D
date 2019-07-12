@@ -254,36 +254,39 @@ else if (popCastle =="metropolis"){
 // 450x450, castle factories
 //tailor
 if (factoryCastle =="tailor"){
-	
+	//houseMaker("tailor",xCastle,yCastle); //business ward
 }
 //glasswork
 else if (factoryCastle =="glasswork"){
-	
+	//houseMaker("glassworks",xCastle,yCastle); //business ward
 }
 //potterer
 else if (factoryCastle =="potterer"){
+	//houseMaker("potter",xCastle,yCastle); //business ward
 }
 //granary
 else if (factoryCastle =="granary"){
+	//houseMaker("granary",xCastle,yCastle); //business ward
 }
 //furrier
 else if (factoryCastle =="fur"){
-	
+	//houseMaker("furrier",xCastle,yCastle); //business ward
 }
 //mint
 else if (factoryCastle =="mint"){
-	
+	//houseMaker("mint",xCastle,yCastle); //business ward
 }
 //soap maker
 else if (factoryCastle =="soapmaker"){
-	
+	//houseMaker("soapmaker",xCastle,yCastle); //business ward
 }
 //cooper
 else if (factoryCastle =="cooper"){
+	//houseMaker("cooper",xCastle,yCastle); //business ward
 }
 //dyeswork
 else if (factoryCastle =="madder" || factoryCastle =="woad" || factoryCastle =="saffron"){
-	
+	//houseMaker("dyesworks",xCastle,yCastle); //business ward
 }
 else {	
 	
