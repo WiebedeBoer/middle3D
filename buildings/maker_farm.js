@@ -218,7 +218,7 @@ else if (farmtype=="pigfarm"){
 //goat farm
 else if (farmtype=="tanner"){
 
-    fieldMaker("forest",xVil+180,zVil-270);
+    //fieldMaker("forest",xVil+180,zVil-270);
     fieldMaker("forest",xVil+180,zVil-180);
     fieldMaker("forest",xVil+180,zVil-90);
     fieldMaker("forest",xVil+180,zVil);
@@ -230,19 +230,19 @@ else if (farmtype=="tanner"){
     fieldMaker("forest",xVil+90,zVil);    
     //fallow
 
-    fieldMaker("forest",xVil,zVil-270);   
+    //fieldMaker("forest",xVil,zVil-270);   
     //fallow
     //fallow
     houseMaker("farmhouse",xVil,zVil); //center
     //fallow
 
-    fieldMaker("forest",xVil-90,zVil-270);
+    //fieldMaker("forest",xVil-90,zVil-270);
     fieldMaker("goat",xVil-90,zVil-180);
     //fallow
     houseMaker("barn",xVil-90,zVil);
     fieldMaker("vegetables",xVil-90,zVil+90);
 
-    fieldMaker("forest",xVil-180,zVil-270);
+    //fieldMaker("forest",xVil-180,zVil-270);
     //fallow
     //fallow
     fieldMaker("forest",xVil-180,zVil);
