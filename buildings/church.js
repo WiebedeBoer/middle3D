@@ -11,6 +11,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//bohemia
 		else if(this.bannier =="bohemian"){
@@ -20,6 +21,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//northern italy
 		else if(this.bannier =="tuscan" || this.bannier =="lombard"){
@@ -29,6 +31,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//france
 		else if(this.bannier =="frankish" || this.bannier =="occitan" || this.bannier =="arpitan" || this.bannier =="breton"){
@@ -38,6 +41,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//british isles
 		else if(this.bannier =="scottish" || this.bannier =="pictish" || this.bannier =="english" || this.bannier =="welsh" || this.bannier =="irish"){
@@ -47,6 +51,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//scandinanvian
 		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="baltic" || this.bannier =="swedish"){
@@ -55,7 +60,8 @@ class Church extends THREE.Group {
 			var scale_y = 0.2;
 			var scale_z = 0.2;
 			var rotate_palace = 0;	
-			var mintower =0;			
+			var mintower =0;
+			var xrepl =0;			
 		}		
 		//poland lithuania, red white
 		else if(this.bannier =="polish" || this.bannier =="lithuanian"){
@@ -65,6 +71,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}	
 		//hungary croatia, red white
 		else if(this.bannier =="croatian" || this.bannier =="hungarian"){
@@ -74,6 +81,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}		
 		//spanish
 		else if(this.bannier =="navarrese" || this.bannier =="aragonese" || this.bannier =="catalan" || this.bannier =="leonese" || this.bannier =="castillian" || this.bannier =="galician" || this.bannier =="galician"){
@@ -83,6 +91,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//portugal
 		else if(this.bannier =="portuguese"){
@@ -92,6 +101,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//napels
 		else if(this.bannier =="neapolitan" || this.bannier =="sardinian" || this.bannier =="sicilian"){
@@ -101,6 +111,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//byzantine, red yellow
 		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian" || this.bannier =="byzantine"){
@@ -110,6 +121,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//russia, blue yellow
 		else if(this.bannier =="russian"){
@@ -119,6 +131,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//georgia armenia
 		else if(this.bannier =="georgian" || this.bannier =="armenian"){
@@ -128,6 +141,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 		//ISLAMIC
 		//andalucia
@@ -138,6 +152,7 @@ class Church extends THREE.Group {
 			var scale_z = 22.2;
 			var rotate_palace = 0;
 			var mintower =45;
+			var xrepl =220;
 		}
 		//persian
 		else if(this.bannier =="turkish" || this.bannier =="persian"){
@@ -147,6 +162,7 @@ class Church extends THREE.Group {
 			var scale_z = 22.2;
 			var rotate_palace = 0;
 			var mintower =45;
+			var xrepl =220;
 		}
 		//arab
 		else if(this.bannier =="maghreb" || this.bannier =="ifriqiya" || this.bannier =="misr" || this.bannier =="mashriq" || this.bannier =="hejaz" || this.bannier =="najd"){
@@ -156,6 +172,7 @@ class Church extends THREE.Group {
 			var scale_z = 22.2;
 			var rotate_palace = 0;
 			var mintower =45;
+			var xrepl =220;
 		}
 		//DEFAULT
 		else {
@@ -165,6 +182,7 @@ class Church extends THREE.Group {
 			var scale_z = 0.2;
 			var rotate_palace = 0;
 			var mintower =0;
+			var xrepl =0;
 		}
 
         var dChurch = this;
@@ -172,7 +190,7 @@ class Church extends THREE.Group {
             mesh.scale.x = scale_x;
             mesh.scale.y = scale_y;
             mesh.scale.z = scale_z;
-            dChurch.position.x = this.pX + mintower;
+            dChurch.position.x = this.pX + xrepl;
             dChurch.position.y = this.pY + mintower;
             dChurch.position.z = this.pZ;
             dChurch.rotation.y = this.yR;
