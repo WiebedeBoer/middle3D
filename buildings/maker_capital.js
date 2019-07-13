@@ -272,7 +272,7 @@ if (factoryCapital =="tailor"){
 }
 //glasswork
 else if (factoryCapital =="glasswork"){
-	houseMaker("glassworks",xCapital-30,yCapital-30); //business ward
+	houseMaker("glassworks",xCapital-30,yCapital-30); //business ward, glasswork
 }
 //potterer
 else if (factoryCapital =="potterer"){

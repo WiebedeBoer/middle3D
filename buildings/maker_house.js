@@ -21,7 +21,9 @@ scene.add( basilica );
 //keep
 else if (type =="keep"){
 var keep = new CastleKeep(xPos,househigh-22,zPos,0);
-scene.add( keep );  
+scene.add( keep );
+var vane = new Flag(xPos, -6,zPos, 0,culture);
+scene.add( vane );   
 }
 //palace
 else if (type =="royalpalace"){
