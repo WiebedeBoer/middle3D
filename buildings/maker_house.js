@@ -4,13 +4,17 @@ var househigh = 21.0;
 //RELIGIOUS PLOT
 //cathedral
 if (type =="cathedral"){
-var cathedral = new Cathedral(xPos,househigh-26.5,zPos,0);
-scene.add( cathedral );  
+	var cathedral = new Cathedral(xPos,househigh-26.5,zPos,0,culture);
+	scene.add( cathedral );  
 }
 //church
 else if (type =="church"){
-var church = new Church(xPos,househigh-22,zPos,0);
-scene.add( church );  
+	var church = new Church(xPos,househigh-22,zPos,0,culture);
+	scene.add( church );  
+}
+else if (type =="chapel"){
+    var chapelry = new Chapel(xPos,0,zPos-120,Math.PI/2,culture);
+    scene.add( chapelry );  	
 }
 //abbey
 else if (type =="basilica"){
@@ -155,11 +159,33 @@ else if (type =="mint"){
 //entertain
 else if (type =="hunting"){
     var hood = new Industries(xPos,0,zPos-120,Math.PI/2);
-    scene.add( hood );  	
-}
-else if (type =="chapel"){
-    var hood = new Industries(xPos,0,zPos-120,Math.PI/2);
-    scene.add( hood );  	
+    scene.add( hood ); 
+	
+	var quiverbow = new Quiver(xPos-25, 2.5,zPos-80, 0,0,0);
+	scene.add( quiverbow ); 
+	var arrowbow = new Arrow(xPos-23.5, 7.5,zPos-80.1, -3.14159 / 2,0,0);
+	scene.add( arrowbow );
+	
+	if (climate =="desert" || climate =="desert_marshes"){        
+        var tree1 = new Forest(xPos,45,zPos-50,"tree_palm"); 
+        scene.add(tree1);
+    }
+    else {
+        if (herb =="cedar"){
+            var tree1 = new Forest(xPos,45,zPos-50,"cedar"); 
+            scene.add(tree1);
+        }
+        else if (herb =="pine"){
+            var tree1 = new Forest(xPos,45,zPos-50,"tree_pine"); 
+            scene.add(tree1);
+        }
+        else {
+            var tree1 = new Forest(xPos,45,zPos-50,"tree_transparent"); 
+            scene.add(tree1);
+        }        
+    }
+
+
 }
 //default houses
 else if (type =="housing"){

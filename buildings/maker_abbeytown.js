@@ -207,7 +207,7 @@ else if (entertainment =="joust"){
 else if (entertainment =="hunt" || entertainment =="falconry"){
 	houseMaker("hunting",xAbbey+225,yAbbey+150); //hunt
 }
-else if (entertainment =="reliquary"){
+else if (entertainment =="reliquary" || entertainment =="pilgrimage"){
 	houseMaker("chapel",xAbbey+225,yAbbey+150); //chapel
 }
 else if (entertainment =="fair"){
