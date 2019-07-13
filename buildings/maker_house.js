@@ -88,6 +88,11 @@ else if (type =="urban"){
     var hood = new Urban(xPos,0,zPos-50,Math.PI/2);
     scene.add( hood );  
 }
+//street
+else if (type =="street"){
+    var alley = new Houserow(xPos,0,zPos,Math.PI/2);
+    scene.add( alley );  
+}
 //house
 else if (type =="villagehouse"){
 var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
@@ -143,7 +148,9 @@ else if (type =="granary"){
 }
 else if (type =="mint"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
-    scene.add( hood );  	
+    scene.add( hood );  
+	var treasure1 = new TreasureChest(xPos-10, 1,zPos-50, 0);
+	scene.add( treasure1 ); 	
 }
 //entertain
 else if (type =="hunting"){

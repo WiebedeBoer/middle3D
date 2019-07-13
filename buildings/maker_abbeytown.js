@@ -249,18 +249,27 @@ else if (popAbbey =="town"){
 	houseMaker("urban",xAbbey+275,yAbbey-150); //abbey ward
 	houseMaker("urban",xAbbey+150,yAbbey+275); //palace ward
 	houseMaker("urban",xAbbey-275,yAbbey+275); //castle ward
+	houseMaker("street",xAbbey+225,yAbbey+425);
+	houseMaker("street",xAbbey-350,yAbbey-575);
+	houseMaker("street",xAbbey+200,yAbbey-575);
 }
 else if (popAbbey =="city"){
 	houseMaker("urban",xAbbey-150,yAbbey-275); //church ward
 	houseMaker("urban",xAbbey+275,yAbbey-150); //abbey ward
 	houseMaker("urban",xAbbey+150,yAbbey+275); //palace ward
 	houseMaker("urban",xAbbey-275,yAbbey+275); //castle ward
+	houseMaker("street",xAbbey+225,yAbbey+425);
+	houseMaker("street",xAbbey-350,yAbbey-575);
+	houseMaker("street",xAbbey+200,yAbbey-575);
 }
 else if (popAbbey =="metropolis"){
 	houseMaker("urban",xAbbey-150,yAbbey-275); //church ward
 	houseMaker("urban",xAbbey+275,yAbbey-150); //abbey ward
 	houseMaker("urban",xAbbey+150,yAbbey+275); //palace ward
 	houseMaker("urban",xAbbey-275,yAbbey+275); //castle ward
+	houseMaker("street",xAbbey+225,yAbbey+425);
+	houseMaker("street",xAbbey-350,yAbbey-575);
+	houseMaker("street",xAbbey+200,yAbbey-575);
 }
 
 

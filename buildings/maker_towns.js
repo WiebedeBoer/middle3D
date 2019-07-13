@@ -249,18 +249,27 @@ else if (popTown =="town"){
 	houseMaker("urban",xTown+275,yTown-150); //abbey ward
 	houseMaker("urban",xTown+150,yTown+275); //palace ward
 	houseMaker("urban",xTown-275,yTown+275); //castle ward
+	houseMaker("street",xTown+225,yTown+425); 	
+	houseMaker("street",xTown-350,yTown-575); 
+	houseMaker("street",xTown+200,yTown-575); 
 }
 else if (popTown =="city"){
 	houseMaker("urban",xTown-150,yTown-275); //church ward
 	houseMaker("urban",xTown+275,yTown-150); //abbey ward
 	houseMaker("urban",xTown+150,yTown+275); //palace ward
 	houseMaker("urban",xTown-275,yTown+275); //castle ward
+	houseMaker("street",xTown+225,yTown+425);
+	houseMaker("street",xTown-350,yTown-575);
+	houseMaker("street",xTown+200,yTown-575); 	
 }
 else if (popTown =="metropolis"){
 	houseMaker("urban",xTown-150,yTown-275); //church ward
 	houseMaker("urban",xTown+275,yTown-150); //abbey ward
 	houseMaker("urban",xTown+150,yTown+275); //palace ward
 	houseMaker("urban",xTown-275,yTown+275); //castle ward
+	houseMaker("street",xTown+225,yTown+425);
+	houseMaker("street",xTown-350,yTown-575); 
+	houseMaker("street",xTown+200,yTown-575); 
 }
 
 //COMMERCIAL INNER WALL

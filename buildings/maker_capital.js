@@ -250,18 +250,27 @@ else if (popCapital =="town"){
 	houseMaker("urban",xCapital+275,yCapital-150); //abbey ward
 	houseMaker("urban",xCapital+150,yCapital+275); //palace ward
 	houseMaker("urban",xCapital-275,yCapital+275); //castle ward
+	houseMaker("street",xCapital+225,yCapital+425); 
+	houseMaker("street",xCapital-350,yCapital-575);
+	houseMaker("street",xCapital+200,yCapital-575);
 }
 else if (popCapital =="city"){
 	houseMaker("urban",xCapital-150,yCapital-275); //church ward
 	houseMaker("urban",xCapital+275,yCapital-150); //abbey ward
 	houseMaker("urban",xCapital+150,yCapital+275); //palace ward
 	houseMaker("urban",xCapital-275,yCapital+275); //castle ward
+	houseMaker("street",xCapital+225,yCapital+425); 
+	houseMaker("street",xCapital-350,yCapital-575);
+	houseMaker("street",xCapital+200,yCapital-575);
 }
 else if (popCapital =="metropolis"){
 	houseMaker("urban",xCapital-150,yCapital-275); //church ward
 	houseMaker("urban",xCapital+275,yCapital-150); //abbey ward
 	houseMaker("urban",xCapital+150,yCapital+275); //palace ward
 	houseMaker("urban",xCapital-275,yCapital+275); //castle ward
+	houseMaker("street",xCapital+225,yCapital+425); 
+	houseMaker("street",xCapital-350,yCapital-575);
+	houseMaker("street",xCapital+200,yCapital-575);
 }
 
 //COMMERCIAL INNER WALL
@@ -288,7 +297,7 @@ else if (factoryCapital =="fur"){
 }
 //mint
 else if (factoryCapital =="mint"){
-	houseMaker("mint",xCapital-30,yCapital-30); //business ward
+	houseMaker("mint",xCapital-30,yCapital-30); //business ward, mint
 }
 //soap maker
 else if (factoryCapital =="soapmaker"){
