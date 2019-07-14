@@ -34,6 +34,22 @@ class Cloister extends THREE.Group {
 			var scale_z = 100.0;
 			var rotate_palace = 0;
 		}
+		//scandinavian
+		else if(this.bannier =="danish" || this.bannier =="swedish" || this.bannier =="norwegian"){
+			var flag_num ="norse";
+			var scale_x = 100.0;
+			var scale_y = 150.0;
+			var scale_z = 100.0;
+			var rotate_palace = 0;
+		}
+		//russian
+		else if(this.bannier =="russian"){
+			var flag_num ="russian";
+			var scale_x = 100.0;
+			var scale_y = 150.0;
+			var scale_z = 100.0;
+			var rotate_palace = 0;
+		}
 		//european
 		else {
 			var flag_num ="west";

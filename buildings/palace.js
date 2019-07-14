@@ -26,6 +26,14 @@ class Palace extends THREE.Group {
 			var scale_z = 4.0;
 			var rotate_palace = 0;
 		}
+		//scandinavian
+		else if(this.bannier =="danish" || this.bannier =="swedish" || this.bannier =="norwegian"){
+			var flag_num ="Norse";
+			var scale_x = 4.0;
+			var scale_y = 3.5;
+			var scale_z = 4.0;
+			var rotate_palace = 0;
+		}
 		//russian
 		else if(this.bannier =="russian"){
 			var flag_num ="Russian";

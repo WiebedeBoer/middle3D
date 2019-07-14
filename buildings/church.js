@@ -53,9 +53,19 @@ class Church extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}
-		//scandinanvian
-		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="baltic" || this.bannier =="swedish"){
+		//teutonic order state
+		else if(this.bannier =="baltic"){
 			var flag_num ="cupic";
+			var scale_x = 0.2;
+			var scale_y = 0.2;
+			var scale_z = 0.2;
+			var rotate_palace = 0;	
+			var mintower =0;
+			var xrepl =0;			
+		}
+		//scandinavian
+		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="swedish"){
+			var flag_num ="norse";
 			var scale_x = 0.2;
 			var scale_y = 0.2;
 			var scale_z = 0.2;

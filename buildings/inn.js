@@ -22,6 +22,11 @@ class Inn extends THREE.Group {
 			var flag_num ="Russian";
 
 		}
+		//scandinavian
+		else if(this.bannier =="danish" || this.bannier =="swedish" || this.bannier =="norwegian"){
+			var flag_num ="Russian";
+
+		}
 		//DEFAULT
 		else {
 			var flag_num ="Inn";
