@@ -37,13 +37,13 @@ var tower4c = new GateTower("tower","city_port","city_tower","city_tower","city_
 scene.add( tower4c );
 
 //gates
-var gateNorthc = new CastleGate(xCastle+442,-245,yCastle-310,0); 
+var gateNorthc = new CastleGate(xCastle+442,-245,yCastle-310,0,culture); 
 scene.add( gateNorthc );
-var gateSouthc = new CastleGate(xCastle-442,-245,yCastle+190,3.1415926); 
+var gateSouthc = new CastleGate(xCastle-442,-245,yCastle+190,3.1415926,culture); 
 scene.add( gateSouthc );
-var gateWestc = new CastleGate(xCastle-255,-245,yCastle-502,1.5707963); 
+var gateWestc = new CastleGate(xCastle-255,-245,yCastle-502,1.5707963,culture); 
 scene.add( gateWestc );
-var gateEastc = new CastleGate(xCastle+245,-245,yCastle+382,4.7123889); 
+var gateEastc = new CastleGate(xCastle+245,-245,yCastle+382,4.7123889,culture); 
 scene.add( gateEastc );
 }
 

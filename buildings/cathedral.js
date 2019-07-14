@@ -156,7 +156,7 @@ class Cathedral extends THREE.Group {
 		}
 		//persian
 		else if(this.bannier =="turkish" || this.bannier =="persian"){
-			var flag_num ="mosque";
+			var flag_num ="sufi";
 			var scale_x = 22.2;
 			var scale_y = 18.2;
 			var scale_z = 22.2;

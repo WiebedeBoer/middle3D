@@ -13,10 +13,10 @@ class Palace extends THREE.Group {
 		//turkish
 		else if(this.bannier =="turkish" || this.bannier =="persian"){
 			var flag_num ="Turk";
-			var scale_x = 4.0;
-			var scale_y = 7.5;
-			var scale_z = 4.0;
-			var rotate_palace = 1.5707963;
+			var scale_x = 14.0;
+			var scale_y = 14.0;
+			var scale_z = 14.0;
+			var rotate_palace = 3.1415926;
 		}
 		//european
 		else {

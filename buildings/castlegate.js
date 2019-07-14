@@ -1,9 +1,22 @@
 class CastleGate extends THREE.Group {
 
     init (){
+		
+		//persian
+		if(this.bannier =="turkish" || this.bannier =="persian"){
+			var flag_num ="east";
+		}
+		//arab
+		else if(this.bannier =="maghreb" || this.bannier =="ifriqiya" || this.bannier =="misr" || this.bannier =="mashriq" || this.bannier =="hejaz" || this.bannier =="najd"){
+			var flag_num ="east";
+		}
+		//DEFAULT
+		else {
+			var flag_num ="west";
+		}
 
         var dChurch = this;
-        loadOBJModel("buildings/castlegate/","castlegate.obj","buildings/castlegate/","castlegate.mtl", (mesh) => {
+        loadOBJModel("buildings/castlegate/","castlegate_"+flag_num+".obj","buildings/castlegate/","castlegate_"+flag_num+".mtl", (mesh) => {
             mesh.scale.x = 33.5;
             mesh.scale.y = 23.2;
             mesh.scale.z = 62.0;
@@ -17,12 +30,13 @@ class CastleGate extends THREE.Group {
         });
     }    
             
-    constructor(pX,pY,pZ,yR){
+    constructor(pX,pY,pZ,yR,bannier){
         super();
         this.pX = pX;
         this.pY = pY;
         this.pZ = pZ;
         this.yR = yR;
+		this.bannier = bannier;
         this.init();
        
     }

@@ -18,13 +18,13 @@ else if (type =="chapel"){
 }
 //abbey
 else if (type =="basilica"){
-var basilica = new Cloister(xPos,househigh+6,zPos,0);
+var basilica = new Cloister(xPos,househigh+6,zPos,0,culture);
 scene.add( basilica );  
 }
 //CASTLE PLOT
 //keep
 else if (type =="keep"){
-var keep = new CastleKeep(xPos,househigh-22,zPos,0);
+var keep = new CastleKeep(xPos,househigh-22,zPos,0,culture);
 scene.add( keep );
 var vane = new Flag(xPos, -6,zPos, 0,culture);
 scene.add( vane );   
@@ -89,12 +89,12 @@ scene.add( tavern );
 }
 //urban
 else if (type =="urban"){
-    var hood = new Urban(xPos,0,zPos-50,Math.PI/2);
+    var hood = new Urban(xPos,0,zPos-50,Math.PI/2,culture);
     scene.add( hood );  
 }
 //street
 else if (type =="street"){
-    var alley = new Houserow(xPos,0,zPos,Math.PI/2);
+    var alley = new Houserow(xPos,0,zPos,Math.PI/2,culture);
     scene.add( alley );  
 }
 //house
@@ -109,7 +109,7 @@ scene.add( farmhouse );
 //INDUSTRY
 //town industries
 else if (type =="cooper"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood ); 
 	var barrel = new Barrel(xPos-10, 1,zPos-50, 0,0,0);
 	scene.add( barrel ); 
@@ -117,7 +117,7 @@ else if (type =="cooper"){
 	scene.add( barrel2 );   	
 }
 else if (type =="potter"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood ); 
 	var jug1 = new Jug(xPos-10, 1,zPos-50, 0);
 	scene.add( jug1 ); 	
@@ -125,25 +125,25 @@ else if (type =="potter"){
 	scene.add( jug2 ); 
 }
 else if (type =="tailor"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  	
 }
 else if (type =="furrier"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  	
 }
 else if (type =="glassworks"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood ); 
 	var glassvase = new Vase(xPos-10, 1,zPos-50, 0);
 	scene.add( glassvase );  	
 }
 else if (type =="dyesworks"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  	
 }
 else if (type =="soapmaker"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  	
 }
 else if (type =="granary"){
@@ -151,14 +151,14 @@ else if (type =="granary"){
     scene.add( grainshed );  	
 }
 else if (type =="mint"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  
 	var treasure1 = new TreasureChest(xPos-10, 1,zPos-50, 0);
 	scene.add( treasure1 ); 	
 }
 //entertain
 else if (type =="hunting"){
-    var hood = new Industries(xPos,0,zPos-120,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-120,Math.PI/2,culture);
     scene.add( hood ); 
 	
 	var quiverbow = new Quiver(xPos-25, 2.5,zPos-80, 0,0,0);
@@ -189,7 +189,7 @@ else if (type =="hunting"){
 }
 //default houses
 else if (type =="housing"){
-    var hood = new Industries(xPos,0,zPos-90,Math.PI/2);
+    var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
     scene.add( hood );  	
 }
 //potterer
