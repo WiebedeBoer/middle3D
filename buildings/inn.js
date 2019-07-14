@@ -1,9 +1,30 @@
 class Inn extends THREE.Group {
 
     init (){
+		
+		//persian
+		if(this.bannier =="turkish" || this.bannier =="persian"){
+			var flag_num ="Caravanserai";
+
+		}
+		//arab
+		else if(this.bannier =="maghreb" || this.bannier =="ifriqiya" || this.bannier =="misr" || this.bannier =="mashriq" || this.bannier =="hejaz" || this.bannier =="najd"){
+			var flag_num ="Caravanserai";
+
+		}
+		//greek orthodox
+		else if(this.bannier =="georgian" || this.bannier =="armenian" || this.bannier =="byzantine"){
+			var flag_num ="Byzantine";
+
+		}
+		//DEFAULT
+		else {
+			var flag_num ="Inn";
+
+		}
 
         var dChurch = this;
-        loadOBJModel("buildings/inn/","SM_Inn.obj","buildings/inn/","SM_Inn.mtl", (mesh) => {
+        loadOBJModel("buildings/inn/","SM_"+flag_num+".obj","buildings/inn/","SM_"+flag_num+".mtl", (mesh) => {
             mesh.scale.x = 5.0;
             mesh.scale.y = 5.0;
             mesh.scale.z = 5.0;
@@ -17,12 +38,13 @@ class Inn extends THREE.Group {
         });
     }    
             
-    constructor(pX,pY,pZ,yR){
+    constructor(pX,pY,pZ,yR,bannier){
         super();
         this.pX = pX;
         this.pY = pY;
         this.pZ = pZ;
         this.yR = yR;
+		this.bannier = bannier;
         this.init();
        
     }

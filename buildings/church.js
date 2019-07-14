@@ -113,8 +113,8 @@ class Church extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}
-		//byzantine, red yellow
-		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian" || this.bannier =="byzantine"){
+		//balkans
+		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian"){
 			var flag_num ="cupic";
 			var scale_x = 0.2;
 			var scale_y = 0.2;
@@ -133,9 +133,19 @@ class Church extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}
+		//byzantine
+		else if(this.bannier =="byzantine"){
+			var flag_num ="byzantine";
+			var scale_x = 0.2;
+			var scale_y = 0.2;
+			var scale_z = 0.2;
+			var rotate_palace = 0;
+			var mintower =0;
+			var xrepl =0;
+		}
 		//georgia armenia
 		else if(this.bannier =="georgian" || this.bannier =="armenian"){
-			var flag_num ="cupic";
+			var flag_num ="byzantine";
 			var scale_x = 0.2;
 			var scale_y = 0.2;
 			var scale_z = 0.2;
@@ -146,7 +156,7 @@ class Church extends THREE.Group {
 		//ISLAMIC
 		//andalucia
 		else if(this.bannier =="andalucian"){
-			var flag_num ="mosque";
+			var flag_num ="andalucian";
 			var scale_x = 22.2;
 			var scale_y = 18.2;
 			var scale_z = 22.2;

@@ -2,15 +2,25 @@ class Flag extends THREE.Group {
 
     init (){
 			
-		//HRE, black yellow
-		if(this.bannier =="saxon" || this.bannier =="bavarian" || this.bannier =="swabian" || this.bannier =="franconian" || this.bannier =="frisian" || this.bannier =="flemish" || this.bannier =="carinthian"){
+		//holy roman empire, black yellow
+		if(this.bannier =="saxon" || this.bannier =="bavarian" || this.bannier =="swabian" || this.bannier =="franconian" || this.bannier =="frisian" || this.bannier =="flemish"){
 			var flag_num ="black_yellow";
+		}
+		else if(this.bannier =="carinthian"){
+			var flag_num ="black_white";
 		}
 		else if(this.bannier =="bohemian"){
+			var flag_num ="red_white";
+		}
+		else if(this.bannier =="lombard"){
 			var flag_num ="black_yellow";
 		}
-		else if(this.bannier =="tuscan" || this.bannier =="lombard"){
-			var flag_num ="black_yellow";
+		else if(this.bannier =="tuscan"){
+			var flag_num ="white_yellow";
+		}
+		//teutonic order state, red white
+		else if(this.bannier =="baltic"){
+			var flag_num ="black_white";
 		}
 		//france, blue yellow
 		else if(this.bannier =="frankish" || this.bannier =="occitan" || this.bannier =="arpitan"){
@@ -37,7 +47,7 @@ class Flag extends THREE.Group {
 			var flag_num ="blue_red";
 		}		
 		//danish, red white
-		else if(this.bannier =="danish" || this.bannier =="baltic"){
+		else if(this.bannier =="danish"){
 			var flag_num ="red_white";
 		}		
 		//swedish, blue yellow
@@ -52,8 +62,8 @@ class Flag extends THREE.Group {
 		else if(this.bannier =="croatian" || this.bannier =="hungarian"){
 			var flag_num ="green_red";
 		}		
-		//spain red yellow
-		else if(this.bannier =="navarrese" || this.bannier =="aragonese" || this.bannier =="catalan" || this.bannier =="leonese" || this.bannier =="castillian" || this.bannier =="galician" || this.bannier =="galician"){
+		//spain, red yellow
+		else if(this.bannier =="navarrese" || this.bannier =="aragonese" || this.bannier =="catalan" || this.bannier =="leonese" || this.bannier =="castillian" || this.bannier =="galician"){
 			var flag_num ="red_yellow";
 		}
 		//portugal, green red
@@ -69,8 +79,12 @@ class Flag extends THREE.Group {
 			var flag_num ="red_yellow";
 		}
 		//byzantine, red yellow
-		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian" || this.bannier =="byzantine"){
+		else if(this.bannier =="bulgarian" || this.bannier =="serbian" || this.bannier =="byzantine"){
 			var flag_num ="red_yellow";
+		}
+		//wallachia, red yellow
+		else if(this.bannier =="wallachian"){
+			var flag_num ="black_white";
 		}
 		//russia, blue yellow
 		else if(this.bannier =="russian"){

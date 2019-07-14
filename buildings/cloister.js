@@ -10,7 +10,7 @@ class Cloister extends THREE.Group {
 			var scale_z = 14.0;
 			var rotate_palace = 3.1415926;
 		}
-				//turkish
+		//turkish
 		else if(this.bannier =="turkish" || this.bannier =="persian"){
 			var flag_num ="east";
 			var scale_x = 14.0;
@@ -20,11 +20,19 @@ class Cloister extends THREE.Group {
 		}
 		//andalucian
 		else if(this.bannier =="andalucian"){
-			var flag_num ="east";
+			var flag_num ="andalucian";
 			var scale_x = 14.0;
 			var scale_y = 14.0;
 			var scale_z = 14.0;
 			var rotate_palace = 3.1415926;
+		}
+		//greek orthodox
+		else if(this.bannier =="georgian" || this.bannier =="armenian" || this.bannier =="byzantine"){
+			var flag_num ="byzantine";
+			var scale_x = 100.0;
+			var scale_y = 150.0;
+			var scale_z = 100.0;
+			var rotate_palace = 0;
 		}
 		//european
 		else {

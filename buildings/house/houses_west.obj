@@ -1,6 +1,6 @@
 # Blender v2.79 (sub 0) OBJ File: 'houses.blend'
 # www.blender.org
-mtllib houses.mtl
+mtllib houses_west.mtl
 o pCube6548.001_Untitled.002
 v -6.781764 -0.021403 -2.375427
 v -1.860288 -0.021403 -4.740246

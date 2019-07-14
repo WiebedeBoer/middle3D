@@ -57,7 +57,7 @@ scene.add( barrel2 );
 }
 //inn
 else if (type =="inn"){
-var inn = new Inn(xPos,househigh-21,zPos,1.5707963);
+var inn = new Inn(xPos,househigh-21,zPos,1.5707963,culture);
 scene.add( inn );  
 }
 //tiltyard

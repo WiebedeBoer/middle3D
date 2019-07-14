@@ -18,6 +18,14 @@ class Palace extends THREE.Group {
 			var scale_z = 14.0;
 			var rotate_palace = 3.1415926;
 		}
+		//greek orthodox
+		else if(this.bannier =="georgian" || this.bannier =="armenian" || this.bannier =="byzantine"){
+			var flag_num ="Byzantine";
+			var scale_x = 4.0;
+			var scale_y = 3.5;
+			var scale_z = 4.0;
+			var rotate_palace = 0;
+		}
 		//european
 		else {
 			var flag_num ="West";

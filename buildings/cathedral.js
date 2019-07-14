@@ -3,7 +3,7 @@ class Cathedral extends THREE.Group {
     init (){
 		
 		//CHRISTIAN
-		//holy roman empire, black yellow
+		//holy roman empire
 		if(this.bannier =="saxon" || this.bannier =="bavarian" || this.bannier =="swabian" || this.bannier =="franconian" || this.bannier =="frisian" || this.bannier =="flemish" || this.bannier =="carinthian"){
 			var flag_num ="west";
 			var scale_x = 10.0;
@@ -63,7 +63,7 @@ class Cathedral extends THREE.Group {
 			var mintower =0;	
 			var xrepl =0;
 		}		
-		//poland lithuania, red white
+		//poland lithuania
 		else if(this.bannier =="polish" || this.bannier =="lithuanian"){
 			var flag_num ="west";
 			var scale_x = 10.0;
@@ -73,7 +73,7 @@ class Cathedral extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}	
-		//hungary croatia, red white
+		//hungary croatia
 		else if(this.bannier =="croatian" || this.bannier =="hungarian"){
 			var flag_num ="west";
 			var scale_x = 10.0;
@@ -113,8 +113,8 @@ class Cathedral extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}
-		//byzantine, red yellow
-		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian" || this.bannier =="byzantine"){
+		//eastern europe
+		else if(this.bannier =="wallachian" || this.bannier =="bulgarian" || this.bannier =="serbian"){
 			var flag_num ="west";
 			var scale_x = 10.0;
 			var scale_y = 11.0;
@@ -123,7 +123,17 @@ class Cathedral extends THREE.Group {
 			var mintower =0;
 			var xrepl =0;
 		}
-		//russia, blue yellow
+		//byzantine
+		else if(this.bannier =="byzantine"){
+			var flag_num ="byzantine";
+			var scale_x = 10.0;
+			var scale_y = 11.0;
+			var scale_z = 10.0;
+			var rotate_palace = 0;
+			var mintower =0;
+			var xrepl =0;
+		}
+		//russia
 		else if(this.bannier =="russian"){
 			var flag_num ="west";
 			var scale_x = 10.0;
@@ -135,7 +145,7 @@ class Cathedral extends THREE.Group {
 		}
 		//georgia armenia
 		else if(this.bannier =="georgian" || this.bannier =="armenian"){
-			var flag_num ="west";
+			var flag_num ="byzantine";
 			var scale_x = 10.0;
 			var scale_y = 11.0;
 			var scale_z = 10.0;
@@ -146,7 +156,7 @@ class Cathedral extends THREE.Group {
 		//ISLAMIC
 		//andalucia
 		else if(this.bannier =="andalucian"){
-			var flag_num ="mosque";
+			var flag_num ="andalucian";
 			var scale_x = 22.2;
 			var scale_y = 18.2;
 			var scale_z = 22.2;

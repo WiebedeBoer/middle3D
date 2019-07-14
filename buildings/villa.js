@@ -12,6 +12,11 @@ class Villa extends THREE.Group {
 			var flag_num ="east";
 
 		}
+		//greek orthodox
+		else if(this.bannier =="georgian" || this.bannier =="armenian" || this.bannier =="byzantine"){
+			var flag_num ="byzantine";
+
+		}
 		//DEFAULT
 		else {
 			var flag_num ="west";
