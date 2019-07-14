@@ -84,7 +84,7 @@ scene.add( watermill );
 }
 //tavern
 else if (type =="tavern"){
-var tavern = new Villa(xPos+28,househigh,zPos+30,0);
+var tavern = new Villa(xPos+28,househigh,zPos+30,0,culture);
 scene.add( tavern );
 }
 //urban
@@ -99,11 +99,11 @@ else if (type =="street"){
 }
 //house
 else if (type =="villagehouse"){
-var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
+var farmhouse = new Villa(xPos+28,househigh,zPos+30,0,culture);
 scene.add( farmhouse );  
 }
 else if (type =="villagehouse2"){
-var farmhouse = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
+var farmhouse = new Villa(xPos+20,househigh,zPos-28,Math.PI/2,culture);
 scene.add( farmhouse );
 }
 //INDUSTRY
@@ -194,7 +194,7 @@ else if (type =="housing"){
 }
 //potterer
 else if (type =="potterer"){
-    var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
+    var potterer = new Villa(xPos+20,househigh,zPos-28,Math.PI/2,culture);
     scene.add( potterer );  
 }
 //smithy
@@ -216,7 +216,7 @@ scene.add( vintner );
 }
 //farm
 else if (type =="farmhouse"){
-var farmhouse = new Villa(xPos+28,househigh,zPos+30,0);
+var farmhouse = new Villa(xPos+28,househigh,zPos+30,0,culture);
 scene.add( farmhouse );    
 }
 //barn
@@ -232,7 +232,7 @@ else if(type =="barn2"){
 //forester
 else if (type =="carpenter"){
     if(climate =="temperate_woodlands" || climate =="temperate_woodlands_marshes" || climate =="mediterranean_woodlands" || climate =="mediterranean_woodlands_marshes"){
-        var carpenter = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
+        var carpenter = new Villa(xPos+20,househigh,zPos-28,Math.PI/2,culture);
         scene.add( carpenter );
         var stool = new Stool(xPos-5,3,zPos-33,0,0,0);
         scene.add( stool ); 
@@ -241,7 +241,7 @@ else if (type =="carpenter"){
 //basketmaker
 else if (type =="basketmaker"){
     if(climate =="temperate_woodlands_marshes" || climate =="desert_marshes" || climate =="mediterranean_woodlands_marshes"){
-        var carpenter = new Villa(xPos+20,househigh,zPos-28,Math.PI/2);
+        var carpenter = new Villa(xPos+20,househigh,zPos-28,Math.PI/2,culture);
         scene.add( carpenter );
         var stool = new Stool(xPos-5,3,zPos-33,0,0,0);
         scene.add( stool ); 

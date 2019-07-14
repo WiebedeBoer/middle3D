@@ -10,7 +10,7 @@ class Industries extends THREE.Group {
 			var scale_z = 20.0;
 			var mintower =58;
 			var zrepl =155;
-			var xrepl =135;
+			var xrepl =100;
 		}
 		//arab
 		else if(this.bannier =="maghreb" || this.bannier =="ifriqiya" || this.bannier =="misr" || this.bannier =="mashriq" || this.bannier =="hejaz" || this.bannier =="najd"){
@@ -20,7 +20,7 @@ class Industries extends THREE.Group {
 			var scale_z = 20.0;
 			var mintower =58;
 			var zrepl =155;
-			var xrepl =135;
+			var xrepl =100;
 		}
 		//DEFAULT
 		else {

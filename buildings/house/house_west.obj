@@ -1,6 +1,6 @@
 # Blender v2.79 (sub 0) OBJ File: ''
 # www.blender.org
-mtllib house.mtl
+mtllib house_west.mtl
 o mesh777679980
 v 0.011551 -0.042240 -0.273677
 v -0.921783 -0.042240 -0.273677

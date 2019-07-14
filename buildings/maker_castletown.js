@@ -242,7 +242,13 @@ else {
 
 //HOUSES
 if (popCastle =="village"){
-	houseMaker("urban",xCastle-15,yCastle-350); //church ward
+	if(culture =="turkish" || culture =="persian" || culture =="maghreb" || culture =="ifriqiya" || culture =="misr" || culture =="mashriq" || culture =="hejaz" || culture =="najd"){
+		houseMaker("urban",xCastle-75,yCastle-320); //church ward
+	}
+	else {
+		houseMaker("urban",xCastle-15,yCastle-350); //church ward
+	}
+	
 }
 else if (popCastle =="town"){
 	houseMaker("urban",xCastle-150,yCastle-275); //church ward
