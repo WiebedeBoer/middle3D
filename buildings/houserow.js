@@ -22,8 +22,29 @@ class Houserow extends THREE.Group {
 			var zrepl =150;
 			var xrepl =15;
 		}
+		//byzantine
 		else if(this.bannier =="georgian" || this.bannier =="armenian" || this.bannier =="byzantine"){
 			var flag_num ="byzantine";
+			var scale_x = 6.2;
+			var scale_y = 6.2;
+			var scale_z = 6.2;
+			var mintower =0;
+			var zrepl =0;
+			var xrepl =0;
+		}
+		//scandinanvian
+		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="swedish"){
+			var flag_num ="norse";
+			var scale_x = 6.2;
+			var scale_y = 6.2;
+			var scale_z = 6.2;
+			var mintower =0;
+			var zrepl =0;
+			var xrepl =0;
+		}
+		//russia
+		else if(this.bannier =="russian"){
+			var flag_num ="norse";
 			var scale_x = 6.2;
 			var scale_y = 6.2;
 			var scale_z = 6.2;

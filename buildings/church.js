@@ -125,7 +125,7 @@ class Church extends THREE.Group {
 		}
 		//russia, blue yellow
 		else if(this.bannier =="russian"){
-			var flag_num ="cupic";
+			var flag_num ="russian";
 			var scale_x = 0.2;
 			var scale_y = 0.2;
 			var scale_z = 0.2;

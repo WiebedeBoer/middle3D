@@ -17,6 +17,15 @@ class Villa extends THREE.Group {
 			var flag_num ="byzantine";
 
 		}
+		//scandinanvian
+		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="swedish"){
+			var flag_num ="norse";
+
+		}
+		//russia
+		else if(this.bannier =="russian"){
+			var flag_num ="norse";
+		}
 		//DEFAULT
 		else {
 			var flag_num ="west";

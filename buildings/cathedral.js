@@ -135,7 +135,7 @@ class Cathedral extends THREE.Group {
 		}
 		//russia
 		else if(this.bannier =="russian"){
-			var flag_num ="west";
+			var flag_num ="russian";
 			var scale_x = 10.0;
 			var scale_y = 11.0;
 			var scale_z = 10.0;
