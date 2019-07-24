@@ -4,7 +4,7 @@ class Table extends THREE.Group {
 
         var dGun = this;
         loadOBJModel("props/table/","Table_Large_Rectangular_01.obj","props/table/","Table_Large_Rectangular_01.mtl", (mesh) => {
-            mesh.scale.set (0.6, 0.7, 0.6);
+            mesh.scale.set (1.1, 1.2, 1.1);
             dGun.position.x = this.pX;
             dGun.position.y = this.pY;
             dGun.position.z = this.pZ;

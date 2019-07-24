@@ -1091,8 +1091,8 @@
 <Region>
 <id>137</id> <place>Anfa</place> <rank>county</rank> <climate>mediterranean_woodlands</climate> <herb>none</herb> <style>minstrel</style> <ride>none</ride> <culture>maghreb</culture> <cycle>none</cycle>
 <capital> <name>Anfa</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>leather</factory> <arms>none</arms> <edu>none</edu> </capital>
-<castle> <name>Rabat</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>cloth</factory> <arms>none</arms> <edu>none</edu> </castle>
-<town> <name>Sale</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>cloth</factory> <arms>shipyard</arms> <edu>university</edu> </town>
+<castle> <name>Rabat</name> <pop>town</pop> <fort>mountain_castle</fort> <com>grain</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>lord_abbot</monastic> <factory>tailor</factory> <arms>none</arms> <edu>none</edu> </castle>
+<town> <name>Sale</name> <pop>town</pop> <fort>burgh</fort> <com>grain</com> <feudal>baron</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>tailor</factory> <arms>shipyard</arms> <edu>university</edu> </town>
 <abbey> <name>Fedala</name> <pop>town</pop> <fort>burgh</fort> <com>wool</com> <feudal>count</feudal> <church>priest</church> <civil>lord_mayor</civil> <monastic>none</monastic> <factory>fishery</factory> <arms>none</arms> <edu>none</edu> </abbey>
 <Point> <xc>176</xc> <yc>1733</yc> </Point> <goat>Maltese</goat> <sheep>Fat_Tailed</sheep> <cattle>none</cattle><horse>none</horse>
 </Region>

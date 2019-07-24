@@ -126,7 +126,11 @@ else if (type =="potter"){
 }
 else if (type =="tailor"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
-    scene.add( hood );  	
+    scene.add( hood );  
+	var table1 = new Table(xPos-90, 1,zPos-40, 0,0,0);
+	scene.add( table1 ); 
+	var cloth1 = new Cloth(xPos-90, 10,zPos-40, 0);
+	scene.add( cloth1 ); 	
 }
 else if (type =="furrier"){
     var hood = new Industries(xPos,0,zPos-90,Math.PI/2,culture);
