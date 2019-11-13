@@ -2,29 +2,43 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Middle ages - main</title>
+<title>Middle Ages - region</title>
 <!--library: three.js-->
 <script src="library/three.js"></script>
 <!--camera controls-->
 <script src="controls/FPControls.js"></script>
-<!--buildings-->
+<!--climate and regions-->
+<script src="openregions.js"></script>
+<!--towns-->
 
-<!--environment: plane en skybox-->
-<script src="environment/Plane.js"></script>
-<script src="environment/Skybox.js"></script>
-<!--lighting-->
-<script src="lighting/Lighting.js"></script>
-<script src="lighting/Pointlight.js"></script>
-<script src="lighting/Lantern.js"></script>
+<!--buildings and plots-->
+
+<!--buildings and fields-->
+
+<!--buildings religious-->
+
+<!--buildings and entertainment-->
+
+<!--buildings and houses-->
+
+<!--buildings and fortifications-->
+
+<!--fields-->
+
 <!--props-->
 
+<!--environment: plane en skybox-->
+<script src="environment/villePlane.js"></script>
+<script src="environment/plane.js"></script>
+<script src="environment/Skybox.js"></script>
+<!--lighting-->
+<script src="lighting/BarracksLight.js"></script>
 <!--animals-->
 
 <!--collision detection-->
-<script src="collision/collision.js"></script>
+<script src="collision/villaCollision.js"></script>
 <!--people-->
 <script src="people/person.js"></script>
-
 <!--economy-->
 <script src="economy/Shooting.js"></script>
 <script src="economy/Gathering.js"></script>
@@ -72,6 +86,7 @@
 <script src="loaders/MTLLoader.js"></script>
 <script src="loaders/ModelLoader.js"></script>
 <script>
+
 //collision vars
 var MovingCube;
 var collidableMeshList = [];
@@ -82,6 +97,7 @@ var propTypes = [];
 //no show menu
 var gamestart = document.getElementById("menu");
 gamestart.style.display = "none";
+
 // Bullets array
 var bullets = [];
 var bulletmeshes = [];      
@@ -100,26 +116,24 @@ renderer.setSize( canvasWidth, canvasHeight );
 //append object to it
 document.getElementById("customcanvas").appendChild(renderer.domElement);
 //camera
-var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7800);
+var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7650);
 camera.position.y = 12;
 camera.position.z = 100;
 camera.position.x = 135;
-//lighting and lantern props
-Lighter();
-//props
-
-//people
-
 //environment
-var environmentsize = 5500;
+var environmentsize = 5100;//4950
 //plane
-var planeroad = new Plane(environmentsize,environmentsize,"ground2");
-scene.add(planeroad);  
+var impluve =new PartPlane(environmentsize,environmentsize,"ground5",0,0,0);
+scene.add( impluve );
 //skybox
 var skyBox = new Skybox(environmentsize,environmentsize,environmentsize);
 scene.add( skyBox );
-//city buildings
-BuildingMaker();
+//lighting 
+barracksLighter();
+//city wall offset
+var wallOffset =60;
+//fields and buildings and props and people, x5, z5
+
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:false } );
@@ -157,7 +171,7 @@ function appendItem(){
         document.getElementById('weapon').innerHTML = eItem;}
 //hit registration collision
 function clearText()
-{   document.getElementById('message').innerHTML = '....';}
+{   document.getElementById('message').innerHTML = '...';}
 function appendText(txt)
 {   document.getElementById('message').innerHTML += txt;}
 //collision vars
@@ -166,8 +180,9 @@ var collisionZ;
 //economy HUD
 appendCoin();
 appendItem();
-
+//onload loop
 function GameLoop(){
+
         //update function
         updateFcts.push(function(delta,now){
                 //controls update
@@ -178,14 +193,11 @@ function GameLoop(){
                 MovingCube.position.x = camera.position.x;
                 MovingCube.position.y = camera.position.y;
                 MovingCube.position.z = camera.position.z;
-                MovingCube.rotation.y = camera.rotation.y;                         
-                //collision detection and mini map                          
-                //playerMovement();
-                //ambient sound
-                ambientGathering();
-                //people movement               
+                MovingCube.rotation.y = camera.rotation.y;                             
                 //bullets
                 BulletTravel(delta);
+                //ambient
+                soundGathering();
         })
         
         //loop runner
@@ -202,40 +214,12 @@ function GameLoop(){
                         updateFn(deltaMsec/1000, nowMsec/1000)
                 })
         })
-
+	
 }
-
 function newDoc() {
-        var x_build = Math.floor((camera.position.x + 1785) / 90); //1785 good
-        var z_build = Math.floor((camera.position.z + 1845) / 90); //1845 good
-
-        if (x_build >=39 || x_build <1 || z_build >=39 || z_build <1){
-                window.location.assign("map.html"); 
-        }
-        else {
-                var btag = ((z_build - 1) * 40) + x_build; //((z - 1) * 40) +x = good
-                var ambients = xtag[btag].getElementsByTagName("BUSINESS")[0].childNodes[0].nodeValue;
-                if (ambients =="tavern"){
-                        window.location.assign("tavern.html");
-                }
-                else if (ambients =="domus" || ambients =="villa"){
-                        window.location.assign("domus.html");
-                }
-                else if (ambients =="bank"){
-                        window.location.assign("bank.html");
-                }
-                else if (ambients =="castrum"){
-                        window.location.assign("castrum.html");
-                }
-                else if (ambients =="basilica"){
-                        window.location.assign("basilica.html");
-                }
-                else if (ambients =="umbilicus"){
-                        window.location.assign("map.html");
-                }
-        }
-        
+    window.location.assign("map.html")
 }
+
 </script>
 </div>
 <div id="game" class="game">
@@ -247,8 +231,8 @@ function newDoc() {
         </div>
         <!--music-->
         <div id="sound" class="ce">                
-                <audio id="imperia" loop><source id="parade" src="music/Rome_Forum.mp3" type="audio/mp3"></audio>   
-                <audio id="soundpar" autoplay><source id="soundscape" src="sfx/atmosphere/population_1_hamlet.mp3" type="audio/mp3"></audio> 
+                <audio id="imperia" loop><source id="parade" src="music/Rome_4.mp3" type="audio/mp3"></audio>   
+                <audio id="soundpar" autoplay><source id="soundscape" src="sfx/atmosphere/birds.mp3" type="audio/mp3"></audio> 
                 <button onclick="changeImperium()" type="button">Change Music</button>
                 <button onclick="pauseImperium()" type="button">Pause Music</button>
                 <button onclick="playImperium()" type="button">Play Music</button>
@@ -256,13 +240,9 @@ function newDoc() {
                 <!--sound scripts-->
                 <script src="sound/musicplayer.js"></script>
                 <script src="sound/soundplayer.js"></script>
-                <script src="sound/ambient.js"></script>
+                <script src="sound/ambient_ville.js"></script>
+
         </div>
 </div>
-<!--description
-<div id="desribe" class="describe">
-        <p class="ce">Use Q, E keys to rotate the camera. Use the arrow keys to move around. Click to attach mouse pointer. Escape to deattach mouse pointer.</p>
-</div>
--->
 </body>
 </html>
