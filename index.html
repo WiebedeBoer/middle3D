@@ -97,7 +97,6 @@ var propTypes = [];
 //no show menu
 var gamestart = document.getElementById("menu");
 gamestart.style.display = "none";
-
 // Bullets array
 var bullets = [];
 var bulletmeshes = [];      
@@ -133,6 +132,27 @@ barracksLighter();
 //city wall offset
 var wallOffset =60;
 //fields and buildings and props and people, x5, z5
+
+//regions
+var inci =1;
+var mxi = 260;//260
+while (inci <mxi){
+
+	var uprovince = xprov[inci].getElementsByTagName("place")[0].childNodes[0].nodeValue;
+	var province = uprovince.replace("_", " ");
+	var id = xprov[inci].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+	var xc = xprov[inci].getElementsByTagName("xc")[0].childNodes[0].nodeValue;
+	var yc = xprov[inci].getElementsByTagName("yc")[0].childNodes[0].nodeValue;
+
+	var cubeGeo = new THREE.CylinderGeometry(5,5,20,4);
+	var wireMat = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:true } );
+	var Wirecube = new THREE.Mesh( cubeGeo, wireMat );
+	Wirecube.position.set(xc, 1, yc);
+	scene.add( Wirecube );  	
+
+
+	inci++;
+}
 
 //moving cube
 var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
