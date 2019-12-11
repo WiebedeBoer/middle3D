@@ -1,0 +1,95 @@
+rural settlements	urban settlements
+
+homestead		town
+hamlet			city
+village			metropolis
+
+martial land unit	peasant land unit		monastical land unit	burgher land unit	ecclesiastical land unit
+
+serjeanty		virgate				virgate			burgage			vicarage
+knight fee		hide				hide			estate			glebe
+constabulary		tithing				chapter			quarter			chapelry
+lordship/barony		homestead/hamlet/village	priory/abbey		township/burgh		parish/diocese/archdiocese		
+hundred/castellany	hundred				provost-principality	hundred			hundred
+bailiwick		bailiwick			commandry		bailiwick		bailiwick
+county			county				abbey-principality	province		prince-bishopric
+duchy			principality			abbey-principality	governate		prince-archbishopric		
+principality/kingdom	crowned republic		order state		crowned republic	papal state					
+
+terrain			water/land		rural/urban		keeps			halls/rooms	
+
+flatland		land				
+			river
+			island
+
+hills			land
+			river
+			island
+
+mountainous		land
+			river
+			island
+
+rooms
+			hall
+			buttery
+			pantry
+			parlour
+			solar
+			kitchen
+			stables
+			armoury
+			refectory
+			scriptorium
+			chapel
+			workshop
+			granary
+			barn
+
+castle parts			
+			battlements/crenellations/arrow slits/machicolations			
+			gatehouse/barbican
+			gate/drawbridge/portcullis/murder holes			
+			cachet/dungeon
+			ditch/moat
+			ramparts/palisade/walls/hoardings
+			turrets/towers
+
+design category		subcategory		main buildings/rooms	exteriors		gates/walls				
+
+house
+			housebarn
+			longhouse
+			cottage
+			hall house
+			town house
+			rectory
+
+manor house
+			manor house		palas
+			chateau			palas
+			schloss			palas
+			palace			palas
+keep
+			norman			bergfried		crenellation
+			shell keep		bergfried		crenellation
+			hall-keep		bergfried		crenellation
+			round keep		bergfried		crenellation
+			house keep		bergfried,palas		crenellation
+			keep-gatehouse		bergfried		crenellation		gate		
+
+castle,unwalled
+			bastle			bergfried					barmkin		
+			peel tower		bergfried		crenellation		barmkin
+			fortified manor		bergfried,palas		crenellation				
+			towerhouse		bergfried,palas		crenellation,hoarding	gate,shield wall
+castle,enclosed
+			germanic		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+castle,linked	
+			philipian		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			germanic		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			towered			bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+castle,poly-warded
+			motte-and-bailey	bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+castle,concentric
+			concentric		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
