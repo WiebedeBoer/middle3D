@@ -48,13 +48,15 @@ store rooms		hall rooms	upstairs rooms		loft rooms
 
 pantry			hall		solar			
 buttery			great hall	parlour			
-larder			library					
+larder			library		muniment			
 spicery			study		workshop
 kitchen			scriptorium	atelier
-refectory		chapel		attic
-armoury			stables		garret
-granary			barn		hayloft
-
+refectory		chapel		chapter house		attic
+armoury			stables		cabinet			garret
+granary			barn					hayloft
+calefactory		dormitory	hospitium		mezzanine
+			serail		majlis
+			diwan		selamlik				
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 castle parts		castle upgrade		castle upgrade		castle upgrade
