@@ -4,6 +4,7 @@ homestead		town
 hamlet			city
 village			metropolis
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 martial land unit	peasant land unit		monastical land unit	burgher land unit	ecclesiastical land unit
 
 serjeanty		virgate				virgate			burgage			vicarage
@@ -16,6 +17,7 @@ county			county				abbey-principality	province		prince-bishopric
 duchy			principality			abbey-principality	governate		prince-archbishopric		
 principality/kingdom	crowned republic		order state		crowned republic	papal state					
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 terrain			water/land		rural/urban		keeps			halls/rooms	
 
 flatland		land				
@@ -30,66 +32,79 @@ mountainous		land
 			river
 			island
 
-rooms
-			hall
-			buttery
-			pantry
-			parlour
-			solar
-			kitchen
-			stables
-			armoury
-			refectory
-			scriptorium
-			chapel
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+inner ward		outer ward
+
+well			granary
+cistern			stables
+chapel			brewery
+dovecote		bakehouse
+chicken coop		carriage house
 			workshop
-			granary
-			barn
+			atelier
 
-castle parts			
-			battlements/crenellations/arrow slits/machicolations			
-			gatehouse/barbican
-			gate/drawbridge/portcullis/murder holes			
-			cachet/dungeon
-			ditch/moat
-			ramparts/palisade/walls/hoardings
-			turrets/towers
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+store rooms		hall rooms	upstairs rooms		loft rooms
 
-design category		subcategory		main buildings/rooms	exteriors		gates/walls				
+pantry			hall		solar			
+buttery			great hall	parlour			
+larder			library					
+spicery			study		workshop
+kitchen			scriptorium	atelier
+refectory		chapel		attic
+armoury			stables		garret
+granary			barn		hayloft
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+castle parts		castle upgrade		castle upgrade		castle upgrade
+			
+battlements		crenellations		arrow slits		machicolations			
+gate			gatehouse		barbican
+drawbridge		portcullis		murder holes			
+cachet			dungeon
+ditch			moat
+rampart			palisade		wall			hoardings
+turret			tower			bergfried
+hall			great hall		palas
+keep
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+design category		subcategory		main buildings/rooms	exteriors		gates/enclosures				
 
 house
 			housebarn
-			longhouse
+			longhouse		hall
 			cottage
-			hall house
-			town house
-			rectory
+			hall house		hall
+			town house		hall
+			rectory			hall
 
 manor house
-			manor house		palas
+			manor house		great hall
 			chateau			palas
 			schloss			palas
-			palace			palas
+			palais			palas
 keep
-			norman			bergfried		crenellation
-			shell keep		bergfried		crenellation
-			hall-keep		bergfried		crenellation
-			round keep		bergfried		crenellation
-			house keep		bergfried,palas		crenellation
-			keep-gatehouse		bergfried		crenellation		gate		
+			norman			keep			crenellation
+			shell keep		keep			crenellation
+			hall-keep		keep,hall		crenellation
+			round keep		keep			crenellation
+			house keep		keep,great hall		crenellation
+			keep-gatehouse		keep			crenellation		gate		
 
 castle,unwalled
-			bastle			bergfried					barmkin		
-			peel tower		bergfried		crenellation		barmkin
-			fortified manor		bergfried,palas		crenellation				
-			towerhouse		bergfried,palas		crenellation,hoarding	gate,shield wall
+			bastle			keep						barmkin		
+			peel tower		keep			crenellation		barmkin
+			fortified manor		keep,great hall		crenellation				
+			towerhouse		keep,great hall		crenellation,hoarding	gate,shield wall
 castle,enclosed
-			germanic		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			germanic		keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,linked	
-			philipian		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
-			germanic		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
-			towered			bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			philipian		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			germanic		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			towered			keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,poly-warded
-			motte-and-bailey	bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			motte-and-bailey	keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,concentric
-			concentric		bergfried,palas		crenellation,hoarding	gatehouse,curtain wall
+			concentric		keep,palas		crenellation,hoarding	gatehouse,curtain wall
