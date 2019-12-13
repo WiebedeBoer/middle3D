@@ -4,12 +4,12 @@ homestead		town
 hamlet			city
 village			metropolis
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 martial land unit	peasant land unit		monastical land unit	burgher land unit	ecclesiastical land unit
 
-serjeanty		virgate				virgate			burgage			vicarage
-knight fee		hide				hide			estate			glebe
-constabulary		tithing				chapter			quarter			chapelry
+virgate			virgate				virgate			burgage			vicarage
+serjeanty		hide				hide			estate			glebe
+knight fee		tithing				chapter			quarter			chapelry
 lordship/barony		homestead/hamlet/village	priory/abbey		township/burgh		parish/diocese/archdiocese		
 hundred/castellany	hundred				provost-principality	hundred			hundred
 bailiwick		bailiwick			commandry		bailiwick		bailiwick
@@ -17,22 +17,21 @@ county			county				abbey-principality	province		prince-bishopric
 duchy			principality			abbey-principality	governate		prince-archbishopric		
 principality/kingdom	crowned republic		order state		crowned republic	papal state					
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-terrain			water/land		rural/urban		keeps			halls/rooms	
+-------------------------------------------------------------------------------------------------------------------------------------------------
+terrain			castle type		rural/urban		keeps			halls/rooms	
 
-flatland		land				
-			river
-			island
+flatland		water castle				
+			bridge castle
+			island castle
+			marsh castle
 
-hills			land
-			river
-			island
+hills			ridge castle
+			spur castle
+			hilltop castle
+			hillside castle		
 
-mountainous		land
-			river
-			island
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 inner ward		outer ward
 
 well			granary
@@ -43,7 +42,7 @@ chicken coop		carriage house
 			workshop
 			atelier
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 store rooms		hall rooms	upstairs rooms		loft rooms
 
 pantry			hall		solar			
@@ -58,7 +57,7 @@ calefactory		dormitory	hospitium		mezzanine
 			serail		majlis
 			diwan		selamlik				
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+-------------------------------------------------------------------------------------------------------------------------------------------------	
 castle parts		castle upgrade		castle upgrade		castle upgrade
 			
 battlements		crenellations		arrow slits		machicolations			
@@ -71,7 +70,7 @@ turret			tower			bergfried
 hall			great hall		palas
 keep
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 design category		subcategory		main buildings/rooms	exteriors		gates/enclosures				
 
 house
@@ -81,32 +80,35 @@ house
 			hall house		hall
 			town house		hall
 			rectory			hall
+fortified house
+			bastle			hall						barmkin	
 
 manor house
 			manor house		great hall
 			chateau			palas
 			schloss			palas
 			palais			palas
-keep
-			norman			keep			crenellation
-			shell keep		keep			crenellation
+ringwork
+			Norman keep		keep			crenellation
+			shell keep		keep			crenellation		mantlet wall			
+			Juliet keep		keep			crenellation
 			hall-keep		keep,hall		crenellation
-			round keep		keep			crenellation
 			house keep		keep,great hall		crenellation
 			keep-gatehouse		keep			crenellation		gate		
 
-castle,unwalled
-			bastle			keep						barmkin		
+castle,compact	
 			peel tower		keep			crenellation		barmkin
 			fortified manor		keep,great hall		crenellation				
 			towerhouse		keep,great hall		crenellation,hoarding	gate,shield wall
 castle,enclosed
-			germanic		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			zwinger	castle		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			courtyard castle	keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,linked	
-			philipian		keep,palas		crenellation,hoarding	gatehouse,curtain wall
-			germanic		keep,palas		crenellation,hoarding	gatehouse,curtain wall
-			towered			keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			l-plan castle		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			z-plan castle		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			towered	castle		keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,poly-warded
 			motte-and-bailey	keep,palas		crenellation,hoarding	gatehouse,curtain wall
 castle,concentric
-			concentric		keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			concentric castle	keep,palas		crenellation,hoarding	gatehouse,curtain wall
+			citadel			keep,palas		crenellation,hoarding	gatehouse,curtain wall
