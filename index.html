@@ -1,268 +1,800 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Middle Ages - region</title>
-<!--library: three.js-->
-<script src="library/three.js"></script>
-<!--camera controls-->
-<script src="controls/FPControls.js"></script>
-<!--climate and regions-->
-<script src="openregions.js"></script>
-<!--towns-->
-
-<!--buildings and plots-->
-
-<!--buildings and fields-->
-
-<!--buildings religious-->
-
-<!--buildings and entertainment-->
-
-<!--buildings and houses-->
-
-<!--buildings and fortifications-->
-
-<!--fields-->
-
-<!--props-->
-
-<!--environment: plane en skybox-->
-<script src="environment/villePlane.js"></script>
-<script src="environment/plane.js"></script>
-<script src="environment/Skybox.js"></script>
-<!--lighting-->
-<script src="lighting/BarracksLight.js"></script>
-<!--animals-->
-
-<!--collision detection-->
-<script src="collision/villaCollision.js"></script>
-<!--people-->
-<script src="people/person.js"></script>
-<!--economy-->
-<script src="economy/Shooting.js"></script>
-<script src="economy/Gathering.js"></script>
-<!--styling-->
-<link rel="stylesheet" type="text/css" href="Styling.css">
-</head>
-<body class="ng-scope" style="margin: 0px; background-color: #d8e7ff; overflow: hidden;" onload="loadImperium(),GameLoop()">
-<div class="parent" id="parent">  
-   <!--customcanvas-->       
-<div height="400" width="800" class="customcanvas" id="customcanvas"></div>
-        <!--hud-->
-                <div id="content-frame" ng-controller="HudState" class="ng-scope">
-                                <div id="canvas-container">
-                                    <div id="canvas-align">
-                                        <canvas id="webgl-canvas" width="800" height="400"></canvas>
-                                        <div id="hud" ng-class="{visible: style.visible, transparent: style.transparent, perspective: style.perspective, animated: style.animated}" class="visible">
-                                            <div id="weapon" class="ng-binding">
-                                                
-                                            </div>
-                                            <div id="ammo" class="ng-binding">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <!--menu-->
-                        <div id="menu" class="ng-menu">
-                                <div id="content-frame" class="ng-scope">
-                                        <div id="canvas-container">
-                                                <div id="quit">
-                                                        <button id="quitbutton">Quit</button>                                                        
-                                                </div>
-                                                <div id="resume">
-                                                        <button id="resumebutton">Resume</button>
-                                                </div>
-                                        </div>
-                                        
-                                </div>
-                                        
-                        </div>
-</div>
-<!--loaders-->
-<script src="loaders/OBJLoader.js"></script>
-<script src="loaders/MTLLoader.js"></script>
-<script src="loaders/ModelLoader.js"></script>
-<script>
-
-//collision vars
-var MovingCube;
-var collidableMeshList = [];
-var collidableBulletMeshList = [];
-//collidable props
-var collidablePropMeshList = []; 
-var propTypes = [];
-//no show menu
-var gamestart = document.getElementById("menu");
-gamestart.style.display = "none";
-// Bullets array
-var bullets = [];
-var bulletmeshes = [];      
-//updater
-var updateFcts = [];
-//scene
-var scene = new THREE.Scene();
-//fog
-scene.fog = new THREE.FogExp2( 0xd0e0f0, 0.0002 );
-//renderer
-var renderer = new THREE.WebGLRenderer( { antialias: false } );
-//window
-canvasWidth = window.innerWidth * 0.98; //screen.width; //800;
-canvasHeight = window.innerHeight - 100; //400;
-renderer.setSize( canvasWidth, canvasHeight );      
-//append object to it
-document.getElementById("customcanvas").appendChild(renderer.domElement);
-//camera
-var camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 0.01, 7650);
-camera.position.y = 12;
-camera.position.z = 100;
-camera.position.x = 135;
-//environment
-var environmentsize = 5100;//4950
-//plane
-var impluve =new PartPlane(environmentsize,environmentsize,"medieval",0,0,0);
-scene.add( impluve );
-//skybox
-var skyBox = new Skybox(environmentsize,environmentsize,environmentsize);
-scene.add( skyBox );
-//lighting 
-barracksLighter();
-//city wall offset
-var wallOffset =60;
-//fields and buildings and props and people, x5, z5
-
-//regions
-var inci =1;
-var mxi = 260;//260
-while (inci <mxi){
-
-	var uprovince = xprov[inci].getElementsByTagName("place")[0].childNodes[0].nodeValue;
-	var province = uprovince.replace("_", " ");
-	var id = xprov[inci].getElementsByTagName("id")[0].childNodes[0].nodeValue;
-	var xc = xprov[inci].getElementsByTagName("xc")[0].childNodes[0].nodeValue;
-	var yc = xprov[inci].getElementsByTagName("yc")[0].childNodes[0].nodeValue;
-
-	var cubeGeo = new THREE.CylinderGeometry(5,5,20,4);
-	var wireMat = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:true } );
-	var Wirecube = new THREE.Mesh( cubeGeo, wireMat );
-	Wirecube.position.set(xc, 1, yc);
-	scene.add( Wirecube );  	
-
-
-	inci++;
-}
-
-//moving cube
-var cubeGeometry = new THREE.CylinderGeometry(5,5,20,4);
-var wireMaterial = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe:true, visible:false } );
-MovingCube = new THREE.Mesh( cubeGeometry, wireMaterial );
-MovingCube.position.set(camera.position.x, camera.position.y, camera.position.z);
-scene.add( MovingCube );  
-//Camera Controls
-var controls = new THREE.FirstPersonControls( camera );
-controls.lookSpeed = 0.05;
-controls.lookVertical = false; //if true vertical look on mousemovement
-//Locking the pointer to the game
-document.getElementById("parent").addEventListener( 'click', function ( event ) {
-        lock();
-}, false );
-function lock(rawr) {
-        document.getElementById("parent").requestPointerLock();
-} 
-//initial economy variables
-var totalItem;
-var totalCoin = 12;
-var totalBread = 3;
-var totalArrow = 23;
-var totalSauce = 2;
-var totalOil = 2;
-var totalWine = 5;
-var totalPottery = 1;
-var totalCheese = 1;
-var eItem ="Purse";
-//initial item
-totalItem = totalCoin;
-//show HUD economy functions
-function appendCoin(){        
-        document.getElementById('ammo').innerHTML = totalItem;}
-function appendItem(){
-        document.getElementById('weapon').innerHTML = eItem;}
-//hit registration collision
-function clearText()
-{   document.getElementById('message').innerHTML = '...';}
-function appendText(txt)
-{   document.getElementById('message').innerHTML += txt;}
-//collision vars
-var collisionX;
-var collisionZ;
-//economy HUD
-appendCoin();
-appendItem();
-//onload loop
-function GameLoop(){
-
-        //update function
-        updateFcts.push(function(delta,now){
-                //controls update
-                controls.update( delta ); 
-                //render the scene
-                renderer.render( scene, camera );
-                //moving cube position and rotation
-                MovingCube.position.x = camera.position.x;
-                MovingCube.position.y = camera.position.y;
-                MovingCube.position.z = camera.position.z;
-                MovingCube.rotation.y = camera.rotation.y;                             
-                //bullets
-                BulletTravel(delta);
-                //ambient
-                soundGathering();
-        })
-        
-        //loop runner
-        var lastTimeMsec= null
-        requestAnimationFrame(function animate(nowMsec){
-                // keep looping
-                requestAnimationFrame( animate );
-                // measure time
-                lastTimeMsec = lastTimeMsec || nowMsec-1000/60
-                var deltaMsec = Math.min(200, nowMsec - lastTimeMsec)
-                lastTimeMsec = nowMsec
-                // call each update function
-                updateFcts.forEach(function(updateFn){
-                        updateFn(deltaMsec/1000, nowMsec/1000)
-                })
-        })
-	
-}
-function newDoc() {
-    window.location.assign("map.html")
-}
-
-</script>
-</div>
-<div id="game" class="game">
-        <!--message-->
-        <div id="message" class="ce"></div>
-        <!--minimap-->
-        <div id="minimap" class="ce">
-                <canvas id="myCanvas" width="40" height="40" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
-        </div>
-        <!--music-->
-        <div id="sound" class="ce">                
-                <audio id="imperia" loop><source id="parade" src="music/Rome_4.mp3" type="audio/mp3"></audio>   
-                <audio id="soundpar" autoplay><source id="soundscape" src="sfx/atmosphere/birds.mp3" type="audio/mp3"></audio> 
-                <button onclick="changeImperium()" type="button">Change Music</button>
-                <button onclick="pauseImperium()" type="button">Pause Music</button>
-                <button onclick="playImperium()" type="button">Play Music</button>
-                <input type="hidden" id="number" value="2"/>
-                <!--sound scripts-->
-                <script src="sound/musicplayer.js"></script>
-                <script src="sound/soundplayer.js"></script>
-                <script src="sound/ambient_ville.js"></script>
-
-        </div>
-</div>
-</body>
-</html>
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<title>feudal map</title>
+<style>
+.mm {width:98%;min-height:100px;margin:auto;}
+.ml {margin-left:5px;margin-right:5px;padding:3px;text-decoration:none;background-color:rgb(192,192,192);color:rgb(0,0,64);}
+.mc {text-align:center;}
+.wmin {width:100%;min-height:600px;}
+.wmed {width:1500px;min-height:1258px;}
+.wmax {width:3000px;min-height:2516px;}
+.worldmap {width:100%;height:auto;}
+</style>
+</HEAD>
+<BODY>
+<div class="wmin"><?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="3000" height="2516" viewBox="0 0 3000 2516" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="map" class="worldmap" zoomAndPan="magnify"><g z-index="1">
+<image xlink:href="good.png" x="0" y="0" width="3000" height="2516">
+</g><text x="100" y="50" fill="black" font-family="Verdana" font-size="35" stroke="white" stroke-width="2">culture</text><g z-index="2">
+<a xlink:href="region.html?region=1"><title>Lower Saxony, saxon (839,635)</title>
+<circle cx="839" cy="635" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=2"><title>Upper Saxony, saxon (1028,761)</title>
+<circle cx="1028" cy="761" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=3"><title>Anhalt, saxon (953,699)</title>
+<circle cx="953" cy="699" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=4"><title>Mecklenburg, saxon (944,597)</title>
+<circle cx="944" cy="597" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=5"><title>Brandenburg, saxon (990,679)</title>
+<circle cx="990" cy="679" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=6"><title>Pomerania, saxon (1070,612)</title>
+<circle cx="1070" cy="612" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=7"><title>Munsterland, saxon (791,710)</title>
+<circle cx="791" cy="710" r="7" stroke="rgb(0,0,128)" stroke-width="1" fill="rgb(0,255,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=8"><title>Bavaria, bavarian (972,897)</title>
+<circle cx="972" cy="897" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,223,223)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=9"><title>Salzburg, bavarian (1011,970)</title>
+<circle cx="1011" cy="970" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,223,223)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=10"><title>Austria, bavarian (1145,947)</title>
+<circle cx="1145" cy="947" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,223,223)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=11"><title>Styria, bavarian (1066,964)</title>
+<circle cx="1066" cy="964" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,223,223)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=12"><title>Tyrolia, bavarian (944,1003)</title>
+<circle cx="944" cy="1003" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,223,223)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=13"><title>Swabia, swabian (886,935)</title>
+<circle cx="886" cy="935" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,191,191)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=14"><title>Schwyz, swabian (784,1022)</title>
+<circle cx="784" cy="1022" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,191,191)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=15"><title>Alsace, swabian (796,924)</title>
+<circle cx="796" cy="924" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,191,191)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=16"><title>Bohemia, bohemian (1066,831)</title>
+<circle cx="1066" cy="831" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,159,159)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=17"><title>Moravia, bohemian (1155,886)</title>
+<circle cx="1155" cy="886" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,159,159)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=18"><title>Franconia, franconian (816,836)</title>
+<circle cx="816" cy="836" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,127,127)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=19"><title>Lower Lorraine, franconian (764,776)</title>
+<circle cx="764" cy="776" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,127,127)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=20"><title>Upper Lorraine, franconian (751,851)</title>
+<circle cx="751" cy="851" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,127,127)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=21"><title>Guelders, franconian (738,739)</title>
+<circle cx="738" cy="739" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,127,127)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=22"><title>Holland, frisian (699,709)</title>
+<circle cx="699" cy="709" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,95,95)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=23"><title>Frisia, frisian (712,639)</title>
+<circle cx="712" cy="639" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,95,95)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=24"><title>Brabant, flemish (673,780)</title>
+<circle cx="673" cy="780" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,63,63)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=25"><title>Flanders, flemish (633,769)</title>
+<circle cx="633" cy="769" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,63,63)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=26"><title>Carinthia, carinthian (1033,1080)</title>
+<circle cx="1033" cy="1080" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,31,31)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=27"><title>Carniola, carinthian (1064,1063)</title>
+<circle cx="1064" cy="1063" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,31,31)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=28"><title>Brittany, breton (371,980)</title>
+<circle cx="371" cy="980" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=29"><title>Ile de France, frankish (578,906)</title>
+<circle cx="578" cy="906" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=30"><title>Bar, frankish (691,912)</title>
+<circle cx="691" cy="912" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=31"><title>Picardy, frankish (575,842)</title>
+<circle cx="575" cy="842" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=32"><title>Normandy, frankish (527,870)</title>
+<circle cx="527" cy="870" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=33"><title>Champagne, frankish (645,881)</title>
+<circle cx="645" cy="881" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=34"><title>Orleans, frankish (559,965)</title>
+<circle cx="559" cy="965" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=35"><title>Touraine, frankish (510,995)</title>
+<circle cx="510" cy="995" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=36"><title>Anjou, frankish (461,990)</title>
+<circle cx="461" cy="990" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=37"><title>Poitou, frankish (496,1044)</title>
+<circle cx="496" cy="1044" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=38"><title>Berry, frankish (580,1013)</title>
+<circle cx="580" cy="1013" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=39"><title>Bourbonnais, frankish (618,1044)</title>
+<circle cx="618" cy="1044" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(191,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=40"><title>Auvergne, occitan (607,1090)</title>
+<circle cx="607" cy="1090" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(127,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=41"><title>Provence, occitan (670,1210)</title>
+<circle cx="670" cy="1210" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(127,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=42"><title>Languedoc, occitan (541,1215)</title>
+<circle cx="541" cy="1215" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(127,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=43"><title>Aquitaine, occitan (460,1145)</title>
+<circle cx="460" cy="1145" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(127,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=44"><title>Angouleme, occitan (489,1098)</title>
+<circle cx="489" cy="1098" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(127,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=45"><title>Viennois, arpitan (714,1124)</title>
+<circle cx="714" cy="1124" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(63,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=46"><title>Burgundy, arpitan (686,999)</title>
+<circle cx="686" cy="999" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(63,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=47"><title>Essex, english (478,739)</title>
+<circle cx="478" cy="739" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=48"><title>Kent, english (526,753)</title>
+<circle cx="526" cy="753" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=49"><title>Wessex, english (429,767)</title>
+<circle cx="429" cy="767" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=50"><title>Cornwall, english (279,819)</title>
+<circle cx="279" cy="819" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=51"><title>East Anglia, english (534,665)</title>
+<circle cx="534" cy="665" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=52"><title>Northumbria, english (439,575)</title>
+<circle cx="439" cy="575" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=53"><title>Hwicce, english (394,693)</title>
+<circle cx="394" cy="693" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=54"><title>Middle Anglia, english (494,680)</title>
+<circle cx="494" cy="680" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=55"><title>Mercia, english (413,665)</title>
+<circle cx="413" cy="665" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=56"><title>Lindsey, english (461,625)</title>
+<circle cx="461" cy="625" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=57"><title>Gwynedd, welsh (310,632)</title>
+<circle cx="310" cy="632" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=58"><title>Powys, welsh (372,661)</title>
+<circle cx="372" cy="661" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=59"><title>Gwent, welsh (354,740)</title>
+<circle cx="354" cy="740" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=60"><title>Vestfold, norwegian (918,133)</title>
+<circle cx="918" cy="133" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=61"><title>Hordaland, norwegian (698,94)</title>
+<circle cx="698" cy="94" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=62"><title>Sjaelland, danish (991,455)</title>
+<circle cx="991" cy="455" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=63"><title>Scania, danish (1016,453)</title>
+<circle cx="1016" cy="453" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=64"><title>Jutland, danish (895,419)</title>
+<circle cx="895" cy="419" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=65"><title>Svaeland, swedish (1213,180)</title>
+<circle cx="1213" cy="180" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=66"><title>Smaland, swedish (1144,382)</title>
+<circle cx="1144" cy="382" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=67"><title>Gotaland, swedish (1026,253)</title>
+<circle cx="1026" cy="253" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=68"><title>Livonia, livonian (1457,361)</title>
+<circle cx="1457" cy="361" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=69"><title>Courland, livonian (1358,342)</title>
+<circle cx="1358" cy="342" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=70"><title>Prussia, prussian (1252,570)</title>
+<circle cx="1252" cy="570" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(132,0,132)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=71"><title>Samogitia, livonian (1338,453)</title>
+<circle cx="1338" cy="453" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=72"><title>Estonia, livonian (1484,172)</title>
+<circle cx="1484" cy="172" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=73"><title>Lothian, scottish (354,435)</title>
+<circle cx="354" cy="435" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=74"><title>Bernicia, scottish (401,447)</title>
+<circle cx="401" cy="447" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=75"><title>Strathclyde, scottish (299,436)</title>
+<circle cx="299" cy="436" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=76"><title>Galloway, scottish (319,514)</title>
+<circle cx="319" cy="514" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=77"><title>Dalriada, scottish (224,408)</title>
+<circle cx="224" cy="408" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=78"><title>Fib, pictish (344,403)</title>
+<circle cx="344" cy="403" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=79"><title>Fortriu, pictish (348,309)</title>
+<circle cx="348" cy="309" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=80"><title>Alba, pictish (361,397)</title>
+<circle cx="361" cy="397" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=81"><title>Caith, pictish (304,313)</title>
+<circle cx="304" cy="313" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=82"><title>Meath, irish (229,618)</title>
+<circle cx="229" cy="618" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,51,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=83"><title>Ulster, irish (213,548)</title>
+<circle cx="213" cy="548" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,51,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=84"><title>Leinster, irish (221,686)</title>
+<circle cx="221" cy="686" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,51,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=85"><title>Munster, irish (163,673)</title>
+<circle cx="163" cy="673" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,51,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=86"><title>Connaught, irish (116,622)</title>
+<circle cx="116" cy="622" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,51,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=87"><title>Navarre, navarrese (417,1258)</title>
+<circle cx="417" cy="1258" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=88"><title>Biscay, navarrese (404,1230)</title>
+<circle cx="404" cy="1230" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=89"><title>Aragon, aragonese (461,1272)</title>
+<circle cx="461" cy="1272" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(219,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=90"><title>Zaragoza, aragonese (447,1321)</title>
+<circle cx="447" cy="1321" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(219,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=91"><title>Gerona, catalan (597,1304)</title>
+<circle cx="597" cy="1304" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=92"><title>Barcelona, catalan (571,1335)</title>
+<circle cx="571" cy="1335" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=93"><title>Valencia, catalan (469,1437)</title>
+<circle cx="469" cy="1437" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=94"><title>Denia, catalan (487,1470)</title>
+<circle cx="487" cy="1470" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=95"><title>Baleares, catalan (590,1432)</title>
+<circle cx="590" cy="1432" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=96"><title>Leon, leonese (258,1269)</title>
+<circle cx="258" cy="1269" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,147,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=97"><title>Asturias, leonese (246,1227)</title>
+<circle cx="246" cy="1227" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,147,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=98"><title>Castile, castilian (291,1321)</title>
+<circle cx="291" cy="1321" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,111,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=99"><title>Burgos, castilian (333,1284)</title>
+<circle cx="333" cy="1284" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,111,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=100"><title>Galicia, galician (138,1254)</title>
+<circle cx="138" cy="1254" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(75,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=101"><title>Estremadura, portuguese (112,1476)</title>
+<circle cx="112" cy="1476" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,39,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=102"><title>Porto, portuguese (133,1347)</title>
+<circle cx="133" cy="1347" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,39,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=103"><title>Braganca, portuguese (209,1314)</title>
+<circle cx="209" cy="1314" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,39,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=104"><title>Beira, portuguese (143,1398)</title>
+<circle cx="143" cy="1398" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,39,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=105"><title>Alentejo, algarve (162,1484)</title>
+<circle cx="162" cy="1484" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,215,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=106"><title>Algarve, algarve (161,1563)</title>
+<circle cx="161" cy="1563" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,215,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=107"><title>Cordoba, andalucian (289,1519)</title>
+<circle cx="289" cy="1519" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=108"><title>Sevilla, andalucian (241,1544)</title>
+<circle cx="241" cy="1544" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=109"><title>Badajoz, andalucian (201,1467)</title>
+<circle cx="201" cy="1467" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=110"><title>Toledo, andalucian (320,1417)</title>
+<circle cx="320" cy="1417" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=111"><title>Granada, andalucian (337,1556)</title>
+<circle cx="337" cy="1556" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=112"><title>Almeria, andalucian (383,1572)</title>
+<circle cx="383" cy="1572" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=113"><title>Murcia, andalucian (437,1515)</title>
+<circle cx="437" cy="1515" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=114"><title>Malaga, andalucian (304,1578)</title>
+<circle cx="304" cy="1578" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=115"><title>Lombardy, lombard (854,1108)</title>
+<circle cx="854" cy="1108" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=116"><title>Verona, lombard (927,1110)</title>
+<circle cx="927" cy="1110" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=117"><title>Genoa, lombard (845,1169)</title>
+<circle cx="845" cy="1169" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=118"><title>Venice, lombard (981,1110)</title>
+<circle cx="981" cy="1110" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=119"><title>Romagna, lombard (977,1168)</title>
+<circle cx="977" cy="1168" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=120"><title>Emilia, lombard (925,1156)</title>
+<circle cx="925" cy="1156" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=121"><title>Aquileja, lombard (1023,1091)</title>
+<circle cx="1023" cy="1091" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=122"><title>Turin, lombard (794,1131)</title>
+<circle cx="794" cy="1131" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,255)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=123"><title>Tuscany, tuscan (923,1205)</title>
+<circle cx="923" cy="1205" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=124"><title>Spoleto, tuscan (998,1262)</title>
+<circle cx="998" cy="1262" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=125"><title>Lazio, tuscan (988,1307)</title>
+<circle cx="988" cy="1307" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=126"><title>Pisa, tuscan (904,1208)</title>
+<circle cx="904" cy="1208" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,204)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=127"><title>Naples, neapolitan (1060,1365)</title>
+<circle cx="1060" cy="1365" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=128"><title>Apulia, neapolitan (1180,1385)</title>
+<circle cx="1180" cy="1385" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=129"><title>Calabria, neapolitan (1140,1447)</title>
+<circle cx="1140" cy="1447" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=130"><title>Benevento, neapolitan (1081,1350)</title>
+<circle cx="1081" cy="1350" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,153)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=131"><title>Sardinia, sardinian (829,1371)</title>
+<circle cx="829" cy="1371" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=132"><title>Cagliari, sardinian (852,1452)</title>
+<circle cx="852" cy="1452" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,102)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=133"><title>Mazara, sicilian (1023,1508)</title>
+<circle cx="1023" cy="1508" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=134"><title>Demona, sicilian (1111,1504)</title>
+<circle cx="1111" cy="1504" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=135"><title>Siracusa, sicilian (1101,1561)</title>
+<circle cx="1101" cy="1561" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=136"><title>Tangiers, maghreb (247,1626)</title>
+<circle cx="247" cy="1626" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=137"><title>Anfa, maghreb (176,1733)</title>
+<circle cx="176" cy="1733" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=138"><title>Fez, maghreb (280,1712)</title>
+<circle cx="280" cy="1712" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=139"><title>Marrakesh, maghreb (161,1827)</title>
+<circle cx="161" cy="1827" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=140"><title>Ifni, maghreb (124,1883)</title>
+<circle cx="124" cy="1883" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=141"><title>Figuig, maghreb (434,1803)</title>
+<circle cx="434" cy="1803" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=142"><title>Tlemcen, maghreb (429,1670)</title>
+<circle cx="429" cy="1670" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=143"><title>Orania, maghreb (457,1630)</title>
+<circle cx="457" cy="1630" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=144"><title>Mzab, maghreb (615,1679)</title>
+<circle cx="615" cy="1679" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=145"><title>Ouled, maghreb (689,1692)</title>
+<circle cx="689" cy="1692" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=146"><title>Algiers, maghreb (607,1578)</title>
+<circle cx="607" cy="1578" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=147"><title>Bejaia, maghreb (687,1577)</title>
+<circle cx="687" cy="1577" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=148"><title>Annaba, maghreb (796,1568)</title>
+<circle cx="796" cy="1568" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=149"><title>Tunisia, maghreb (894,1574)</title>
+<circle cx="894" cy="1574" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,219,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=150"><title>Kairouan, ifriqiya (890,1630)</title>
+<circle cx="890" cy="1630" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=151"><title>Gabes, ifriqiya (891,1719)</title>
+<circle cx="891" cy="1719" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=152"><title>Djerba, ifriqiya (867,1896)</title>
+<circle cx="867" cy="1896" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=153"><title>Tripolitana, ifriqiya (1017,1768)</title>
+<circle cx="1017" cy="1768" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=154"><title>Germa, ifriqiya (1011,2064)</title>
+<circle cx="1011" cy="2064" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=155"><title>Senoussi, misr (1425,2167)</title>
+<circle cx="1425" cy="2167" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=156"><title>Cyrenaica, misr (1300,1805)</title>
+<circle cx="1300" cy="1805" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=157"><title>Delta, misr (1693,1848)</title>
+<circle cx="1693" cy="1848" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=158"><title>Cairo, misr (1744,1901)</title>
+<circle cx="1744" cy="1901" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=159"><title>Minya, misr (1727,1993)</title>
+<circle cx="1727" cy="1993" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=160"><title>Asyut, misr (1743,2034)</title>
+<circle cx="1743" cy="2034" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,183,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=161"><title>Silesia, polish (1137,760)</title>
+<circle cx="1137" cy="760" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=162"><title>Lesser Poland, polish (1289,832)</title>
+<circle cx="1289" cy="832" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=163"><title>Greater Poland, polish (1194,671)</title>
+<circle cx="1194" cy="671" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=164"><title>Masovia, polish (1280,670)</title>
+<circle cx="1280" cy="670" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=165"><title>Brest, lithuanian (1442,701)</title>
+<circle cx="1442" cy="701" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(219,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=166"><title>Lithuania, lithuanian (1490,529)</title>
+<circle cx="1490" cy="529" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(219,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=167"><title>Istria, croatian (1043,1143)</title>
+<circle cx="1043" cy="1143" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=168"><title>Dalmatia, croatian (1215,1267)</title>
+<circle cx="1215" cy="1267" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=169"><title>Croatia, croatian (1138,1190)</title>
+<circle cx="1138" cy="1190" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(183,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=170"><title>Burgenland, hungarian (1197,978)</title>
+<circle cx="1197" cy="978" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=171"><title>Veszprem, hungarian (1207,1013)</title>
+<circle cx="1207" cy="1013" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=172"><title>Esztergom, hungarian (1241,971)</title>
+<circle cx="1241" cy="971" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=173"><title>Eger, hungarian (1307,964)</title>
+<circle cx="1307" cy="964" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=174"><title>Vac, hungarian (1253,989)</title>
+<circle cx="1253" cy="989" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=175"><title>Pecs, hungarian (1220,1074)</title>
+<circle cx="1220" cy="1074" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=176"><title>Transsylvania, hungarian (1435,1073)</title>
+<circle cx="1435" cy="1073" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(147,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=177"><title>Oltenia, wallachian (1424,1133)</title>
+<circle cx="1424" cy="1133" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=178"><title>Mutenia, wallachian (1511,1140)</title>
+<circle cx="1511" cy="1140" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=179"><title>Besarabia, wallachian (1642,1183)</title>
+<circle cx="1642" cy="1183" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=180"><title>Moldova, wallachian (1544,982)</title>
+<circle cx="1544" cy="982" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(111,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=181"><title>Sofia, bulgarian (1426,1264)</title>
+<circle cx="1426" cy="1264" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(75,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=182"><title>Varna, bulgarian (1611,1236)</title>
+<circle cx="1611" cy="1236" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(75,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=183"><title>Bosnia, serbian (1249,1211)</title>
+<circle cx="1249" cy="1211" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=184"><title>Syrmia, serbian (1310,1147)</title>
+<circle cx="1310" cy="1147" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=185"><title>Rashka, serbian (1317,1231)</title>
+<circle cx="1317" cy="1231" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=186"><title>Serbia, serbian (1321,1291)</title>
+<circle cx="1321" cy="1291" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=187"><title>Kosovo, serbian (1339,1267)</title>
+<circle cx="1339" cy="1267" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(39,0,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=188"><title>Oleshia, russian (1801,1041)</title>
+<circle cx="1801" cy="1041" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=189"><title>Pereyaslav, russian (1755,832)</title>
+<circle cx="1755" cy="832" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=190"><title>Kiev, russian (1717,807)</title>
+<circle cx="1717" cy="807" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=191"><title>Halych, russian (1483,889)</title>
+<circle cx="1483" cy="889" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=192"><title>Turov, russian (1604,703)</title>
+<circle cx="1604" cy="703" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=193"><title>Tchernigov, russian (1747,740)</title>
+<circle cx="1747" cy="740" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=194"><title>Polotsk, russian (1647,469)</title>
+<circle cx="1647" cy="469" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=195"><title>Smolensk, russian (1780,517)</title>
+<circle cx="1780" cy="517" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=196"><title>Ryazan, russian (2088,530)</title>
+<circle cx="2088" cy="530" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=197"><title>Muscovy, russian (2003,449)</title>
+<circle cx="2003" cy="449" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=198"><title>Pleskov, russian (1627,297)</title>
+<circle cx="1627" cy="297" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=199"><title>Novgorod, russian (1747,242)</title>
+<circle cx="1747" cy="242" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=200"><title>Bolgar, russian (2467,506)</title>
+<circle cx="2467" cy="506" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=201"><title>Vladimir, russian (2117,421)</title>
+<circle cx="2117" cy="421" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=202"><title>Vologda, russian (2095,187)</title>
+<circle cx="2095" cy="187" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=203"><title>Oryol, russian (1942,643)</title>
+<circle cx="1942" cy="643" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=204"><title>Kursk, russian (1946,724)</title>
+<circle cx="1946" cy="724" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(51,0,51)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=205"><title>Atil, turkish (2427,1056)</title>
+<circle cx="2427" cy="1056" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(192,0,192)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=206"><title>Khiva, turkish (2922,1336)</title>
+<circle cx="2922" cy="1336" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(192,0,192)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=207"><title>Thrace, byzantine (1654,1356)</title>
+<circle cx="1654" cy="1356" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=208"><title>Thessaloniki, byzantine (1410,1375)</title>
+<circle cx="1410" cy="1375" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=209"><title>Hellas, byzantine (1441,1515)</title>
+<circle cx="1441" cy="1515" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=210"><title>Peloponnesos, byzantine (1390,1561)</title>
+<circle cx="1390" cy="1561" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=211"><title>Nicopolis, byzantine (1332,1453)</title>
+<circle cx="1332" cy="1453" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=212"><title>Epirus, byzantine (1282,1330)</title>
+<circle cx="1282" cy="1330" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=213"><title>Macedonia, byzantine (1343,1382)</title>
+<circle cx="1343" cy="1382" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=214"><title>Aegean, byzantine (1500,1648)</title>
+<circle cx="1500" cy="1648" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=215"><title>Samos, byzantine (1581,1492)</title>
+<circle cx="1581" cy="1492" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=216"><title>Thracesia, byzantine (1608,1522)</title>
+<circle cx="1608" cy="1522" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=217"><title>Opsicia, byzantine (1685,1387)</title>
+<circle cx="1685" cy="1387" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=218"><title>Anatolia, byzantine (1797,1520)</title>
+<circle cx="1797" cy="1520" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=219"><title>Cibyrrhaeot, byzantine (1776,1587)</title>
+<circle cx="1776" cy="1587" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=220"><title>Bucellaria, byzantine (1811,1412)</title>
+<circle cx="1811" cy="1412" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=221"><title>Paphlagonia, byzantine (1904,1300)</title>
+<circle cx="1904" cy="1300" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=222"><title>Cilicia, byzantine (1883,1574)</title>
+<circle cx="1883" cy="1574" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=223"><title>Cappadocia, byzantine (1918,1477)</title>
+<circle cx="1918" cy="1477" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=224"><title>Chaldea, byzantine (2089,1357)</title>
+<circle cx="2089" cy="1357" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=225"><title>Edessa, byzantine (2052,1555)</title>
+<circle cx="2052" cy="1555" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=226"><title>Armeniac, byzantine (1932,1374)</title>
+<circle cx="1932" cy="1374" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=227"><title>Hexacomia, byzantine (2109,1517)</title>
+<circle cx="2109" cy="1517" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=228"><title>Sebasteia, byzantine (1981,1422)</title>
+<circle cx="1981" cy="1422" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(255,255,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=229"><title>Abchasia, georgian (2167,1322)</title>
+<circle cx="2167" cy="1322" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=230"><title>Georgia, georgian (2295,1317)</title>
+<circle cx="2295" cy="1317" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=231"><title>Derbent, georgian (2435,1299)</title>
+<circle cx="2435" cy="1299" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(204,204,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=232"><title>Kars, armenian (2245,1383)</title>
+<circle cx="2245" cy="1383" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=233"><title>Artsakh, armenian (2320,1451)</title>
+<circle cx="2320" cy="1451" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=234"><title>Armenia, armenian (2185,1493)</title>
+<circle cx="2185" cy="1493" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=235"><title>Mardin, armenian (2130,1548)</title>
+<circle cx="2130" cy="1548" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=236"><title>Van, armenian (2237,1488)</title>
+<circle cx="2237" cy="1488" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(153,153,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=237"><title>Khorasan, persian (2861,1605)</title>
+<circle cx="2861" cy="1605" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=238"><title>Sistan, persian (2848,1652)</title>
+<circle cx="2848" cy="1652" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=239"><title>Kerman, persian (2791,1890)</title>
+<circle cx="2791" cy="1890" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=240"><title>Fars, persian (2609,1924)</title>
+<circle cx="2609" cy="1924" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=241"><title>Jibal, persian (2572,1778)</title>
+<circle cx="2572" cy="1778" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=242"><title>Rhages, persian (2561,1631)</title>
+<circle cx="2561" cy="1631" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=243"><title>Gorgan, persian (2684,1573)</title>
+<circle cx="2684" cy="1573" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=244"><title>Azerbaijan, persian (2354,1509)</title>
+<circle cx="2354" cy="1509" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=245"><title>Kurdistan, persian (2445,1675)</title>
+<circle cx="2445" cy="1675" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(102,102,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=246"><title>Najd, najd (2369,2144)</title>
+<circle cx="2369" cy="2144" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,147,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=247"><title>Hejaz, hejaz (2092,2292)</title>
+<circle cx="2092" cy="2292" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,111,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=248"><title>Dedan, hejaz (2018,2063)</title>
+<circle cx="2018" cy="2063" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,111,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=249"><title>Jerusalem, mashriq (1907,1821)</title>
+<circle cx="1907" cy="1821" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=250"><title>Acre, mashriq (1902,1766)</title>
+<circle cx="1902" cy="1766" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=251"><title>Bosra, mashriq (1957,1787)</title>
+<circle cx="1957" cy="1787" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=252"><title>Damascus, mashriq (1949,1737)</title>
+<circle cx="1949" cy="1737" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=253"><title>Homs, mashriq (1968,1678)</title>
+<circle cx="1968" cy="1678" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=254"><title>Tripoli, mashriq (1932,1692)</title>
+<circle cx="1932" cy="1692" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=255"><title>Antioch, mashriq (1944,1606)</title>
+<circle cx="1944" cy="1606" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=256"><title>Aleppo, mashriq (1984,1604)</title>
+<circle cx="1984" cy="1604" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=257"><title>Raqqa, mashriq (2059,1617)</title>
+<circle cx="2059" cy="1617" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=258"><title>Erbil, mashriq (2263,1605)</title>
+<circle cx="2263" cy="1605" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=259"><title>Baghdad, mashriq (2275,1747)</title>
+<circle cx="2275" cy="1747" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g><g z-index="2">
+<a xlink:href="region.html?region=260"><title>Kufah, mashriq (2286,1810)</title>
+<circle cx="2286" cy="1810" r="7" stroke="rgb(0,0,0)" stroke-width="1" fill="rgb(0,75,0)" />
+</a></g></svg></div></BODY>
+</HTML>
