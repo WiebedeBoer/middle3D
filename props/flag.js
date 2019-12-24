@@ -19,7 +19,7 @@ class Flag extends THREE.Group {
 			var flag_num ="white_yellow";
 		}
 		//teutonic order state, red white
-		else if(this.bannier =="baltic"){
+		else if(this.bannier =="prussian" || this.bannier =="livonian"){
 			var flag_num ="black_white";
 		}
 		//france, blue yellow
@@ -71,7 +71,7 @@ class Flag extends THREE.Group {
 			var flag_num ="green_red";
 		}
 		//andalucia, green white
-		else if(this.bannier =="andalucian"){
+		else if(this.bannier =="andalucian" || this.bannier =="algarve"){
 			var flag_num ="green_white";
 		}
 		//napels, red yellow
