@@ -19,7 +19,7 @@ class Cloister extends THREE.Group {
 			var rotate_palace = 3.1415926;
 		}
 		//andalucian
-		else if(this.bannier =="andalucian"){
+		else if(this.bannier =="andalucian" || this.bannier =="algarve"){
 			var flag_num ="andalucian";
 			var scale_x = 14.0;
 			var scale_y = 14.0;

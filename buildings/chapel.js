@@ -48,8 +48,17 @@ class Chapel extends THREE.Group {
 			var rotate_palace = 0;
 			var mintower =0;
 		}
-		//scandinanvian
-		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="baltic" || this.bannier =="swedish"){
+		//scandinavian
+		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="swedish"){
+			var flag_num ="chapel";
+			var scale_x = 5.5;
+			var scale_y = 5.5;
+			var scale_z = 5.5;
+			var rotate_palace = 0;	
+			var mintower =0;			
+		}
+		//baltic
+		else if(this.bannier =="prussian" || this.bannier =="livonian"){
 			var flag_num ="chapel";
 			var scale_x = 5.5;
 			var scale_y = 5.5;
@@ -131,7 +140,7 @@ class Chapel extends THREE.Group {
 		}
 		//ISLAMIC
 		//andalucia
-		else if(this.bannier =="andalucian"){
+		else if(this.bannier =="andalucian" || this.bannier =="algarve"){
 			var flag_num ="minaret";
 			var scale_x = 0.1;
 			var scale_y = 0.1;

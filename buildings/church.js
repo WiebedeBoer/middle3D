@@ -54,7 +54,7 @@ class Church extends THREE.Group {
 			var xrepl =0;
 		}
 		//teutonic order state
-		else if(this.bannier =="baltic"){
+		else if(this.bannier =="prussian" || this.bannier =="livonian"){
 			var flag_num ="cupic";
 			var scale_x = 0.2;
 			var scale_y = 0.2;
@@ -165,7 +165,7 @@ class Church extends THREE.Group {
 		}
 		//ISLAMIC
 		//andalucia
-		else if(this.bannier =="andalucian"){
+		else if(this.bannier =="andalucian" || this.bannier =="algarve"){
 			var flag_num ="andalucian";
 			var scale_x = 22.2;
 			var scale_y = 18.2;

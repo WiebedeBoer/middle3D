@@ -54,7 +54,7 @@ class Cathedral extends THREE.Group {
 			var xrepl =0;
 		}
 		//scandinanvian
-		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="baltic" || this.bannier =="swedish"){
+		else if(this.bannier =="norwegian" || this.bannier =="danish" || this.bannier =="swedish"){
 			var flag_num ="west";
 			var scale_x = 10.0;
 			var scale_y = 11.0;
@@ -62,7 +62,17 @@ class Cathedral extends THREE.Group {
 			var rotate_palace = 0;
 			var mintower =0;	
 			var xrepl =0;
-		}		
+		}
+		//baltic
+		else if(this.bannier =="prussian" || this.bannier =="livonian"){
+			var flag_num ="west";
+			var scale_x = 10.0;
+			var scale_y = 11.0;
+			var scale_z = 10.0;
+			var rotate_palace = 0;
+			var mintower =0;	
+			var xrepl =0;
+		}
 		//poland lithuania
 		else if(this.bannier =="polish" || this.bannier =="lithuanian"){
 			var flag_num ="west";
@@ -155,7 +165,7 @@ class Cathedral extends THREE.Group {
 		}
 		//ISLAMIC
 		//andalucia
-		else if(this.bannier =="andalucian"){
+		else if(this.bannier =="andalucian" || this.bannier =="algarve"){
 			var flag_num ="andalucian";
 			var scale_x = 22.2;
 			var scale_y = 18.2;
